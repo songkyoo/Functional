@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Functional.Core\Functional.Core.csproj" />
+    <ProjectReference Include="..\Functional\Functional.csproj" />
   </ItemGroup>
 
 </Project>

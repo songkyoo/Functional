@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Macaron.Functional.Core</PackageId>
+    <PackageId>Macaron.Functional</PackageId>
     <Version>1.0.0</Version>
     <Authors>Song, Gyu</Authors>
   </PropertyGroup>
