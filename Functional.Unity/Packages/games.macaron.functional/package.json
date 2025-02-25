@@ -3,5 +3,8 @@
     "version": "1.0.0",
     "displayName": "Functional",
     "unity": "2022.3",
-    "license": "UNLICENSED"
+    "license": "LICENSE.md",
+    "author": {
+        "name": "Song, Gyu"
+    }
 }
