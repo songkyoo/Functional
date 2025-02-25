@@ -1,5 +1,7 @@
 {
     "name": "games.macaron.functional",
     "version": "1.0.0",
-    "displayName": "Functional"
+    "displayName": "Functional",
+    "unity": "2022.3",
+    "license": "UNLICENSED"
 }
