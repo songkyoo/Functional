@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace Macaron.Functional;
 
 public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>, IEquatable<NothingMaybe>

@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace Macaron.Functional;
 
 public readonly struct Either<TLeft, TRight>

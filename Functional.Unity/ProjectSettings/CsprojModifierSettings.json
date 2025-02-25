@@ -1,0 +1,1 @@
+{"AdditionalImports":[{"Path":"LangVersion.props","Position":0},{"Path":"Nullable.props","Position":0}],"AdditionalImportsAdditionalProjects":["Macaron.Functional.csproj"],"EnableAddAnalyzerReferences":false,"AddAnalyzerReferencesAdditionalProjects":[]}
