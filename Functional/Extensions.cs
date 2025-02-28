@@ -1,5 +1,3 @@
-using System;
-
 namespace Macaron.Functional;
 
 public static class Extensions
