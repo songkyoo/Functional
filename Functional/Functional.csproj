@@ -15,5 +15,9 @@
     <RepositoryUrl>https://github.com/songkyoo/Functional</RepositoryUrl>
   </PropertyGroup>
 
+  <Target Name="TransformT4TextTemplates" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet tool restore" />
+    <Exec Command="dotnet t4 Extensions.Partial.tt -p:MaxCount=8" />
+  </Target>
 
 </Project>
