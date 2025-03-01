@@ -76,4 +76,16 @@ public static partial class Extensions
             return fn(disposable);
         }
     }
+
+    public static TResult Use<T, TContext, TResult>(
+        this T disposable,
+        in TContext context,
+        Func<TContext, T, TResult> fn
+    ) where T : IDisposable
+    {
+        using (disposable)
+        {
+            return fn(context, disposable);
+        }
+    }
 }
