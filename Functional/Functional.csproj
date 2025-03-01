@@ -20,6 +20,7 @@
     <Exec Command="dotnet t4 Extensions.Partial.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Extensions.Curry.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Extensions.Uncurry.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Utility.Compose.tt -p:MaxCount=8" />
   </Target>
 
 </Project>
