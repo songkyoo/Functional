@@ -50,7 +50,7 @@ public class EitherTest
     }
 
     [Test]
-    public void Left_WithTypeAndRight_ReturnsLeftEither()
+    public void Left_WithTypeAndLeft_ReturnsLeftEither()
     {
         Either<string, string> either = Left<string, string>("Foo");
 
