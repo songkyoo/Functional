@@ -1,28 +1,28 @@
 namespace Macaron.Functional;
 
-public static class Extensions
+public static partial class Extensions
 {
-    public static TResult Let<T, TResult>(this T obj, Func<T, TResult> fn) where T : notnull
+    public static TResult Let<T, TResult>(this T self, Func<T, TResult> fn) where T : notnull
     {
-        return fn(obj);
+        return fn(self);
     }
 
-    public static TResult Let<T, TContext, TResult>(this T obj, in TContext context, Func<T, TContext, TResult> fn)
+    public static TResult Let<T, TContext, TResult>(this T self, in TContext context, Func<TContext, T, TResult> fn)
         where T : notnull
     {
-        return fn(obj, context);
+        return fn(context, self);
     }
 
-    public static T Also<T>(this T obj, Action<T> action) where T : notnull
+    public static T Also<T>(this T self, Action<T> action) where T : notnull
     {
-        action(obj);
-        return obj;
+        action(self);
+        return self;
     }
 
-    public static T Also<T, TContext>(this T obj, in TContext context, Action<T, TContext> action) where T : notnull
+    public static T Also<T, TContext>(this T self, in TContext context, Action<TContext, T> action) where T : notnull
     {
-        action(obj, context);
-        return obj;
+        action(context, self);
+        return self;
     }
 
     public static T? TakeIf<T>(this T self, Func<T, bool> predicate) where T : class
@@ -30,10 +30,10 @@ public static class Extensions
         return predicate(self) ? self : null;
     }
 
-    public static T? TakeIf<T, TContext>(this T self, TContext context, Func<T, TContext, bool> predicate)
+    public static T? TakeIf<T, TContext>(this T self, TContext context, Func<TContext, T, bool> predicate)
         where T : class
     {
-        return predicate(self, context) ? self : null;
+        return predicate(context, self) ? self : null;
     }
 
     public static T? TakeIfStruct<T>(this T self, Func<T, bool> predicate) where T : struct
@@ -41,10 +41,10 @@ public static class Extensions
         return predicate(self) ? self : null;
     }
 
-    public static T? TakeIfStruct<T, TContext>(this T self, in TContext context, Func<T, TContext, bool> predicate)
+    public static T? TakeIfStruct<T, TContext>(this T self, in TContext context, Func<TContext, T, bool> predicate)
         where T : struct
     {
-        return predicate(self, context) ? self : null;
+        return predicate(context, self) ? self : null;
     }
 
     public static T? TakeUnless<T>(this T self, Func<T, bool> predicate) where T : class
@@ -52,10 +52,10 @@ public static class Extensions
         return !predicate(self) ? self : null;
     }
 
-    public static T? TakeUnless<T, TContext>(this T self, in TContext context, Func<T, TContext, bool> predicate)
+    public static T? TakeUnless<T, TContext>(this T self, in TContext context, Func<TContext, T, bool> predicate)
         where T : class
     {
-        return !predicate(self, context) ? self : null;
+        return !predicate(context, self) ? self : null;
     }
 
     public static T? TakeUnlessStruct<T>(this T self, Func<T, bool> predicate) where T : struct
@@ -63,10 +63,10 @@ public static class Extensions
         return !predicate(self) ? self : null;
     }
 
-    public static T? TakeUnlessStruct<T, TContext>(this T self, in TContext context, Func<T, TContext, bool> predicate)
+    public static T? TakeUnlessStruct<T, TContext>(this T self, in TContext context, Func<TContext, T, bool> predicate)
         where T : struct
     {
-        return !predicate(self, context) ? self : null;
+        return !predicate(context, self) ? self : null;
     }
 
     public static TResult Use<T, TResult>(this T disposable, Func<T, TResult> fn) where T : IDisposable
