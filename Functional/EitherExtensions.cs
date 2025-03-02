@@ -44,9 +44,4 @@ public static class EitherExtensions
             return Either.Left<TLeft, TResult>(fn.Left);
         }
     }
-
-    public static Func<Either<L, T>, Either<L, TResult>> Lift<L, T, TResult>(Func<T, TResult> fn)
-    {
-        return either => either.Map(fn);
-    }
 }

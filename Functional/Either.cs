@@ -21,4 +21,9 @@ public static class Either
     {
         return new RightEither<TLeft, TRight>(value);
     }
+
+    public static Func<Either<L, T>, Either<L, TResult>> Lift<L, T, TResult>(Func<T, TResult> fn)
+    {
+        return either => either.Map(fn);
+    }
 }
