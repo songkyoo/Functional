@@ -26,9 +26,4 @@ public static partial class MaybeExtensions
     {
         return fn.FlatMap(maybe.Map);
     }
-
-    public static Func<Maybe<T>, Maybe<TResult>> Lift<T, TResult>(Func<T, TResult> fn)
-    {
-        return maybe => maybe.Map(fn);
-    }
 }

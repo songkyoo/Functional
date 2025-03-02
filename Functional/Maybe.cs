@@ -1,6 +1,6 @@
 ﻿namespace Macaron.Functional;
 
-public static class Maybe
+public static partial class Maybe
 {
     public static Maybe<T> Just<T>(in T value)
     {
@@ -15,5 +15,10 @@ public static class Maybe
     public static Maybe<T> Nothing<T>()
     {
         return new NothingMaybe<T>();
+    }
+
+    public static Func<Maybe<T>, Maybe<TResult>> Lift<T, TResult>(Func<T, TResult> fn)
+    {
+        return maybe => maybe.Map(fn);
     }
 }
