@@ -116,5 +116,22 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
             false => Maybe.Nothing()
         };
     }
+
+    public TResult Match<TResult>(Func<T, TResult> just, Func<TResult> nothing)
+    {
+        return IsJust ? just.Invoke(_value!) : nothing.Invoke();
+    }
+
+    public void Match(Action<T> just, Action nothing)
+    {
+        if (IsJust)
+        {
+            just.Invoke(_value!);
+        }
+        else
+        {
+            nothing.Invoke();
+        }
+    }
     #endregion
 }

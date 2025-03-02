@@ -166,5 +166,22 @@ public readonly struct Either<TLeft, TRight>
             false => fn(_left!)
         };
     }
+
+    public TResult Match<TResult>(Func<TLeft, TResult> left, Func<TRight, TResult> right)
+    {
+        return IsRight ? right(_right!) : left(_left!);
+    }
+
+    public void Match(Action<TLeft> left, Action<TRight> right)
+    {
+        if (IsRight)
+        {
+            right.Invoke(_right!);
+        }
+        else
+        {
+            left.Invoke(_left!);
+        }
+    }
     #endregion
 }
