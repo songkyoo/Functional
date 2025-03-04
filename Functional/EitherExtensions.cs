@@ -2,17 +2,17 @@ namespace Macaron.Functional;
 
 public static class EitherExtensions
 {
-    public static TRight GetOrElse<TLeft, TRight>(this Either<TLeft, TRight> either, Func<TRight> supplier)
+    public static TRight GetOrElse<TLeft, TRight>(this Either<TLeft, TRight> either, Func<TRight> getDefaultValue)
     {
-        return either.IsRight ? either.Right : supplier.Invoke();
+        return either.IsRight ? either.Right : getDefaultValue();
     }
 
     public static Either<TLeft, TRight> OrElse<TLeft, TRight>(
         this Either<TLeft, TRight> either,
-        Func<TRight> supplier
+        Func<TRight> getDefaultValue
     )
     {
-        return either.IsRight ? either : Either.Right(supplier.Invoke());
+        return either.IsRight ? either : Either.Right(getDefaultValue());
     }
 
     public static Either<TLeft, TRight> OrElse<TLeft, TRight>(
@@ -25,14 +25,15 @@ public static class EitherExtensions
 
     public static Either<TLeft, TRight> OrElse<TLeft, TRight>(
         this Either<TLeft, TRight> either,
-        Func<Either<TLeft, TRight>> supplier
+        Func<Either<TLeft, TRight>> getDefaultValue
     )
     {
-        return either.IsRight ? either : supplier.Invoke();
+        return either.IsRight ? either : getDefaultValue();
     }
 
     public static Either<TLeft, TResult> Apply<TLeft, TRight, TResult>(
-        this Either<TLeft, Func<TRight, TResult>> fn, Either<TLeft, TRight> either
+        this Either<TLeft, Func<TRight, TResult>> fn,
+        Either<TLeft, TRight> either
     )
     {
         if (fn.IsRight)
