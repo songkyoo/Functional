@@ -1,6 +1,6 @@
 namespace Macaron.Functional;
 
-public static class Either
+public static partial class Either
 {
     public static LeftEither<TLeft> Left<TLeft>(in TLeft value)
     {
@@ -22,7 +22,9 @@ public static class Either
         return new RightEither<TLeft, TRight>(value);
     }
 
-    public static Func<Either<L, T>, Either<L, TResult>> Lift<L, T, TResult>(Func<T, TResult> fn)
+    public static Func<Either<TLeft, TRight>, Either<TLeft, TResult>> Lift<TLeft, TRight, TResult>(
+        Func<TRight, TResult> fn
+    )
     {
         return either => either.Map(fn);
     }

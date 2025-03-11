@@ -1,6 +1,6 @@
 namespace Macaron.Functional;
 
-public static class EitherExtensions
+public static partial class EitherExtensions
 {
     public static TRight GetOrElse<TLeft, TRight>(this Either<TLeft, TRight> either, Func<TRight> getDefaultValue)
     {
@@ -36,13 +36,20 @@ public static class EitherExtensions
         Either<TLeft, TRight> either
     )
     {
-        if (fn.IsRight)
-        {
-            return either.Map(fn.Right);
-        }
-        else
+        if (fn.IsLeft)
         {
             return Either.Left<TLeft, TResult>(fn.Left);
         }
+
+        if (either.IsLeft)
+        {
+            return Either.Left<TLeft, TResult>(either.Left);
+        }
+
+        var f = fn.Right;
+        var value = either.Right;
+        var result = f(value);
+
+        return Either.Right<TLeft, TResult>(result);
     }
 }
