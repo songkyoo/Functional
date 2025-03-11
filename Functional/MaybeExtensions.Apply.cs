@@ -15,8 +15,9 @@ partial class MaybeExtensions
         var f = fn.Value;
         var value1 = maybe1.Value;
         var value2 = maybe2.Value;
+        var result = f(value1, value2);
 
-        return Maybe.Just(f(value1, value2));
+        return Maybe.Just(result);
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, TResult>(
@@ -32,8 +33,9 @@ partial class MaybeExtensions
         var value1 = maybe1.Value;
         var value2 = maybe2.Value;
         var value3 = maybe3.Value;
+        var result = f(value1, value2, value3);
 
-        return Maybe.Just(f(value1, value2, value3));
+        return Maybe.Just(result);
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, T4, TResult>(
@@ -50,8 +52,9 @@ partial class MaybeExtensions
         var value2 = maybe2.Value;
         var value3 = maybe3.Value;
         var value4 = maybe4.Value;
+        var result = f(value1, value2, value3, value4);
 
-        return Maybe.Just(f(value1, value2, value3, value4));
+        return Maybe.Just(result);
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, T4, T5, TResult>(
@@ -69,8 +72,9 @@ partial class MaybeExtensions
         var value3 = maybe3.Value;
         var value4 = maybe4.Value;
         var value5 = maybe5.Value;
+        var result = f(value1, value2, value3, value4, value5);
 
-        return Maybe.Just(f(value1, value2, value3, value4, value5));
+        return Maybe.Just(result);
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, T4, T5, T6, TResult>(
@@ -89,8 +93,9 @@ partial class MaybeExtensions
         var value4 = maybe4.Value;
         var value5 = maybe5.Value;
         var value6 = maybe6.Value;
+        var result = f(value1, value2, value3, value4, value5, value6);
 
-        return Maybe.Just(f(value1, value2, value3, value4, value5, value6));
+        return Maybe.Just(result);
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, T4, T5, T6, T7, TResult>(
@@ -110,8 +115,9 @@ partial class MaybeExtensions
         var value5 = maybe5.Value;
         var value6 = maybe6.Value;
         var value7 = maybe7.Value;
+        var result = f(value1, value2, value3, value4, value5, value6, value7);
 
-        return Maybe.Just(f(value1, value2, value3, value4, value5, value6, value7));
+        return Maybe.Just(result);
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
@@ -132,8 +138,9 @@ partial class MaybeExtensions
         var value6 = maybe6.Value;
         var value7 = maybe7.Value;
         var value8 = maybe8.Value;
+        var result = f(value1, value2, value3, value4, value5, value6, value7, value8);
 
-        return Maybe.Just(f(value1, value2, value3, value4, value5, value6, value7, value8));
+        return Maybe.Just(result);
     }
 
 }

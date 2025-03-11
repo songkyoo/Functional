@@ -11,7 +11,7 @@ partial class Maybe
         Func<<# for (int j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult> fn
     )
     {
-        return (<# for (int j = 1; j <= i; j++) { #>maybe<#= j #><# if (j < i) { #>, <# } #> <# } #>) => Maybe.Just(fn).Apply(<# for (int j = 1; j <= i; j++) { #>maybe<#= j #><# if (j < i) { #>, <# } #> <# } #>);
+        return (<# for (int j = 1; j <= i; j++) { #>maybe<#= j #><# if (j < i) { #>, <# } #><# } #>) => Maybe.Just(fn).Apply(<# for (int j = 1; j <= i; j++) { #>maybe<#= j #><# if (j < i) { #>, <# } #><# } #>);
     }
 
 <# } #>
