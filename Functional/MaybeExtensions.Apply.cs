@@ -4,7 +4,9 @@ namespace Macaron.Functional;
 partial class MaybeExtensions
 {
     public static Maybe<TResult> Apply<T1, T2, TResult>(
-        this Maybe<Func<T1, T2, TResult>> fn, Maybe<T1> maybe1, Maybe<T2> maybe2
+        this Maybe<Func<T1, T2, TResult>> fn,
+        Maybe<T1> maybe1,
+        Maybe<T2> maybe2
     )
     {
         if (fn.IsNothing || maybe1.IsNothing || maybe2.IsNothing)
@@ -21,7 +23,10 @@ partial class MaybeExtensions
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, TResult>(
-        this Maybe<Func<T1, T2, T3, TResult>> fn, Maybe<T1> maybe1, Maybe<T2> maybe2, Maybe<T3> maybe3
+        this Maybe<Func<T1, T2, T3, TResult>> fn,
+        Maybe<T1> maybe1,
+        Maybe<T2> maybe2,
+        Maybe<T3> maybe3
     )
     {
         if (fn.IsNothing || maybe1.IsNothing || maybe2.IsNothing || maybe3.IsNothing)
@@ -39,7 +44,11 @@ partial class MaybeExtensions
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, T4, TResult>(
-        this Maybe<Func<T1, T2, T3, T4, TResult>> fn, Maybe<T1> maybe1, Maybe<T2> maybe2, Maybe<T3> maybe3, Maybe<T4> maybe4
+        this Maybe<Func<T1, T2, T3, T4, TResult>> fn,
+        Maybe<T1> maybe1,
+        Maybe<T2> maybe2,
+        Maybe<T3> maybe3,
+        Maybe<T4> maybe4
     )
     {
         if (fn.IsNothing || maybe1.IsNothing || maybe2.IsNothing || maybe3.IsNothing || maybe4.IsNothing)
@@ -58,7 +67,12 @@ partial class MaybeExtensions
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, T4, T5, TResult>(
-        this Maybe<Func<T1, T2, T3, T4, T5, TResult>> fn, Maybe<T1> maybe1, Maybe<T2> maybe2, Maybe<T3> maybe3, Maybe<T4> maybe4, Maybe<T5> maybe5
+        this Maybe<Func<T1, T2, T3, T4, T5, TResult>> fn,
+        Maybe<T1> maybe1,
+        Maybe<T2> maybe2,
+        Maybe<T3> maybe3,
+        Maybe<T4> maybe4,
+        Maybe<T5> maybe5
     )
     {
         if (fn.IsNothing || maybe1.IsNothing || maybe2.IsNothing || maybe3.IsNothing || maybe4.IsNothing || maybe5.IsNothing)
@@ -78,7 +92,13 @@ partial class MaybeExtensions
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, T4, T5, T6, TResult>(
-        this Maybe<Func<T1, T2, T3, T4, T5, T6, TResult>> fn, Maybe<T1> maybe1, Maybe<T2> maybe2, Maybe<T3> maybe3, Maybe<T4> maybe4, Maybe<T5> maybe5, Maybe<T6> maybe6
+        this Maybe<Func<T1, T2, T3, T4, T5, T6, TResult>> fn,
+        Maybe<T1> maybe1,
+        Maybe<T2> maybe2,
+        Maybe<T3> maybe3,
+        Maybe<T4> maybe4,
+        Maybe<T5> maybe5,
+        Maybe<T6> maybe6
     )
     {
         if (fn.IsNothing || maybe1.IsNothing || maybe2.IsNothing || maybe3.IsNothing || maybe4.IsNothing || maybe5.IsNothing || maybe6.IsNothing)
@@ -99,7 +119,14 @@ partial class MaybeExtensions
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, T4, T5, T6, T7, TResult>(
-        this Maybe<Func<T1, T2, T3, T4, T5, T6, T7, TResult>> fn, Maybe<T1> maybe1, Maybe<T2> maybe2, Maybe<T3> maybe3, Maybe<T4> maybe4, Maybe<T5> maybe5, Maybe<T6> maybe6, Maybe<T7> maybe7
+        this Maybe<Func<T1, T2, T3, T4, T5, T6, T7, TResult>> fn,
+        Maybe<T1> maybe1,
+        Maybe<T2> maybe2,
+        Maybe<T3> maybe3,
+        Maybe<T4> maybe4,
+        Maybe<T5> maybe5,
+        Maybe<T6> maybe6,
+        Maybe<T7> maybe7
     )
     {
         if (fn.IsNothing || maybe1.IsNothing || maybe2.IsNothing || maybe3.IsNothing || maybe4.IsNothing || maybe5.IsNothing || maybe6.IsNothing || maybe7.IsNothing)
@@ -121,7 +148,15 @@ partial class MaybeExtensions
     }
 
     public static Maybe<TResult> Apply<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
-        this Maybe<Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult>> fn, Maybe<T1> maybe1, Maybe<T2> maybe2, Maybe<T3> maybe3, Maybe<T4> maybe4, Maybe<T5> maybe5, Maybe<T6> maybe6, Maybe<T7> maybe7, Maybe<T8> maybe8
+        this Maybe<Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult>> fn,
+        Maybe<T1> maybe1,
+        Maybe<T2> maybe2,
+        Maybe<T3> maybe3,
+        Maybe<T4> maybe4,
+        Maybe<T5> maybe5,
+        Maybe<T6> maybe6,
+        Maybe<T7> maybe7,
+        Maybe<T8> maybe8
     )
     {
         if (fn.IsNothing || maybe1.IsNothing || maybe2.IsNothing || maybe3.IsNothing || maybe4.IsNothing || maybe5.IsNothing || maybe6.IsNothing || maybe7.IsNothing || maybe8.IsNothing)

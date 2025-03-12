@@ -33,7 +33,7 @@ for (int i = 2; i <= MaxCount; i++)
 
     string actionTypeParams = string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}"));
     string funcTypeParams = actionTypeParams + ", TResult";
-    string paramList = string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n} arg{n}"));
+    string paramList = string.Join(", ", Enumerable.Range(1, i).Select(n => $"arg{n}"));
 #>
     public static Func<<#= funcTypeParams #>> Uncurry<<#= funcTypeParams #>>(
         this <#= nestedFuncType #> fn

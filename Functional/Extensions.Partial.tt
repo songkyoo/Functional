@@ -81,7 +81,10 @@ private void GenerateMethod(IReadOnlyList<bool> fixedArgumentStates)
         ? $"Action<{string.Join(", ", returnTypeParams)}>"
         : "Action";
 #>
-    public static <#= funcReturnType #> Partial<<#= typeParams + ", TResult" #>>(this Func<<#= typeParams #>, TResult> fn, <#= string.Join(", ", funcParameters) #>)
+    public static <#= funcReturnType #> Partial<<#= typeParams + ", TResult" #>>(
+        this Func<<#= typeParams #>, TResult> fn,
+        <#= string.Join($",{Environment.NewLine}        ", funcParameters) #>
+    )
     {
 <#+
     if (returnTypeParams.Count > 0)
@@ -99,7 +102,10 @@ private void GenerateMethod(IReadOnlyList<bool> fixedArgumentStates)
 #>
     }
 
-    public static <#= actionReturnType #> Partial<<#= typeParams #>>(this Action<<#= typeParams #>> fn, <#= string.Join(", ", funcParameters) #>)
+    public static <#= actionReturnType #> Partial<<#= typeParams #>>(
+        this Action<<#= typeParams #>> fn,
+        <#= string.Join($",{Environment.NewLine}        ", funcParameters) #>
+    )
     {
 <#+
     if (returnTypeParams.Count > 0)

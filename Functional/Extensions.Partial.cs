@@ -3,4942 +3,13946 @@ namespace Macaron.Functional;
 
 partial class Extensions
 {
-    public static Func<T2, TResult> Partial<T1, T2, TResult>(this Func<T1, T2, TResult> fn, T1 arg1, Placeholder _2)
+    public static Func<T2, TResult> Partial<T1, T2, TResult>(
+        this Func<T1, T2, TResult> fn,
+        T1 arg1,
+        Placeholder _2
+    )
     {
         return (arg2) => fn(arg1, arg2);
     }
 
-    public static Action<T2> Partial<T1, T2>(this Action<T1, T2> fn, T1 arg1, Placeholder _2)
+    public static Action<T2> Partial<T1, T2>(
+        this Action<T1, T2> fn,
+        T1 arg1,
+        Placeholder _2
+    )
     {
         return (arg2) => fn(arg1, arg2);
     }
 
-    public static Func<T1, TResult> Partial<T1, T2, TResult>(this Func<T1, T2, TResult> fn, Placeholder _1, T2 arg2)
+    public static Func<T1, TResult> Partial<T1, T2, TResult>(
+        this Func<T1, T2, TResult> fn,
+        Placeholder _1,
+        T2 arg2
+    )
     {
         return (arg1) => fn(arg1, arg2);
     }
 
-    public static Action<T1> Partial<T1, T2>(this Action<T1, T2> fn, Placeholder _1, T2 arg2)
+    public static Action<T1> Partial<T1, T2>(
+        this Action<T1, T2> fn,
+        Placeholder _1,
+        T2 arg2
+    )
     {
         return (arg1) => fn(arg1, arg2);
     }
 
-    public static Func<T2, T3, TResult> Partial<T1, T2, T3, TResult>(this Func<T1, T2, T3, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3)
+    public static Func<T2, T3, TResult> Partial<T1, T2, T3, TResult>(
+        this Func<T1, T2, T3, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3);
     }
 
-    public static Action<T2, T3> Partial<T1, T2, T3>(this Action<T1, T2, T3> fn, T1 arg1, Placeholder _2, Placeholder _3)
+    public static Action<T2, T3> Partial<T1, T2, T3>(
+        this Action<T1, T2, T3> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3);
     }
 
-    public static Func<T1, T3, TResult> Partial<T1, T2, T3, TResult>(this Func<T1, T2, T3, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3)
+    public static Func<T1, T3, TResult> Partial<T1, T2, T3, TResult>(
+        this Func<T1, T2, T3, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3);
     }
 
-    public static Action<T1, T3> Partial<T1, T2, T3>(this Action<T1, T2, T3> fn, Placeholder _1, T2 arg2, Placeholder _3)
+    public static Action<T1, T3> Partial<T1, T2, T3>(
+        this Action<T1, T2, T3> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3);
     }
 
-    public static Func<T1, T2, TResult> Partial<T1, T2, T3, TResult>(this Func<T1, T2, T3, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3)
+    public static Func<T1, T2, TResult> Partial<T1, T2, T3, TResult>(
+        this Func<T1, T2, T3, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3);
     }
 
-    public static Action<T1, T2> Partial<T1, T2, T3>(this Action<T1, T2, T3> fn, Placeholder _1, Placeholder _2, T3 arg3)
+    public static Action<T1, T2> Partial<T1, T2, T3>(
+        this Action<T1, T2, T3> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3);
     }
 
-    public static Func<T3, TResult> Partial<T1, T2, T3, TResult>(this Func<T1, T2, T3, TResult> fn, T1 arg1, T2 arg2, Placeholder _3)
+    public static Func<T3, TResult> Partial<T1, T2, T3, TResult>(
+        this Func<T1, T2, T3, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3);
     }
 
-    public static Action<T3> Partial<T1, T2, T3>(this Action<T1, T2, T3> fn, T1 arg1, T2 arg2, Placeholder _3)
+    public static Action<T3> Partial<T1, T2, T3>(
+        this Action<T1, T2, T3> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3);
     }
 
-    public static Func<T2, TResult> Partial<T1, T2, T3, TResult>(this Func<T1, T2, T3, TResult> fn, T1 arg1, Placeholder _2, T3 arg3)
+    public static Func<T2, TResult> Partial<T1, T2, T3, TResult>(
+        this Func<T1, T2, T3, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3);
     }
 
-    public static Action<T2> Partial<T1, T2, T3>(this Action<T1, T2, T3> fn, T1 arg1, Placeholder _2, T3 arg3)
+    public static Action<T2> Partial<T1, T2, T3>(
+        this Action<T1, T2, T3> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3);
     }
 
-    public static Func<T1, TResult> Partial<T1, T2, T3, TResult>(this Func<T1, T2, T3, TResult> fn, Placeholder _1, T2 arg2, T3 arg3)
+    public static Func<T1, TResult> Partial<T1, T2, T3, TResult>(
+        this Func<T1, T2, T3, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3);
     }
 
-    public static Action<T1> Partial<T1, T2, T3>(this Action<T1, T2, T3> fn, Placeholder _1, T2 arg2, T3 arg3)
+    public static Action<T1> Partial<T1, T2, T3>(
+        this Action<T1, T2, T3> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3);
     }
 
-    public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4)
+    public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4
+    )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T2, T3, T4> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4)
+    public static Action<T2, T3, T4> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4
+    )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T1, T3, T4, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4)
+    public static Func<T1, T3, T4, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4
+    )
     {
         return (arg1, arg3, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T1, T3, T4> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4)
+    public static Action<T1, T3, T4> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4
+    )
     {
         return (arg1, arg3, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T1, T2, T4, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4)
+    public static Func<T1, T2, T4, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4
+    )
     {
         return (arg1, arg2, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T1, T2, T4> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4)
+    public static Action<T1, T2, T4> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4
+    )
     {
         return (arg1, arg2, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T1, T2, T3, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4)
+    public static Func<T1, T2, T3, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4
+    )
     {
         return (arg1, arg2, arg3) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T1, T2, T3> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4)
+    public static Action<T1, T2, T3> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4
+    )
     {
         return (arg1, arg2, arg3) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T3, T4, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4)
+    public static Func<T3, T4, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4
+    )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T3, T4> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4)
+    public static Action<T3, T4> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4
+    )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T2, T4, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4)
+    public static Func<T2, T4, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4
+    )
     {
         return (arg2, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T2, T4> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4)
+    public static Action<T2, T4> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4
+    )
     {
         return (arg2, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T2, T3, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4)
+    public static Func<T2, T3, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T2, T3> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4)
+    public static Action<T2, T3> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T1, T4, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4)
+    public static Func<T1, T4, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4
+    )
     {
         return (arg1, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T1, T4> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4)
+    public static Action<T1, T4> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4
+    )
     {
         return (arg1, arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T1, T3, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4)
+    public static Func<T1, T3, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T1, T3> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4)
+    public static Action<T1, T3> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T1, T2, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4)
+    public static Func<T1, T2, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T1, T2> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4)
+    public static Action<T1, T2> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T4, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4)
+    public static Func<T4, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4
+    )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T4> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4)
+    public static Action<T4> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4
+    )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T3, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4)
+    public static Func<T3, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T3> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4)
+    public static Action<T3> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T2, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4)
+    public static Func<T2, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T2> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4)
+    public static Action<T2> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T1, TResult> Partial<T1, T2, T3, T4, TResult>(this Func<T1, T2, T3, T4, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4)
+    public static Func<T1, TResult> Partial<T1, T2, T3, T4, TResult>(
+        this Func<T1, T2, T3, T4, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Action<T1> Partial<T1, T2, T3, T4>(this Action<T1, T2, T3, T4> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4)
+    public static Action<T1> Partial<T1, T2, T3, T4>(
+        this Action<T1, T2, T3, T4> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3, arg4);
     }
 
-    public static Func<T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5)
+    public static Func<T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5)
+    public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5)
+    public static Func<T1, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg1, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5)
+    public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg1, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5)
+    public static Func<T1, T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg1, arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5)
+    public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg1, arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5)
+    public static Func<T1, T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg1, arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5)
+    public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg1, arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5)
+    public static Func<T1, T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg1, arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5)
+    public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg1, arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5)
+    public static Func<T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5)
+    public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5)
+    public static Func<T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5)
+    public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5)
+    public static Func<T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5)
+    public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5)
+    public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5)
+    public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5)
+    public static Func<T1, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg1, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5)
+    public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg1, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5)
+    public static Func<T1, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg1, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5)
+    public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg1, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5)
+    public static Func<T1, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg1, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5)
+    public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg1, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T2, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5)
+    public static Func<T1, T2, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg1, arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5)
+    public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg1, arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T2, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5)
+    public static Func<T1, T2, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg1, arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5)
+    public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg1, arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T2, T3, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5)
+    public static Func<T1, T2, T3, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg1, arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5)
+    public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg1, arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5)
+    public static Func<T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T4, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5)
+    public static Action<T4, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5
+    )
     {
         return (arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T3, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5)
+    public static Func<T3, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T3, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5)
+    public static Action<T3, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T3, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5)
+    public static Func<T3, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T3, T4> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5)
+    public static Action<T3, T4> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T2, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5)
+    public static Func<T2, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T2, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5)
+    public static Action<T2, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T2, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5)
+    public static Func<T2, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T2, T4> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5)
+    public static Action<T2, T4> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T2, T3, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5)
+    public static Func<T2, T3, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T2, T3> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5)
+    public static Action<T2, T3> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5)
+    public static Func<T1, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg1, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5)
+    public static Action<T1, T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg1, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5)
+    public static Func<T1, T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg1, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T4> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5)
+    public static Action<T1, T4> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg1, arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T3, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5)
+    public static Func<T1, T3, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T3> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5)
+    public static Action<T1, T3> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, T2, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5)
+    public static Func<T1, T2, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1, T2> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5)
+    public static Action<T1, T2> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5)
+    public static Func<T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T5> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5)
+    public static Action<T5> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5
+    )
     {
         return (arg5) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5)
+    public static Func<T4, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T4> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5)
+    public static Action<T4> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5
+    )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T3, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5)
+    public static Func<T3, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T3> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5)
+    public static Action<T3> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T2, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5)
+    public static Func<T2, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T2> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5)
+    public static Action<T2> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T1, TResult> Partial<T1, T2, T3, T4, T5, TResult>(this Func<T1, T2, T3, T4, T5, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
+    public static Func<T1, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
+        this Func<T1, T2, T3, T4, T5, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Action<T1> Partial<T1, T2, T3, T4, T5>(this Action<T1, T2, T3, T4, T5> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
+    public static Action<T1> Partial<T1, T2, T3, T4, T5>(
+        this Action<T1, T2, T3, T4, T5> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3, arg4, arg5);
     }
 
-    public static Func<T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Func<T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Action<T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Func<T1, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Action<T1, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Func<T1, T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Action<T1, T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Func<T1, T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Action<T1, T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Func<T1, T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Action<T1, T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Func<T1, T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Action<T1, T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Func<T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Action<T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Func<T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Action<T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Func<T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Action<T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Func<T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Action<T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Func<T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Func<T1, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Action<T1, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Func<T1, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Action<T1, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Func<T1, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Action<T1, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Func<T1, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Func<T1, T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Action<T1, T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Func<T1, T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Action<T1, T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Func<T1, T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Func<T1, T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Action<T1, T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Func<T1, T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Func<T1, T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Func<T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6)
+    public static Action<T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Func<T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Action<T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Func<T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Action<T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Func<T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Func<T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Action<T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Func<T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Action<T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Func<T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Func<T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Action<T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Func<T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Func<T1, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Action<T1, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg1, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Func<T1, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Action<T1, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Func<T1, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Func<T1, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T3, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Action<T1, T3, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Func<T1, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Func<T1, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Func<T1, T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Action<T1, T2, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Func<T1, T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Func<T1, T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6)
+    public static Func<T1, T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6)
+    public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Func<T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T5, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6)
+    public static Action<T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6
+    )
     {
         return (arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Func<T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T4, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6)
+    public static Action<T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Func<T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T4, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6)
+    public static Action<T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Func<T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T3, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Action<T3, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Func<T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T3, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Action<T3, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Func<T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T3, T4> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Action<T3, T4> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Func<T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Action<T2, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Func<T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Action<T2, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Func<T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T4> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Action<T2, T4> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6)
+    public static Func<T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2, T3> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6)
+    public static Action<T2, T3> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Func<T1, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Action<T1, T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg1, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Func<T1, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Action<T1, T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg1, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Func<T1, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T4> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Action<T1, T4> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6)
+    public static Func<T1, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T3> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6)
+    public static Action<T1, T3> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, T2, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
+    public static Func<T1, T2, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1, T2> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
+    public static Action<T1, T2> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Func<T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T6> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6)
+    public static Action<T6> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6
+    )
     {
         return (arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Func<T5, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T5> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6)
+    public static Action<T5> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6
+    )
     {
         return (arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Func<T4, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T4> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6)
+    public static Action<T4> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T3, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6)
+    public static Func<T3, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T3> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6)
+    public static Action<T3> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
+    public static Func<T2, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T2> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
+    public static Action<T2> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T1, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(this Func<T1, T2, T3, T4, T5, T6, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
+    public static Func<T1, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Action<T1> Partial<T1, T2, T3, T4, T5, T6>(this Action<T1, T2, T3, T4, T5, T6> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
+    public static Action<T1> Partial<T1, T2, T3, T4, T5, T6>(
+        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
     }
 
-    public static Func<T2, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T2, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T2, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T2, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T2, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T2, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T1, T2, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T1, T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T1, T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T1, T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T2, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T2, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T2, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T2, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T1, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T1, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T1, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T1, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T2, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T2, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T1, T2, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T1, T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T1, T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T1, T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T2, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T1, T2, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T1, T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T1, T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T1, T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T1, T2, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T1, T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T1, T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T1, T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T1, T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T1, T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T2, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T2, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T2, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T2, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T2, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T2, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T1, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T1, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T1, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T1, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T1, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T1, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T1, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T1, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T1, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T1, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T1, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T1, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T1, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T2, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T1, T2, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T1, T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T1, T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T1, T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T1, T2, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T1, T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T1, T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T1, T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T1, T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T1, T2, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T1, T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T1, T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T1, T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T1, T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T1, T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Func<T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7)
+    public static Action<T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T2, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg2, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T2, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T2, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T2, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T1, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T1, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg1, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T1, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T1, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T1, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T1, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T1, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T1, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T1, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T1, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T1, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T1, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T1, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T1, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T1, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T1, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T1, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T1, T2, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T1, T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg2, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T1, T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T1, T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T1, T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T1, T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T1, T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Func<T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7)
+    public static Action<T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7
+    )
     {
         return (arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Func<T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7)
+    public static Action<T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Func<T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7)
+    public static Action<T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T2, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg2, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T1, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T1, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg1, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T1, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T1, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg1, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T1, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T1, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T1, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T1, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T1, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T3> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T1, T3> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, T2, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T1, T2, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1, T2> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T1, T2> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Func<T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T7> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7)
+    public static Action<T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7
+    )
     {
         return (arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Func<T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T6> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7)
+    public static Action<T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7
+    )
     {
         return (arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Func<T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T5> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7)
+    public static Action<T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T4> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T3> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T3> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T2, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T2> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T2> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T1, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Func<T1, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Action<T1> Partial<T1, T2, T3, T4, T5, T6, T7>(this Action<T1, T2, T3, T4, T5, T6, T7> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+    public static Action<T1> Partial<T1, T2, T3, T4, T5, T6, T7>(
+        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
-    public static Func<T2, T3, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T3, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T3, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T3, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T3, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T3, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T3, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T3, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T3, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T3, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T3, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T3, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T3, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T3, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T2, T3, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T2, T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T2, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T2, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T3, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T3, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T3, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T3, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T3, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T3, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T3, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T3, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T3, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T3, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T3, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T3, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T3, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T3, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T2, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T2, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T2, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T3, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T3, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T2, T3, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T2, T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T2, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T3, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T2, T3, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T2, T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T2, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T2, T3, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T2, T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T2, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T3, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T3, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T3, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T3, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T3, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T3, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T3, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T3, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T3, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T3, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T4, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg4, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T4, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg4, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T4, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg4, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T3, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T3, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T3, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T3, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T3, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T3, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T3, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T3, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T3, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T2, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T2, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T2, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T2, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T2, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T2, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T2, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T2, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T2, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T2, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T3, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T2, T3, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T2, T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T2, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T2, T3, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T2, T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T2, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T2, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T2, T3, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T2, T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T2, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T2, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T3, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T3, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T3, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T3, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T2, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T2, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T3, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg3, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Func<T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, Placeholder _8)
+    public static Action<T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T5, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg5, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T5, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg5, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T4, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg4, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T4, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg4, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T4, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg4, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T4, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg4, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T4, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg4, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T3, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg3, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T3, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T3, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T3, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T3, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T3, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T3, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T3, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T3, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T2, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T2, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg2, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T2, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T2, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T2, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T2, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T2, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T2, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T2, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T2, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T2, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T2, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T2, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T2, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T2, T3, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T2, T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg3, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T2, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T2, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T2, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T1, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T1, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg1, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T1, T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T1, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T1, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T1, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T3, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg3, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T2, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T2, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg2, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T2, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Func<T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, Placeholder _8)
+    public static Action<T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        Placeholder _8
+    )
     {
         return (arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Func<T6, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, Placeholder _8)
+    public static Action<T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg6, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Func<T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, Placeholder _7, T8 arg8)
+    public static Action<T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T5, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg5, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T5, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg5, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T4, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg4, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T4, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg4, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T4, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg4, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T4, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T3, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg3, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T3, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg3, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T3, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T3, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T3, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T2, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T2, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg2, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T2, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg2, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T2, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T2, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T2, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T2, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T1, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T1, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg1, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T1, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T1, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg1, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T1, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T1, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, T2, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, T2, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1, T2> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1, T2> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1, arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Func<T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, Placeholder _8)
+    public static Action<T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        Placeholder _8
+    )
     {
         return (arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Func<T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, Placeholder _7, T8 arg8)
+    public static Action<T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        Placeholder _7,
+        T8 arg8
+    )
     {
         return (arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Func<T6, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, Placeholder _6, T7 arg7, T8 arg8)
+    public static Action<T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        Placeholder _6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T5, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, T4 arg4, Placeholder _5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        Placeholder _5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg5) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T4, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, T3 arg3, Placeholder _4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        T3 arg3,
+        Placeholder _4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T3, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, T2 arg2, Placeholder _3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        T2 arg2,
+        Placeholder _3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg3) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T2, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T2, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T2> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, T1 arg1, Placeholder _2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T2> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        T1 arg1,
+        Placeholder _2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg2) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Func<T1, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Func<T1, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
 
-    public static Action<T1> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn, Placeholder _1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
+    public static Action<T1> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Placeholder _1,
+        T2 arg2,
+        T3 arg3,
+        T4 arg4,
+        T5 arg5,
+        T6 arg6,
+        T7 arg7,
+        T8 arg8
+    )
     {
         return (arg1) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     }
