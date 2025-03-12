@@ -1,6 +1,6 @@
 namespace Macaron.Functional;
 
-public struct RightEither<TRight>
+public readonly struct RightEither<TRight>
 {
     public readonly TRight Value;
 
