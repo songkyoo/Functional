@@ -17,13 +17,17 @@
 
   <Target Name="TransformT4TextTemplates" BeforeTargets="BeforeBuild">
     <Exec Command="dotnet tool restore" />
-    <Exec Command="dotnet t4 Extensions.Partial.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Either.Lift.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 EitherExtensions.Apply.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Extensions.Curry.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Extensions.Partial.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Extensions.Uncurry.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Maybe.Lift.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 MaybeExtensions.Apply.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Compose.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Utility.Nothing.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Pipe.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Utility.Tuple.tt -p:MaxCount=8" />
   </Target>
 
 </Project>
