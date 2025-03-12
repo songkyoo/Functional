@@ -8,22 +8,22 @@ public readonly struct Either<TLeft, TRight>
     , IEquatable<RightEither<TLeft, TRight>>
 {
     #region Implicit Conversion Operators
-    public static implicit operator Either<TLeft, TRight>(in LeftEither<TLeft> left)
+    public static implicit operator Either<TLeft, TRight>(LeftEither<TLeft> left)
     {
         return new Either<TLeft, TRight>(isRight: false, right: default, left: left.Value);
     }
 
-    public static implicit operator Either<TLeft, TRight>(in LeftEither<TLeft, TRight> left)
+    public static implicit operator Either<TLeft, TRight>(LeftEither<TLeft, TRight> left)
     {
         return new Either<TLeft, TRight>(isRight: false, right: default, left: left.Value);
     }
 
-    public static implicit operator Either<TLeft, TRight>(in RightEither<TRight> right)
+    public static implicit operator Either<TLeft, TRight>(RightEither<TRight> right)
     {
         return new Either<TLeft, TRight>(isRight: true, right: right.Value, left: default);
     }
 
-    public static implicit operator Either<TLeft, TRight>(in RightEither<TLeft, TRight> right)
+    public static implicit operator Either<TLeft, TRight>(RightEither<TLeft, TRight> right)
     {
         return new Either<TLeft, TRight>(isRight: true, right: right.Value, left: default);
     }
@@ -46,7 +46,7 @@ public readonly struct Either<TLeft, TRight>
     #endregion
 
     #region Constructors
-    private Either(bool isRight, in TLeft? left, in TRight? right)
+    private Either(bool isRight, TLeft? left, TRight? right)
     {
         _isRight = isRight;
         _left = left;
@@ -117,12 +117,12 @@ public readonly struct Either<TLeft, TRight>
     #endregion
 
     #region Methods
-    public TRight GetOrElse(in TRight value)
+    public TRight GetOrElse(TRight value)
     {
         return IsRight ? _right! : value;
     }
 
-    public Either<TLeft, TRight> OrElse(in TRight value)
+    public Either<TLeft, TRight> OrElse(TRight value)
     {
         return IsRight switch
         {

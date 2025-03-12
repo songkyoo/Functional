@@ -4,7 +4,7 @@ public struct RightEither<TRight>
 {
     public readonly TRight Value;
 
-    public RightEither(in TRight value)
+    public RightEither(TRight value)
     {
         Value = value;
     }

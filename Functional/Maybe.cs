@@ -2,7 +2,7 @@
 
 public static partial class Maybe
 {
-    public static Maybe<T> Just<T>(in T value)
+    public static Maybe<T> Just<T>(T value)
     {
         return new JustMaybe<T>(value);
     }

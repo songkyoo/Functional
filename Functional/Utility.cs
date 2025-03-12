@@ -2,7 +2,7 @@ namespace Macaron.Functional;
 
 public static partial class Utility
 {
-    public static T Identity<T>(in T value)
+    public static T Identity<T>(T value)
     {
         return value;
     }

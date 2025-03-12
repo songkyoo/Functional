@@ -17,7 +17,7 @@ public static partial class EitherExtensions
 
     public static Either<TLeft, TRight> OrElse<TLeft, TRight>(
         this Either<TLeft, TRight> either,
-        in Either<TLeft, TRight> other
+        Either<TLeft, TRight> other
     )
     {
         return either.IsRight ? either : other;

@@ -12,7 +12,7 @@ public static partial class MaybeExtensions
         return maybe.IsJust ? maybe : Maybe.Just(getDefaultValue());
     }
 
-    public static Maybe<T> OrElse<T>(this Maybe<T> maybe, in Maybe<T> other)
+    public static Maybe<T> OrElse<T>(this Maybe<T> maybe, Maybe<T> other)
     {
         return maybe.IsJust ? maybe : other;
     }

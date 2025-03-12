@@ -4,7 +4,7 @@ public readonly struct LeftEither<TLeft>
 {
     public readonly TLeft Value;
 
-    public LeftEither(in TLeft value)
+    public LeftEither(TLeft value)
     {
         Value = value;
     }

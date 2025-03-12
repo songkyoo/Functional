@@ -3,17 +3,17 @@ namespace Macaron.Functional;
 public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>, IEquatable<NothingMaybe>
 {
     #region Implicit Conversion Operators
-    public static implicit operator Maybe<T>(in JustMaybe<T> just)
+    public static implicit operator Maybe<T>(JustMaybe<T> just)
     {
         return new Maybe<T>(isJust: true, value: just.Value);
     }
 
-    public static implicit operator Maybe<T>(in NothingMaybe nothing)
+    public static implicit operator Maybe<T>(NothingMaybe nothing)
     {
         return new Maybe<T>(isJust: false, value: default);
     }
 
-    public static implicit operator Maybe<T>(in NothingMaybe<T> nothing)
+    public static implicit operator Maybe<T>(NothingMaybe<T> nothing)
     {
         return new Maybe<T>(isJust: false, value: default);
     }
@@ -33,7 +33,7 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     #endregion
 
     #region Constructors
-    private Maybe(bool isJust, in T? value)
+    private Maybe(bool isJust, T? value)
     {
         _isJust = isJust;
         _value = value;
@@ -85,12 +85,12 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     #endregion
 
     #region Methods
-    public T GetOrElse(in T value)
+    public T GetOrElse(T value)
     {
         return IsJust ? _value! : value;
     }
 
-    public Maybe<T> OrElse(in T value)
+    public Maybe<T> OrElse(T value)
     {
         return IsJust switch
         {
