@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <PackageId>Macaron.Functional</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Gyu Song</Authors>
     <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/songkyoo/Functional</RepositoryUrl>
