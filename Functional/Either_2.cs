@@ -135,7 +135,7 @@ public readonly struct Either<TLeft, TRight>
     {
         return IsRight switch
         {
-            true => Either.Right(fn(_right!)),
+            true => Either.Right(fn.Invoke(_right!)),
             false => Either.Left<TLeft, TResult>(_left!)
         };
     }
@@ -144,7 +144,7 @@ public readonly struct Either<TLeft, TRight>
     {
         return IsRight switch
         {
-            true => fn(_right!),
+            true => fn.Invoke(_right!),
             false => Either.Left<TLeft, TResult>(_left!)
         };
     }
@@ -154,7 +154,7 @@ public readonly struct Either<TLeft, TRight>
         return IsRight switch
         {
             true => Either.Right<TResult, TRight>(_right!),
-            false => Either.Left(fn(_left!))
+            false => Either.Left(fn.Invoke(_left!))
         };
     }
 
@@ -163,13 +163,13 @@ public readonly struct Either<TLeft, TRight>
         return IsRight switch
         {
             true => Either.Right<TResult, TRight>(_right!),
-            false => fn(_left!)
+            false => fn.Invoke(_left!)
         };
     }
 
     public TResult Match<TResult>(Func<TLeft, TResult> left, Func<TRight, TResult> right)
     {
-        return IsRight ? right(_right!) : left(_left!);
+        return IsRight ? right.Invoke(_right!) : left.Invoke(_left!);
     }
 
     public void Match(Action<TLeft> left, Action<TRight> right)

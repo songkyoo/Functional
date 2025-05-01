@@ -199,4 +199,13 @@ public class EitherTest
 
         Assert.That(either.FlatMapLeft(toUpper), Is.EqualTo(Right("FOO")));
     }
+
+    [Test]
+    public void LinqQuery_WithEitherType_ShouldTransformCorrectly()
+    {
+        var either = Right<int, string>("Foo");
+        var result = from x in either select x.ToUpper();
+
+        Assert.That(result.Right, Is.EqualTo("FOO"));
+    }
 }

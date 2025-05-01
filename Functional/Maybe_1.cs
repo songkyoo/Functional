@@ -103,7 +103,7 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     {
         return IsJust switch
         {
-            true => Maybe.Just(fn(_value!)),
+            true => Maybe.Just(fn.Invoke(_value!)),
             false => Maybe.Nothing()
         };
     }
@@ -112,7 +112,7 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     {
         return IsJust switch
         {
-            true => fn(_value!),
+            true => fn.Invoke(_value!),
             false => Maybe.Nothing()
         };
     }

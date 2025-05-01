@@ -121,4 +121,15 @@ public class MaybeTest
 
         Assert.That(option.FlatMap(toUpper), Is.EqualTo(Nothing()));
     }
+
+    [Test]
+    public void LinqQuery_WithMaybeType_ShouldFilterAndTransformCorrectly()
+    {
+        var maybe = Just("Foo");
+        var just = from x in maybe where x.Length > 2 select x.ToUpper();
+        var nothing = from x in maybe where x.Length < 2 select x.ToUpper();
+
+        Assert.That(just.Value, Is.EqualTo("FOO"));
+        Assert.That(nothing.IsNothing, Is.True);
+    }
 }

@@ -2,6 +2,22 @@ namespace Macaron.Functional;
 
 public static partial class EitherExtensions
 {
+    public static Either<TLeft, TResult> Select<TLeft, TRight, TResult>(
+        this Either<TLeft, TRight> either,
+        Func<TRight, TResult> selector
+    )
+    {
+        return either.Map(selector);
+    }
+
+    public static Either<TLeft, TResult> SelectMany<TLeft, TRight, TResult>(
+        this Either<TLeft, TRight> either,
+        Func<TRight, Either<TLeft, TResult>> selector
+    )
+    {
+        return either.FlatMap(selector);
+    }
+
     public static TRight GetOrElse<TLeft, TRight>(this Either<TLeft, TRight> either, Func<TRight> getDefaultValue)
     {
         return either.IsRight ? either.Right : getDefaultValue();
