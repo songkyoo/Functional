@@ -18,17 +18,7 @@ public static partial class Extensions
         return predicate(self) ? self : null;
     }
 
-    public static T? TakeIfStruct<T>(this T self, Func<T, bool> predicate) where T : struct
-    {
-        return predicate(self) ? self : null;
-    }
-
     public static T? TakeUnless<T>(this T self, Func<T, bool> predicate) where T : class
-    {
-        return !predicate(self) ? self : null;
-    }
-
-    public static T? TakeUnlessStruct<T>(this T self, Func<T, bool> predicate) where T : struct
     {
         return !predicate(self) ? self : null;
     }
