@@ -8,128 +8,135 @@ public class MaybeTest
     [Test]
     public void DefaultCtor_WithoutJustOrNothing_CreateInvalidMaybeObject()
     {
-        Maybe<string> option = default;
+        Maybe<string> maybe = default;
 
-        Assert.That(() => option.IsJust, Throws.Exception.InstanceOf<InvalidOperationException>());
-        Assert.That(() => option.IsNothing, Throws.Exception.InstanceOf<InvalidOperationException>());
-        Assert.That(() => option.Value, Throws.Exception.InstanceOf<InvalidOperationException>());
+        Assert.That(() => maybe.IsJust, Throws.Exception.InstanceOf<InvalidOperationException>());
+        Assert.That(() => maybe.IsNothing, Throws.Exception.InstanceOf<InvalidOperationException>());
+        Assert.That(() => maybe.Value, Throws.Exception.InstanceOf<InvalidOperationException>());
     }
 
     [Test]
     public void Just_WithValue_ReturnsJustMaybe()
     {
-        Maybe<string> option = Just("Foo");
+        Maybe<string> just = Just("Foo");
 
-        Assert.That(option.IsJust, Is.True);
-        Assert.That(option.IsNothing, Is.False);
-        Assert.That(option.Value, Is.EqualTo("Foo"));
+        Assert.That(just.IsJust, Is.True);
+        Assert.That(just.IsNothing, Is.False);
+        Assert.That(just.Value, Is.EqualTo("Foo"));
     }
 
     [Test]
     public void Nothing_WithoutType_ReturnsNothingMaybe()
     {
-        Maybe<string> option = Nothing();
+        Maybe<string> nothing = Nothing();
 
-        Assert.That(option.IsJust, Is.False);
-        Assert.That(option.IsNothing, Is.True);
-        Assert.That(() => option.Value, Throws.Exception.InstanceOf<InvalidOperationException>());
+        Assert.That(nothing.IsJust, Is.False);
+        Assert.That(nothing.IsNothing, Is.True);
+        Assert.That(() => nothing.Value, Throws.Exception.InstanceOf<InvalidOperationException>());
     }
 
     [Test]
     public void Nothing_WithType_ReturnsNothingMaybe()
     {
-        Maybe<string> option = Nothing<string>();
+        Maybe<string> nothing = Nothing<string>();
 
-        Assert.That(option.IsJust, Is.False);
-        Assert.That(option.IsNothing, Is.True);
-        Assert.That(() => option.Value, Throws.Exception.InstanceOf<InvalidOperationException>());
-    }
-
-    [Test]
-    public void GetOrElse_JustMaybe_ReturnsMaybeValue()
-    {
-        Maybe<string> option = Just("Foo");
-
-        Assert.That(option.GetOrElse("Bar"), Is.EqualTo("Foo"));
-    }
-
-    [Test]
-    public void GetOrElse_NothingMaybe_ReturnsReplacementValue()
-    {
-        Maybe<string> option = Nothing();
-
-        Assert.That(option.GetOrElse("Bar"), Is.EqualTo("Bar"));
-    }
-
-    [Test]
-    public void OrElse_JustMaybe_ReturnsSelf()
-    {
-        Maybe<string> option = Just("Foo");
-
-        Assert.That(option.OrElse("Bar"), Is.EqualTo(Just("Foo")));
-    }
-
-    [Test]
-    public void OrElse_NothingMaybe_ReturnsJustMaybe()
-    {
-        Maybe<string> option = Nothing();
-
-        Assert.That(option.OrElse("Bar"), Is.EqualTo(Just("Bar")));
+        Assert.That(nothing.IsJust, Is.False);
+        Assert.That(nothing.IsNothing, Is.True);
+        Assert.That(() => nothing.Value, Throws.Exception.InstanceOf<InvalidOperationException>());
     }
 
     [Test]
     public void Map_JustMaybe_ReturnsJustMaybe()
     {
-        Maybe<string> option = Just("Foo");
+        Maybe<string> just = Just("Foo");
         Func<string, string> toUpper = str => str.ToUpper();
 
-        Assert.That(option.Map(toUpper), Is.EqualTo(Just("FOO")));
+        Assert.That(just.Map(toUpper), Is.EqualTo(Just("FOO")));
     }
 
     [Test]
     public void Map_NothingMaybe_ReturnsNothingMaybe()
     {
-        Maybe<string> option = Nothing();
+        Maybe<string> nothing = Nothing();
         Func<string, string> toUpper = str => str.ToUpper();
 
-        Assert.That(option.Map(toUpper), Is.EqualTo(Nothing()));
+        Assert.That(nothing.Map(toUpper), Is.EqualTo(Nothing()));
     }
 
     [Test]
     public void FlatMap_JustMaybeReturnedByFuncWithJustMaybe_ReturnsReturnedJustMaybe()
     {
-        Maybe<string> option = Just("Foo");
+        Maybe<string> just = Just("Foo");
         Func<string, Maybe<string>> toUpper = str => Just(str.ToUpper());
 
-        Assert.That(option.FlatMap(toUpper), Is.EqualTo(Just("FOO")));
+        Assert.That(just.FlatMap(toUpper), Is.EqualTo(Just("FOO")));
     }
 
     [Test]
     public void FlatMap_NothingMaybeReturnedByFuncWithJustMaybe_ReturnsReturnedNothingMaybe()
     {
-        Maybe<string> option = Just("Foo");
+        Maybe<string> just = Just("Foo");
         Func<string, Maybe<string>> toNothing = _ => Nothing();
 
-        Assert.That(option.FlatMap(toNothing), Is.EqualTo(Nothing()));
+        Assert.That(just.FlatMap(toNothing), Is.EqualTo(Nothing()));
     }
 
     [Test]
     public void FlatMap_NothingMaybe_ReturnsNothingMaybe()
     {
-        Maybe<string> option = Nothing();
+        Maybe<string> nothing = Nothing();
         Func<string, Maybe<string>> toUpper = str => Just(str.ToUpper());
 
-        Assert.That(option.FlatMap(toUpper), Is.EqualTo(Nothing()));
+        Assert.That(nothing.FlatMap(toUpper), Is.EqualTo(Nothing()));
     }
 
     [Test]
-    public void LinqQuery_WithMaybeType_ShouldFilterAndTransformCorrectly()
+    public void Match_JustMaybe_ReturnsJustValue()
     {
-        var maybe = Just("Foo");
-        var just = from x in maybe where x.Length > 2 select x.ToUpper();
-        var nothing = from x in maybe where x.Length < 2 select x.ToUpper();
+        Maybe<string> just = Just("Foo");
 
-        Assert.That(just.Value, Is.EqualTo("FOO"));
-        Assert.That(nothing.IsNothing, Is.True);
+        Assert.That(
+            actual: just.Match(
+                just: value => value,
+                nothing: () => "Nothing"
+            ),
+            expression: Is.EqualTo("Foo")
+        );
+    }
+
+    [Test]
+    public void Match_NothingMaybe_ReturnsNothingValue()
+    {
+        Maybe<string> nothing = Nothing();
+
+        Assert.That(
+            actual: nothing.Match(
+                just: value => value,
+                nothing: () => "Nothing"
+            ),
+            expression: Is.EqualTo("Nothing")
+        );
+    }
+
+    [Test]
+    public void Match_JustMaybe_ExecutesJustAction()
+    {
+        Maybe<string> just = Just("Foo");
+
+        var executed = false;
+        just.Match(just: _ => executed = true, nothing: () => { });
+
+        Assert.That(executed, Is.True);
+    }
+
+    [Test]
+    public void Match_NothingMaybe_ExecutesNothingAction()
+    {
+        Maybe<string> nothing = Nothing();
+
+        var executed = false;
+        nothing.Match(just: _ => { }, nothing: () => executed = true);
+
+        Assert.That(executed, Is.True);
     }
 }

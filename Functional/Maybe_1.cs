@@ -85,20 +85,6 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     #endregion
 
     #region Methods
-    public T GetOrElse(T value)
-    {
-        return IsJust ? _value! : value;
-    }
-
-    public Maybe<T> OrElse(T value)
-    {
-        return IsJust switch
-        {
-            true => this,
-            false => Maybe.Just(value)
-        };
-    }
-
     public Maybe<TResult> Map<TResult>(Func<T, TResult> fn)
     {
         return IsJust switch

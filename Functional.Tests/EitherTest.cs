@@ -19,193 +19,210 @@ public class EitherTest
     [Test]
     public void Right_WithRight_ReturnsRightEither()
     {
-        Either<string, string> either = Right("Foo");
+        Either<string, string> right = Right("Foo");
 
-        Assert.That(either.IsLeft, Is.False);
-        Assert.That(either.IsRight, Is.True);
-        Assert.That(() => either.Left, Throws.Exception.InstanceOf<InvalidOperationException>());
-        Assert.That(either.Right, Is.EqualTo("Foo"));
+        Assert.That(right.IsLeft, Is.False);
+        Assert.That(right.IsRight, Is.True);
+        Assert.That(() => right.Left, Throws.Exception.InstanceOf<InvalidOperationException>());
+        Assert.That(right.Right, Is.EqualTo("Foo"));
     }
 
     [Test]
     public void Right_WithTypeAndRight_ReturnsRightEither()
     {
-        Either<string, string> either = Right<string, string>("Foo");
+        Either<string, string> right = Right<string, string>("Foo");
 
-        Assert.That(either.IsLeft, Is.False);
-        Assert.That(either.IsRight, Is.True);
-        Assert.That(() => either.Left, Throws.Exception.InstanceOf<InvalidOperationException>());
-        Assert.That(either.Right, Is.EqualTo("Foo"));
+        Assert.That(right.IsLeft, Is.False);
+        Assert.That(right.IsRight, Is.True);
+        Assert.That(() => right.Left, Throws.Exception.InstanceOf<InvalidOperationException>());
+        Assert.That(right.Right, Is.EqualTo("Foo"));
     }
 
     [Test]
     public void Left_WithLeft_ReturnsLeftEither()
     {
-        Either<string, string> either = Left("Bar");
+        Either<string, string> left = Left("Bar");
 
-        Assert.That(either.IsLeft, Is.True);
-        Assert.That(either.IsRight, Is.False);
-        Assert.That(() => either.Right, Throws.Exception.InstanceOf<InvalidOperationException>());
-        Assert.That(either.Left, Is.EqualTo("Bar"));
+        Assert.That(left.IsLeft, Is.True);
+        Assert.That(left.IsRight, Is.False);
+        Assert.That(() => left.Right, Throws.Exception.InstanceOf<InvalidOperationException>());
+        Assert.That(left.Left, Is.EqualTo("Bar"));
     }
 
     [Test]
     public void Left_WithTypeAndLeft_ReturnsLeftEither()
     {
-        Either<string, string> either = Left<string, string>("Foo");
+        Either<string, string> left = Left<string, string>("Foo");
 
-        Assert.That(either.IsLeft, Is.True);
-        Assert.That(either.IsRight, Is.False);
-        Assert.That(() => either.Right, Throws.Exception.InstanceOf<InvalidOperationException>());
-        Assert.That(either.Left, Is.EqualTo("Foo"));
+        Assert.That(left.IsLeft, Is.True);
+        Assert.That(left.IsRight, Is.False);
+        Assert.That(() => left.Right, Throws.Exception.InstanceOf<InvalidOperationException>());
+        Assert.That(left.Left, Is.EqualTo("Foo"));
     }
 
     [Test]
     public void GetOrElse_RightEither_ReturnsEitherRight()
     {
-        Either<string, string> either = Right("Foo");
+        Either<string, string> right = Right("Foo");
 
-        Assert.That(either.GetOrElse("Bar"), Is.EqualTo("Foo"));
-    }
-
-    [Test]
-    public void GetOrElse_LeftEither_ReturnsReplacementRight()
-    {
-        Either<string, string> either = Left("Foo");
-
-        Assert.That(either.GetOrElse("Bar"), Is.EqualTo("Bar"));
-    }
-
-    [Test]
-    public void OrElse_RightEither_ReturnsSelf()
-    {
-        Either<string, string> either = Right("Foo");
-
-        Assert.That(either.OrElse("Bar"), Is.EqualTo(Right("Foo")));
-    }
-
-    [Test]
-    public void OrElse_LeftEither_ReturnsRightEither()
-    {
-        Either<string, string> either = Left("Foo");
-
-        Assert.That(either.OrElse("Bar"), Is.EqualTo(Right("Bar")));
+        Assert.That(right.GetOrElse("Bar"), Is.EqualTo("Foo"));
     }
 
     [Test]
     public void Map_RightEither_ReturnsRightEither()
     {
-        Either<string, string> either = Right("Foo");
+        Either<string, string> right = Right("Foo");
         Func<string, string> toUpper = str => str.ToUpper();
 
-        Assert.That(either.Map(toUpper), Is.EqualTo(Right("FOO")));
+        Assert.That(right.Map(toUpper), Is.EqualTo(Right("FOO")));
     }
 
     [Test]
     public void Map_LeftEither_ReturnsLeftEither()
     {
-        Either<string, string> either = Left("Foo");
+        Either<string, string> left = Left("Foo");
         Func<string, string> toUpper = str => str.ToUpper();
 
-        Assert.That(either.Map(toUpper), Is.EqualTo(Left("Foo")));
-    }
-
-    [Test]
-    public void FlatMap_RightEitherReturnedByFuncWithRightEither_ReturnsReturnedRightEither()
-    {
-        Either<string, string> either = Right("Foo");
-        Func<string, Either<string, string>> toUpper = str => Right(str.ToUpper());
-
-        Assert.That(either.FlatMap(toUpper), Is.EqualTo(Right("FOO")));
-    }
-
-    [Test]
-    public void FlatMap_LeftEitherReturnedByFuncWithRightEither_ReturnsReturnedLeftEither()
-    {
-        Either<string, string> either = Right("Foo");
-        Func<string, Either<string, string>> toUpper = str => Left(str.ToUpper());
-
-        Assert.That(either.FlatMap(toUpper), Is.EqualTo(Left("FOO")));
-    }
-
-    [Test]
-    public void FlatMap_RightEitherReturnedByFuncWithLeftEither_ReturnsLeftEither()
-    {
-        Either<string, string> either = Left("Foo");
-        Func<string, Either<string, string>> toUpper = str => Right(str.ToUpper());
-
-        Assert.That(either.FlatMap(toUpper), Is.EqualTo(Left("Foo")));
-    }
-
-    [Test]
-    public void FlatMap_LeftEitherReturnedByFuncWithLeftEither_ReturnsLeftEither()
-    {
-        Either<string, string> either = Left("Foo");
-        Func<string, Either<string, string>> toUpper = str => Left(str.ToUpper());
-
-        Assert.That(either.FlatMap(toUpper), Is.EqualTo(Left("Foo")));
+        Assert.That(left.Map(toUpper), Is.EqualTo(Left("Foo")));
     }
 
     [Test]
     public void MapLeft_RightEither_ReturnsRightEither()
     {
-        Either<string, string> either = Right("Foo");
+        Either<string, string> right = Right("Foo");
         Func<string, string> toUpper = str => str.ToUpper();
 
-        Assert.That(either.MapLeft(toUpper), Is.EqualTo(Right("Foo")));
+        Assert.That(right.MapLeft(toUpper), Is.EqualTo(Right("Foo")));
     }
 
     [Test]
     public void MapLeft_LeftEither_ReturnsLeftEither()
     {
-        Either<string, string> either = Left("Foo");
+        Either<string, string> left = Left("Foo");
         Func<string, string> toUpper = str => str.ToUpper();
 
-        Assert.That(either.MapLeft(toUpper), Is.EqualTo(Left("FOO")));
+        Assert.That(left.MapLeft(toUpper), Is.EqualTo(Left("FOO")));
+    }
+
+    [Test]
+    public void FlatMap_RightEitherReturnedByFuncWithRightEither_ReturnsReturnedRightEither()
+    {
+        Either<string, string> right = Right("Foo");
+        Func<string, Either<string, string>> toUpper = str => Right(str.ToUpper());
+
+        Assert.That(right.FlatMap(toUpper), Is.EqualTo(Right("FOO")));
+    }
+
+    [Test]
+    public void FlatMap_LeftEitherReturnedByFuncWithRightEither_ReturnsReturnedLeftEither()
+    {
+        Either<string, string> right = Right("Foo");
+        Func<string, Either<string, string>> toUpper = str => Left(str.ToUpper());
+
+        Assert.That(right.FlatMap(toUpper), Is.EqualTo(Left("FOO")));
+    }
+
+    [Test]
+    public void FlatMap_RightEitherReturnedByFuncWithLeftEither_ReturnsLeftEither()
+    {
+        Either<string, string> left = Left("Foo");
+        Func<string, Either<string, string>> toUpper = str => Right(str.ToUpper());
+
+        Assert.That(left.FlatMap(toUpper), Is.EqualTo(Left("Foo")));
+    }
+
+    [Test]
+    public void FlatMap_LeftEitherReturnedByFuncWithLeftEither_ReturnsLeftEither()
+    {
+        Either<string, string> left = Left("Foo");
+        Func<string, Either<string, string>> toUpper = str => Left(str.ToUpper());
+
+        Assert.That(left.FlatMap(toUpper), Is.EqualTo(Left("Foo")));
     }
 
     [Test]
     public void FlatMapLeft_RightEitherReturnedByFuncWithRightEither_ReturnsRightEither()
     {
-        Either<string, string> either = Right("Foo");
+        Either<string, string> right = Right("Foo");
         Func<string, Either<string, string>> toUpper = str => Right(str.ToUpper());
 
-        Assert.That(either.FlatMapLeft(toUpper), Is.EqualTo(Right("Foo")));
+        Assert.That(right.FlatMapLeft(toUpper), Is.EqualTo(Right("Foo")));
     }
 
     [Test]
     public void FlatMapLeft_LeftEitherReturnedByFuncWithRightEither_ReturnsRightEither()
     {
-        Either<string, string> either = Right("Foo");
+        Either<string, string> right = Right("Foo");
         Func<string, Either<string, string>> toUpper = str => Left(str.ToUpper());
 
-        Assert.That(either.FlatMapLeft(toUpper), Is.EqualTo(Right("Foo")));
+        Assert.That(right.FlatMapLeft(toUpper), Is.EqualTo(Right("Foo")));
     }
 
     [Test]
     public void FlatMapLeft_LeftEitherReturnedByFuncWithLeftEither_ReturnsReturnedLeftEither()
     {
-        Either<string, string> either = Left("Foo");
+        Either<string, string> left = Left("Foo");
         Func<string, Either<string, string>> toUpper = str => Left(str.ToUpper());
 
-        Assert.That(either.FlatMapLeft(toUpper), Is.EqualTo(Left("FOO")));
+        Assert.That(left.FlatMapLeft(toUpper), Is.EqualTo(Left("FOO")));
     }
 
     [Test]
     public void FlatMapLeft_RightEitherReturnedByFuncWithLeftEither_ReturnsReturnedRightEither()
     {
-        Either<string, string> either = Left("Foo");
+        Either<string, string> left = Left("Foo");
         Func<string, Either<string, string>> toUpper = str => Right(str.ToUpper());
 
-        Assert.That(either.FlatMapLeft(toUpper), Is.EqualTo(Right("FOO")));
+        Assert.That(left.FlatMapLeft(toUpper), Is.EqualTo(Right("FOO")));
     }
 
     [Test]
-    public void LinqQuery_WithEitherType_ShouldTransformCorrectly()
+    public void Match_LeftEither_ReturnsLeftValue()
     {
-        var either = Right<int, string>("Foo");
-        var result = from x in either select x.ToUpper();
+        Either<string, string> left = Left("Foo");
 
-        Assert.That(result.Right, Is.EqualTo("FOO"));
+        Assert.That(
+            actual: left.Match(
+                left: value => value,
+                right: _ => "Bar"
+            ),
+            expression: Is.EqualTo("Foo")
+        );
+    }
+
+    [Test]
+    public void Match_RightEither_ReturnsRightValue()
+    {
+        Either<string, string> right = Right("Foo");
+
+        Assert.That(
+            actual: right.Match(
+                left: _ => "Bar",
+                right: value => value
+            ),
+            expression: Is.EqualTo("Foo")
+        );
+    }
+
+    [Test]
+    public void Match_LeftEither_ExecutesLeftAction()
+    {
+        Either<string, string> left = Left("Foo");
+
+        var executed = false;
+        left.Match(left: _ => executed = true, right: _ => { });
+
+        Assert.That(executed, Is.True);
+    }
+
+    [Test]
+    public void Match_RightEither_ExecutesRightAction()
+    {
+        Either<string, string> right = Right("Foo");
+
+        var executed = false;
+        right.Match(left: _ => { }, right: _ => executed = true);
+
+        Assert.That(executed, Is.True);
     }
 }

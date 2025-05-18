@@ -117,26 +117,17 @@ public readonly struct Either<TLeft, TRight>
     #endregion
 
     #region Methods
-    public TRight GetOrElse(TRight value)
-    {
-        return IsRight ? _right! : value;
-    }
-
-    public Either<TLeft, TRight> OrElse(TRight value)
-    {
-        return IsRight switch
-        {
-            true => this,
-            false => Either.Right(value)
-        };
-    }
-
     public Either<TLeft, TResult> Map<TResult>(Func<TRight, TResult> fn)
     {
+        return IsRight ? Either.Right(fn.Invoke(_right!)) : Either.Left<TLeft, TResult>(_left!);
+    }
+
+    public Either<TResult, TRight> MapLeft<TResult>(Func<TLeft, TResult> fn)
+    {
         return IsRight switch
         {
-            true => Either.Right(fn.Invoke(_right!)),
-            false => Either.Left<TLeft, TResult>(_left!)
+            true => Either.Right<TResult, TRight>(_right!),
+            false => Either.Left(fn.Invoke(_left!))
         };
     }
 
@@ -146,15 +137,6 @@ public readonly struct Either<TLeft, TRight>
         {
             true => fn.Invoke(_right!),
             false => Either.Left<TLeft, TResult>(_left!)
-        };
-    }
-
-    public Either<TResult, TRight> MapLeft<TResult>(Func<TLeft, TResult> fn)
-    {
-        return IsRight switch
-        {
-            true => Either.Right<TResult, TRight>(_right!),
-            false => Either.Left(fn.Invoke(_left!))
         };
     }
 
