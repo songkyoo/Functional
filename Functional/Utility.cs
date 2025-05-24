@@ -83,4 +83,16 @@ public static partial class Utility
     {
         return (t2, t1) => fn(t1, t2);
     }
+
+    public static T1 First<T1, T2>((T1, T2) tuple) => tuple.Item1;
+
+    public static TKey First<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Key;
+
+    public static TKey Key<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Key;
+
+    public static T2 Second<T1, T2>((T1, T2) tuple) => tuple.Item2;
+
+    public static TValue Second<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Value;
+
+    public static TValue Value<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Value;
 }
