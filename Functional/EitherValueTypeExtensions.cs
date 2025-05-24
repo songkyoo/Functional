@@ -1,6 +1,6 @@
 ﻿namespace Macaron.Functional;
 
-public static class ValueTypeEitherExtensions
+public static class EitherValueTypeExtensions
 {
     public static TRight? GetOrNull<TLeft, TRight>(this Either<TLeft, TRight> either)
         where TRight : struct

@@ -1,6 +1,6 @@
 ﻿namespace Macaron.Functional;
 
-public static class ValueTypeMaybeExtensions
+public static class MaybeValueTypeExtensions
 {
     public static T? GetOrNull<T>(this Maybe<T> maybe)
         where T : struct

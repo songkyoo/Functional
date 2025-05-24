@@ -1,6 +1,6 @@
 ﻿namespace Macaron.Functional;
 
-public static class StructExtensions
+public static class ValueTypeExtensions
 {
     public static T? TakeIf<T>(this T self, Func<T, bool> predicate) where T : struct
     {
