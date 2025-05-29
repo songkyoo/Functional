@@ -6,7 +6,7 @@ partial class Utility
     public static Func<T2, TResult> Partial<T1, T2, TResult>(
         Func<T1, T2, TResult> fn,
         T1 arg1,
-        Placeholder _2
+        Placeholder _2 = default
     )
     {
         return (arg2) => fn(arg1, arg2);
@@ -15,7 +15,7 @@ partial class Utility
     public static Action<T2> Partial<T1, T2>(
         this Action<T1, T2> fn,
         T1 arg1,
-        Placeholder _2
+        Placeholder _2 = default
     )
     {
         return (arg2) => fn(arg1, arg2);
@@ -42,8 +42,8 @@ partial class Utility
     public static Func<T2, T3, TResult> Partial<T1, T2, T3, TResult>(
         Func<T1, T2, T3, TResult> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3
+        Placeholder _2 = default,
+        Placeholder _3 = default
     )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3);
@@ -52,8 +52,8 @@ partial class Utility
     public static Action<T2, T3> Partial<T1, T2, T3>(
         this Action<T1, T2, T3> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3
+        Placeholder _2 = default,
+        Placeholder _3 = default
     )
     {
         return (arg2, arg3) => fn(arg1, arg2, arg3);
@@ -162,9 +162,9 @@ partial class Utility
     public static Func<T2, T3, T4, TResult> Partial<T1, T2, T3, T4, TResult>(
         Func<T1, T2, T3, T4, TResult> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3,
-        Placeholder _4
+        Placeholder _2 = default,
+        Placeholder _3 = default,
+        Placeholder _4 = default
     )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4);
@@ -173,9 +173,9 @@ partial class Utility
     public static Action<T2, T3, T4> Partial<T1, T2, T3, T4>(
         this Action<T1, T2, T3, T4> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3,
-        Placeholder _4
+        Placeholder _2 = default,
+        Placeholder _3 = default,
+        Placeholder _4 = default
     )
     {
         return (arg2, arg3, arg4) => fn(arg1, arg2, arg3, arg4);
@@ -470,10 +470,10 @@ partial class Utility
     public static Func<T2, T3, T4, T5, TResult> Partial<T1, T2, T3, T4, T5, TResult>(
         Func<T1, T2, T3, T4, T5, TResult> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5
+        Placeholder _2 = default,
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default
     )
     {
         return (arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
@@ -482,10 +482,10 @@ partial class Utility
     public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5>(
         this Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5
+        Placeholder _2 = default,
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default
     )
     {
         return (arg2, arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
@@ -1190,11 +1190,11 @@ partial class Utility
     public static Func<T2, T3, T4, T5, T6, TResult> Partial<T1, T2, T3, T4, T5, T6, TResult>(
         Func<T1, T2, T3, T4, T5, T6, TResult> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6
+        Placeholder _2 = default,
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default
     )
     {
         return (arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -1203,11 +1203,11 @@ partial class Utility
     public static Action<T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
         this Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6
+        Placeholder _2 = default,
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default
     )
     {
         return (arg2, arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -2802,12 +2802,12 @@ partial class Utility
     public static Func<T2, T3, T4, T5, T6, T7, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, TResult>(
         Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7
+        Placeholder _2 = default,
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default
     )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -2816,12 +2816,12 @@ partial class Utility
     public static Action<T2, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
         this Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7
+        Placeholder _2 = default,
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default
     )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -6330,13 +6330,13 @@ partial class Utility
     public static Func<T2, T3, T4, T5, T6, T7, T8, TResult> Partial<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
         Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _2 = default,
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -6345,13 +6345,13 @@ partial class Utility
     public static Action<T2, T3, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
         this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
-        Placeholder _2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _2 = default,
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg2, arg3, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
