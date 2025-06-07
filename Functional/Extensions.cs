@@ -2,17 +2,6 @@ namespace Macaron.Functional;
 
 public static partial class Extensions
 {
-    public static TResult Let<T, TResult>(this T self, Func<T, TResult> fn) where T : notnull
-    {
-        return fn(self);
-    }
-
-    public static T Also<T>(this T self, Action<T> action) where T : notnull
-    {
-        action(self);
-        return self;
-    }
-
     public static T? TakeIf<T>(this T self, Func<T, bool> predicate) where T : class
     {
         return predicate(self) ? self : null;
