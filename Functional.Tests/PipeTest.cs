@@ -1,6 +1,6 @@
-namespace Macaron.Tests.Functional;
-
 using static Macaron.Functional.Utility;
+
+namespace Macaron.Functional.Tests;
 
 [TestFixture]
 public class PipeTest

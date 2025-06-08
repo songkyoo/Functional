@@ -1,6 +1,4 @@
-namespace Macaron.Tests.Functional;
-
-using Macaron.Functional;
+namespace Macaron.Functional.Tests;
 
 [TestFixture]
 public class CurryTest

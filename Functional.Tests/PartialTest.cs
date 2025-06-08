@@ -1,8 +1,6 @@
-namespace Macaron.Tests.Functional;
-
-using Macaron.Functional;
-
 using static Macaron.Functional.Placeholder;
+
+namespace Macaron.Functional.Tests;
 
 [TestFixture]
 public class PartialTest
