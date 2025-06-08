@@ -12,42 +12,65 @@ for (int i = 2; i <= MaxCount; i++)
 {
     string actionTypeParams = string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}"));
     string funcTypeParams = actionTypeParams + ", TResult";
-    string actionReturnType = "Func<T1, ";
-    string funcReturnType = "Func<T1, ";
+    string args = $"arg1{string.Join("", Enumerable.Range(2, i - 1).Select(j => $", arg{j}"))}";
 
-    for (int j = 2; j < i; j++)
+    for (int j = 1; j <= i; j++)
     {
-        actionReturnType += $"Func<T{j}, ";
-        funcReturnType += $"Func<T{j}, ";
-    }
-
-    actionReturnType += $"Action<T{i}>";
-    funcReturnType += $"Func<T{i}, TResult>";
-
-    for (int j = 2; j < i; j++)
-    {
-        actionReturnType += ">";
-        funcReturnType += ">";
-    }
-
-    actionReturnType += ">";
-    funcReturnType += ">";
 #>
-    public static <#= funcReturnType #> Curry<<#= funcTypeParams #>>(
-        this Func<<#= funcTypeParams #>> fn
+    public static <#= GetFuncReturnTypeString(j, i) #> Curry<<#= funcTypeParams #>>(
+        this Func<<#= funcTypeParams #>> fn<#= string.Join("", Enumerable.Range(1, j - 1).Select(n => $", T{n} arg{n}")) #>
     )
     {
-        return <#= string.Join("", Enumerable.Range(1, i).Select(j => $"arg{j} => ")) #>fn(arg1<#= string.Join("", Enumerable.Range(2, i-1).Select(j => $", arg{j}")) #>);
+        return <#= string.Join("", Enumerable.Range(j, i - j + 1).Select(j => $"arg{j} => ")) #>fn(<#= args #>);
     }
 
-    public static <#= actionReturnType #> Curry<<#= actionTypeParams #>>(
-        this Action<<#= actionTypeParams #>> action
+    public static <#= GetActionReturnTypeString(j, i) #> Curry<<#= actionTypeParams #>>(
+        this Action<<#= actionTypeParams #>> action<#= string.Join("", Enumerable.Range(1, j - 1).Select(n => $", T{n} arg{n}")) #>
     )
     {
-        return <#= string.Join("", Enumerable.Range(1, i).Select(j => $"arg{j} => ")) #>action(arg1<#= string.Join("", Enumerable.Range(2, i-1).Select(j => $", arg{j}")) #>);
+        return <#= string.Join("", Enumerable.Range(j, i - j + 1).Select(j => $"arg{j} => ")) #>action(<#= args #>);
     }
-
 <#
+    }
 }
 #>
 }
+<#+
+static string GetFuncReturnTypeString(int start, int end)
+{
+    string result = $"";
+
+    for (int i = start; i < end; i++)
+    {
+        result += $"Func<T{i}, ";
+    }
+
+    result += $"Func<T{end}, TResult>";
+
+    for (int i = start; i < end; i++)
+    {
+        result += ">";
+    }
+
+    return result;
+}
+
+static string GetActionReturnTypeString(int start, int end)
+{
+    string result = $"";
+
+    for (int i = start; i < end; i++)
+    {
+        result += $"Func<T{i}, ";
+    }
+
+    result += $"Action<T{end}>";
+
+    for (int i = start; i < end; i++)
+    {
+        result += ">";
+    }
+
+    return result;
+}
+#>
