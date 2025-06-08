@@ -56,7 +56,23 @@ private void GenerateMethod(IReadOnlyList<bool> fixedArgumentStates)
     var lambdaInputParams = new List<string>();
     var lambdaArgs = new List<string>();
 
-    var useDefaultPlaceHolderValue = fixedArgumentStates.First() && fixedArgumentStates.Skip(1).All(x => !x);
+    bool useDefaultPlaceHolderValue = true;
+    bool seenPlaceholder = false;
+    for (int i = 0; i < fixedArgumentStates.Count; i++)
+    {
+        if (seenPlaceholder)
+        {
+            if (fixedArgumentStates[i])
+            {
+                useDefaultPlaceHolderValue = false;
+                break;
+            }
+        }
+        else if (!fixedArgumentStates[i])
+        {
+            seenPlaceholder = true;
+        }
+    }
 
     for (int i = 0; i < paramCount; i++)
     {

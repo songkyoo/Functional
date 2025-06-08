@@ -103,7 +103,7 @@ partial class Utility
         Func<T1, T2, T3, TResult> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3
+        Placeholder _3 = default
     )
     {
         return (arg3) => fn(arg1, arg2, arg3);
@@ -113,7 +113,7 @@ partial class Utility
         this Action<T1, T2, T3> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3
+        Placeholder _3 = default
     )
     {
         return (arg3) => fn(arg1, arg2, arg3);
@@ -251,8 +251,8 @@ partial class Utility
         Func<T1, T2, T3, T4, TResult> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3,
-        Placeholder _4
+        Placeholder _3 = default,
+        Placeholder _4 = default
     )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4);
@@ -262,8 +262,8 @@ partial class Utility
         this Action<T1, T2, T3, T4> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3,
-        Placeholder _4
+        Placeholder _3 = default,
+        Placeholder _4 = default
     )
     {
         return (arg3, arg4) => fn(arg1, arg2, arg3, arg4);
@@ -384,7 +384,7 @@ partial class Utility
         T1 arg1,
         T2 arg2,
         T3 arg3,
-        Placeholder _4
+        Placeholder _4 = default
     )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4);
@@ -395,7 +395,7 @@ partial class Utility
         T1 arg1,
         T2 arg2,
         T3 arg3,
-        Placeholder _4
+        Placeholder _4 = default
     )
     {
         return (arg4) => fn(arg1, arg2, arg3, arg4);
@@ -591,9 +591,9 @@ partial class Utility
         Func<T1, T2, T3, T4, T5, TResult> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default
     )
     {
         return (arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
@@ -603,9 +603,9 @@ partial class Utility
         this Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default
     )
     {
         return (arg3, arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
@@ -832,8 +832,8 @@ partial class Utility
         T1 arg1,
         T2 arg2,
         T3 arg3,
-        Placeholder _4,
-        Placeholder _5
+        Placeholder _4 = default,
+        Placeholder _5 = default
     )
     {
         return (arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
@@ -844,8 +844,8 @@ partial class Utility
         T1 arg1,
         T2 arg2,
         T3 arg3,
-        Placeholder _4,
-        Placeholder _5
+        Placeholder _4 = default,
+        Placeholder _5 = default
     )
     {
         return (arg4, arg5) => fn(arg1, arg2, arg3, arg4, arg5);
@@ -1073,7 +1073,7 @@ partial class Utility
         T2 arg2,
         T3 arg3,
         T4 arg4,
-        Placeholder _5
+        Placeholder _5 = default
     )
     {
         return (arg5) => fn(arg1, arg2, arg3, arg4, arg5);
@@ -1085,7 +1085,7 @@ partial class Utility
         T2 arg2,
         T3 arg3,
         T4 arg4,
-        Placeholder _5
+        Placeholder _5 = default
     )
     {
         return (arg5) => fn(arg1, arg2, arg3, arg4, arg5);
@@ -1347,10 +1347,10 @@ partial class Utility
         Func<T1, T2, T3, T4, T5, T6, TResult> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default
     )
     {
         return (arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -1360,10 +1360,10 @@ partial class Utility
         this Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default
     )
     {
         return (arg3, arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -1738,9 +1738,9 @@ partial class Utility
         T1 arg1,
         T2 arg2,
         T3 arg3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default
     )
     {
         return (arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -1751,9 +1751,9 @@ partial class Utility
         T1 arg1,
         T2 arg2,
         T3 arg3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default
     )
     {
         return (arg4, arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -2259,8 +2259,8 @@ partial class Utility
         T2 arg2,
         T3 arg3,
         T4 arg4,
-        Placeholder _5,
-        Placeholder _6
+        Placeholder _5 = default,
+        Placeholder _6 = default
     )
     {
         return (arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -2272,8 +2272,8 @@ partial class Utility
         T2 arg2,
         T3 arg3,
         T4 arg4,
-        Placeholder _5,
-        Placeholder _6
+        Placeholder _5 = default,
+        Placeholder _6 = default
     )
     {
         return (arg5, arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -2650,7 +2650,7 @@ partial class Utility
         T3 arg3,
         T4 arg4,
         T5 arg5,
-        Placeholder _6
+        Placeholder _6 = default
     )
     {
         return (arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -2663,7 +2663,7 @@ partial class Utility
         T3 arg3,
         T4 arg4,
         T5 arg5,
-        Placeholder _6
+        Placeholder _6 = default
     )
     {
         return (arg6) => fn(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -2999,11 +2999,11 @@ partial class Utility
         Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default
     )
     {
         return (arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -3013,11 +3013,11 @@ partial class Utility
         this Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default
     )
     {
         return (arg3, arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -3588,10 +3588,10 @@ partial class Utility
         T1 arg1,
         T2 arg2,
         T3 arg3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default
     )
     {
         return (arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -3602,10 +3602,10 @@ partial class Utility
         T1 arg1,
         T2 arg2,
         T3 arg3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default
     )
     {
         return (arg4, arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -4569,9 +4569,9 @@ partial class Utility
         T2 arg2,
         T3 arg3,
         T4 arg4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default
     )
     {
         return (arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -4583,9 +4583,9 @@ partial class Utility
         T2 arg2,
         T3 arg3,
         T4 arg4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default
     )
     {
         return (arg5, arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -5550,8 +5550,8 @@ partial class Utility
         T3 arg3,
         T4 arg4,
         T5 arg5,
-        Placeholder _6,
-        Placeholder _7
+        Placeholder _6 = default,
+        Placeholder _7 = default
     )
     {
         return (arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -5564,8 +5564,8 @@ partial class Utility
         T3 arg3,
         T4 arg4,
         T5 arg5,
-        Placeholder _6,
-        Placeholder _7
+        Placeholder _6 = default,
+        Placeholder _7 = default
     )
     {
         return (arg6, arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -6139,7 +6139,7 @@ partial class Utility
         T4 arg4,
         T5 arg5,
         T6 arg6,
-        Placeholder _7
+        Placeholder _7 = default
     )
     {
         return (arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -6153,7 +6153,7 @@ partial class Utility
         T4 arg4,
         T5 arg5,
         T6 arg6,
-        Placeholder _7
+        Placeholder _7 = default
     )
     {
         return (arg7) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -6571,12 +6571,12 @@ partial class Utility
         Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg3, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -6586,12 +6586,12 @@ partial class Utility
         this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
-        Placeholder _3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _3 = default,
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg3, arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -7412,11 +7412,11 @@ partial class Utility
         T1 arg1,
         T2 arg2,
         T3 arg3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -7427,11 +7427,11 @@ partial class Utility
         T1 arg1,
         T2 arg2,
         T3 arg3,
-        Placeholder _4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _4 = default,
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg4, arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -9093,10 +9093,10 @@ partial class Utility
         T2 arg2,
         T3 arg3,
         T4 arg4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -9108,10 +9108,10 @@ partial class Utility
         T2 arg2,
         T3 arg3,
         T4 arg4,
-        Placeholder _5,
-        Placeholder _6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _5 = default,
+        Placeholder _6 = default,
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg5, arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -11194,9 +11194,9 @@ partial class Utility
         T3 arg3,
         T4 arg4,
         T5 arg5,
-        Placeholder _6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _6 = default,
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -11209,9 +11209,9 @@ partial class Utility
         T3 arg3,
         T4 arg4,
         T5 arg5,
-        Placeholder _6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _6 = default,
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg6, arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -12875,8 +12875,8 @@ partial class Utility
         T4 arg4,
         T5 arg5,
         T6 arg6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -12890,8 +12890,8 @@ partial class Utility
         T4 arg4,
         T5 arg5,
         T6 arg6,
-        Placeholder _7,
-        Placeholder _8
+        Placeholder _7 = default,
+        Placeholder _8 = default
     )
     {
         return (arg7, arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -13716,7 +13716,7 @@ partial class Utility
         T5 arg5,
         T6 arg6,
         T7 arg7,
-        Placeholder _8
+        Placeholder _8 = default
     )
     {
         return (arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
@@ -13731,7 +13731,7 @@ partial class Utility
         T5 arg5,
         T6 arg6,
         T7 arg7,
-        Placeholder _8
+        Placeholder _8 = default
     )
     {
         return (arg8) => fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
