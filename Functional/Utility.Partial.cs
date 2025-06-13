@@ -13,7 +13,7 @@ partial class Utility
     }
 
     public static Action<T2> Partial<T1, T2>(
-        this Action<T1, T2> fn,
+        Action<T1, T2> fn,
         T1 arg1,
         Placeholder _2 = default
     )
@@ -31,7 +31,7 @@ partial class Utility
     }
 
     public static Action<T1> Partial<T1, T2>(
-        this Action<T1, T2> fn,
+        Action<T1, T2> fn,
         Placeholder _1,
         T2 arg2
     )
@@ -50,7 +50,7 @@ partial class Utility
     }
 
     public static Action<T2, T3> Partial<T1, T2, T3>(
-        this Action<T1, T2, T3> fn,
+        Action<T1, T2, T3> fn,
         T1 arg1,
         Placeholder _2 = default,
         Placeholder _3 = default
@@ -70,7 +70,7 @@ partial class Utility
     }
 
     public static Action<T1, T3> Partial<T1, T2, T3>(
-        this Action<T1, T2, T3> fn,
+        Action<T1, T2, T3> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3
@@ -90,7 +90,7 @@ partial class Utility
     }
 
     public static Action<T1, T2> Partial<T1, T2, T3>(
-        this Action<T1, T2, T3> fn,
+        Action<T1, T2, T3> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3
@@ -110,7 +110,7 @@ partial class Utility
     }
 
     public static Action<T3> Partial<T1, T2, T3>(
-        this Action<T1, T2, T3> fn,
+        Action<T1, T2, T3> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3 = default
@@ -130,7 +130,7 @@ partial class Utility
     }
 
     public static Action<T2> Partial<T1, T2, T3>(
-        this Action<T1, T2, T3> fn,
+        Action<T1, T2, T3> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3
@@ -150,7 +150,7 @@ partial class Utility
     }
 
     public static Action<T1> Partial<T1, T2, T3>(
-        this Action<T1, T2, T3> fn,
+        Action<T1, T2, T3> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3
@@ -171,7 +171,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         T1 arg1,
         Placeholder _2 = default,
         Placeholder _3 = default,
@@ -193,7 +193,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -215,7 +215,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -237,7 +237,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -259,7 +259,7 @@ partial class Utility
     }
 
     public static Action<T3, T4> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3 = default,
@@ -281,7 +281,7 @@ partial class Utility
     }
 
     public static Action<T2, T4> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -303,7 +303,7 @@ partial class Utility
     }
 
     public static Action<T2, T3> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -325,7 +325,7 @@ partial class Utility
     }
 
     public static Action<T1, T4> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -347,7 +347,7 @@ partial class Utility
     }
 
     public static Action<T1, T3> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -369,7 +369,7 @@ partial class Utility
     }
 
     public static Action<T1, T2> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -391,7 +391,7 @@ partial class Utility
     }
 
     public static Action<T4> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -413,7 +413,7 @@ partial class Utility
     }
 
     public static Action<T3> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -435,7 +435,7 @@ partial class Utility
     }
 
     public static Action<T2> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -457,7 +457,7 @@ partial class Utility
     }
 
     public static Action<T1> Partial<T1, T2, T3, T4>(
-        this Action<T1, T2, T3, T4> fn,
+        Action<T1, T2, T3, T4> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -480,7 +480,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         Placeholder _2 = default,
         Placeholder _3 = default,
@@ -504,7 +504,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -528,7 +528,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -552,7 +552,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -576,7 +576,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -600,7 +600,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3 = default,
@@ -624,7 +624,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -648,7 +648,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -672,7 +672,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -696,7 +696,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -720,7 +720,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -744,7 +744,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -768,7 +768,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -792,7 +792,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -816,7 +816,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -840,7 +840,7 @@ partial class Utility
     }
 
     public static Action<T4, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -864,7 +864,7 @@ partial class Utility
     }
 
     public static Action<T3, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -888,7 +888,7 @@ partial class Utility
     }
 
     public static Action<T3, T4> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -912,7 +912,7 @@ partial class Utility
     }
 
     public static Action<T2, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -936,7 +936,7 @@ partial class Utility
     }
 
     public static Action<T2, T4> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -960,7 +960,7 @@ partial class Utility
     }
 
     public static Action<T2, T3> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -984,7 +984,7 @@ partial class Utility
     }
 
     public static Action<T1, T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -1008,7 +1008,7 @@ partial class Utility
     }
 
     public static Action<T1, T4> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -1032,7 +1032,7 @@ partial class Utility
     }
 
     public static Action<T1, T3> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -1056,7 +1056,7 @@ partial class Utility
     }
 
     public static Action<T1, T2> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -1080,7 +1080,7 @@ partial class Utility
     }
 
     public static Action<T5> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -1104,7 +1104,7 @@ partial class Utility
     }
 
     public static Action<T4> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -1128,7 +1128,7 @@ partial class Utility
     }
 
     public static Action<T3> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -1152,7 +1152,7 @@ partial class Utility
     }
 
     public static Action<T2> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -1176,7 +1176,7 @@ partial class Utility
     }
 
     public static Action<T1> Partial<T1, T2, T3, T4, T5>(
-        this Action<T1, T2, T3, T4, T5> fn,
+        Action<T1, T2, T3, T4, T5> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -1201,7 +1201,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2 = default,
         Placeholder _3 = default,
@@ -1227,7 +1227,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -1253,7 +1253,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -1279,7 +1279,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -1305,7 +1305,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -1331,7 +1331,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -1357,7 +1357,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3 = default,
@@ -1383,7 +1383,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -1409,7 +1409,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -1435,7 +1435,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -1461,7 +1461,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -1487,7 +1487,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -1513,7 +1513,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -1539,7 +1539,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -1565,7 +1565,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -1591,7 +1591,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -1617,7 +1617,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -1643,7 +1643,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -1669,7 +1669,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -1695,7 +1695,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -1721,7 +1721,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -1747,7 +1747,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -1773,7 +1773,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -1799,7 +1799,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -1825,7 +1825,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -1851,7 +1851,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -1877,7 +1877,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -1903,7 +1903,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -1929,7 +1929,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -1955,7 +1955,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -1981,7 +1981,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -2007,7 +2007,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -2033,7 +2033,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -2059,7 +2059,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -2085,7 +2085,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -2111,7 +2111,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -2137,7 +2137,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -2163,7 +2163,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -2189,7 +2189,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -2215,7 +2215,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -2241,7 +2241,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -2267,7 +2267,7 @@ partial class Utility
     }
 
     public static Action<T5, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -2293,7 +2293,7 @@ partial class Utility
     }
 
     public static Action<T4, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -2319,7 +2319,7 @@ partial class Utility
     }
 
     public static Action<T4, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -2345,7 +2345,7 @@ partial class Utility
     }
 
     public static Action<T3, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -2371,7 +2371,7 @@ partial class Utility
     }
 
     public static Action<T3, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -2397,7 +2397,7 @@ partial class Utility
     }
 
     public static Action<T3, T4> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -2423,7 +2423,7 @@ partial class Utility
     }
 
     public static Action<T2, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -2449,7 +2449,7 @@ partial class Utility
     }
 
     public static Action<T2, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -2475,7 +2475,7 @@ partial class Utility
     }
 
     public static Action<T2, T4> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -2501,7 +2501,7 @@ partial class Utility
     }
 
     public static Action<T2, T3> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -2527,7 +2527,7 @@ partial class Utility
     }
 
     public static Action<T1, T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -2553,7 +2553,7 @@ partial class Utility
     }
 
     public static Action<T1, T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -2579,7 +2579,7 @@ partial class Utility
     }
 
     public static Action<T1, T4> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -2605,7 +2605,7 @@ partial class Utility
     }
 
     public static Action<T1, T3> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -2631,7 +2631,7 @@ partial class Utility
     }
 
     public static Action<T1, T2> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -2657,7 +2657,7 @@ partial class Utility
     }
 
     public static Action<T6> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -2683,7 +2683,7 @@ partial class Utility
     }
 
     public static Action<T5> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -2709,7 +2709,7 @@ partial class Utility
     }
 
     public static Action<T4> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -2735,7 +2735,7 @@ partial class Utility
     }
 
     public static Action<T3> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -2761,7 +2761,7 @@ partial class Utility
     }
 
     public static Action<T2> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -2787,7 +2787,7 @@ partial class Utility
     }
 
     public static Action<T1> Partial<T1, T2, T3, T4, T5, T6>(
-        this Action<T1, T2, T3, T4, T5, T6> fn,
+        Action<T1, T2, T3, T4, T5, T6> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -2814,7 +2814,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2 = default,
         Placeholder _3 = default,
@@ -2842,7 +2842,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -2870,7 +2870,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -2898,7 +2898,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -2926,7 +2926,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -2954,7 +2954,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -2982,7 +2982,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -3010,7 +3010,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3 = default,
@@ -3038,7 +3038,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -3066,7 +3066,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -3094,7 +3094,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -3122,7 +3122,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -3150,7 +3150,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -3178,7 +3178,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -3206,7 +3206,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -3234,7 +3234,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -3262,7 +3262,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -3290,7 +3290,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -3318,7 +3318,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -3346,7 +3346,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -3374,7 +3374,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -3402,7 +3402,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -3430,7 +3430,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -3458,7 +3458,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -3486,7 +3486,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -3514,7 +3514,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -3542,7 +3542,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -3570,7 +3570,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -3598,7 +3598,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -3626,7 +3626,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -3654,7 +3654,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -3682,7 +3682,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -3710,7 +3710,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -3738,7 +3738,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -3766,7 +3766,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -3794,7 +3794,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -3822,7 +3822,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -3850,7 +3850,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -3878,7 +3878,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -3906,7 +3906,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -3934,7 +3934,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -3962,7 +3962,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -3990,7 +3990,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -4018,7 +4018,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -4046,7 +4046,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -4074,7 +4074,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -4102,7 +4102,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -4130,7 +4130,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -4158,7 +4158,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -4186,7 +4186,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -4214,7 +4214,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -4242,7 +4242,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -4270,7 +4270,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -4298,7 +4298,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -4326,7 +4326,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -4354,7 +4354,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -4382,7 +4382,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -4410,7 +4410,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -4438,7 +4438,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -4466,7 +4466,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -4494,7 +4494,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -4522,7 +4522,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -4550,7 +4550,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -4578,7 +4578,7 @@ partial class Utility
     }
 
     public static Action<T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -4606,7 +4606,7 @@ partial class Utility
     }
 
     public static Action<T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -4634,7 +4634,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -4662,7 +4662,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -4690,7 +4690,7 @@ partial class Utility
     }
 
     public static Action<T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -4718,7 +4718,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -4746,7 +4746,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -4774,7 +4774,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -4802,7 +4802,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -4830,7 +4830,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -4858,7 +4858,7 @@ partial class Utility
     }
 
     public static Action<T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -4886,7 +4886,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -4914,7 +4914,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -4942,7 +4942,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -4970,7 +4970,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -4998,7 +4998,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -5026,7 +5026,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -5054,7 +5054,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -5082,7 +5082,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -5110,7 +5110,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -5138,7 +5138,7 @@ partial class Utility
     }
 
     public static Action<T1, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -5166,7 +5166,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -5194,7 +5194,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -5222,7 +5222,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -5250,7 +5250,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -5278,7 +5278,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -5306,7 +5306,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -5334,7 +5334,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -5362,7 +5362,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -5390,7 +5390,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -5418,7 +5418,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -5446,7 +5446,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -5474,7 +5474,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -5502,7 +5502,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -5530,7 +5530,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -5558,7 +5558,7 @@ partial class Utility
     }
 
     public static Action<T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -5586,7 +5586,7 @@ partial class Utility
     }
 
     public static Action<T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -5614,7 +5614,7 @@ partial class Utility
     }
 
     public static Action<T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -5642,7 +5642,7 @@ partial class Utility
     }
 
     public static Action<T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -5670,7 +5670,7 @@ partial class Utility
     }
 
     public static Action<T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -5698,7 +5698,7 @@ partial class Utility
     }
 
     public static Action<T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -5726,7 +5726,7 @@ partial class Utility
     }
 
     public static Action<T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -5754,7 +5754,7 @@ partial class Utility
     }
 
     public static Action<T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -5782,7 +5782,7 @@ partial class Utility
     }
 
     public static Action<T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -5810,7 +5810,7 @@ partial class Utility
     }
 
     public static Action<T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -5838,7 +5838,7 @@ partial class Utility
     }
 
     public static Action<T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -5866,7 +5866,7 @@ partial class Utility
     }
 
     public static Action<T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -5894,7 +5894,7 @@ partial class Utility
     }
 
     public static Action<T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -5922,7 +5922,7 @@ partial class Utility
     }
 
     public static Action<T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -5950,7 +5950,7 @@ partial class Utility
     }
 
     public static Action<T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -5978,7 +5978,7 @@ partial class Utility
     }
 
     public static Action<T1, T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -6006,7 +6006,7 @@ partial class Utility
     }
 
     public static Action<T1, T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -6034,7 +6034,7 @@ partial class Utility
     }
 
     public static Action<T1, T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -6062,7 +6062,7 @@ partial class Utility
     }
 
     public static Action<T1, T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -6090,7 +6090,7 @@ partial class Utility
     }
 
     public static Action<T1, T3> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -6118,7 +6118,7 @@ partial class Utility
     }
 
     public static Action<T1, T2> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -6146,7 +6146,7 @@ partial class Utility
     }
 
     public static Action<T7> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -6174,7 +6174,7 @@ partial class Utility
     }
 
     public static Action<T6> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -6202,7 +6202,7 @@ partial class Utility
     }
 
     public static Action<T5> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -6230,7 +6230,7 @@ partial class Utility
     }
 
     public static Action<T4> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -6258,7 +6258,7 @@ partial class Utility
     }
 
     public static Action<T3> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -6286,7 +6286,7 @@ partial class Utility
     }
 
     public static Action<T2> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -6314,7 +6314,7 @@ partial class Utility
     }
 
     public static Action<T1> Partial<T1, T2, T3, T4, T5, T6, T7>(
-        this Action<T1, T2, T3, T4, T5, T6, T7> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -6343,7 +6343,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2 = default,
         Placeholder _3 = default,
@@ -6373,7 +6373,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -6403,7 +6403,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -6433,7 +6433,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -6463,7 +6463,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -6493,7 +6493,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -6523,7 +6523,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -6553,7 +6553,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -6583,7 +6583,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3 = default,
@@ -6613,7 +6613,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -6643,7 +6643,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -6673,7 +6673,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -6703,7 +6703,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -6733,7 +6733,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -6763,7 +6763,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -6793,7 +6793,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -6823,7 +6823,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -6853,7 +6853,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -6883,7 +6883,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -6913,7 +6913,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -6943,7 +6943,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -6973,7 +6973,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -7003,7 +7003,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -7033,7 +7033,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -7063,7 +7063,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -7093,7 +7093,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -7123,7 +7123,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -7153,7 +7153,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -7183,7 +7183,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -7213,7 +7213,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -7243,7 +7243,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -7273,7 +7273,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -7303,7 +7303,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -7333,7 +7333,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -7363,7 +7363,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -7393,7 +7393,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -7423,7 +7423,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -7453,7 +7453,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -7483,7 +7483,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -7513,7 +7513,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -7543,7 +7543,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -7573,7 +7573,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -7603,7 +7603,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -7633,7 +7633,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -7663,7 +7663,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -7693,7 +7693,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -7723,7 +7723,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -7753,7 +7753,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -7783,7 +7783,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -7813,7 +7813,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -7843,7 +7843,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -7873,7 +7873,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -7903,7 +7903,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -7933,7 +7933,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -7963,7 +7963,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -7993,7 +7993,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -8023,7 +8023,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -8053,7 +8053,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -8083,7 +8083,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -8113,7 +8113,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -8143,7 +8143,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -8173,7 +8173,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -8203,7 +8203,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -8233,7 +8233,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -8263,7 +8263,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -8293,7 +8293,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -8323,7 +8323,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -8353,7 +8353,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -8383,7 +8383,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -8413,7 +8413,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -8443,7 +8443,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -8473,7 +8473,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -8503,7 +8503,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -8533,7 +8533,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -8563,7 +8563,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -8593,7 +8593,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -8623,7 +8623,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -8653,7 +8653,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -8683,7 +8683,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -8713,7 +8713,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -8743,7 +8743,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -8773,7 +8773,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -8803,7 +8803,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -8833,7 +8833,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -8863,7 +8863,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -8893,7 +8893,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -8923,7 +8923,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -8953,7 +8953,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -8983,7 +8983,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -9013,7 +9013,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -9043,7 +9043,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -9073,7 +9073,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -9103,7 +9103,7 @@ partial class Utility
     }
 
     public static Action<T5, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -9133,7 +9133,7 @@ partial class Utility
     }
 
     public static Action<T4, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -9163,7 +9163,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -9193,7 +9193,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -9223,7 +9223,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -9253,7 +9253,7 @@ partial class Utility
     }
 
     public static Action<T3, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -9283,7 +9283,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -9313,7 +9313,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -9343,7 +9343,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -9373,7 +9373,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -9403,7 +9403,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -9433,7 +9433,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -9463,7 +9463,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -9493,7 +9493,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -9523,7 +9523,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -9553,7 +9553,7 @@ partial class Utility
     }
 
     public static Action<T2, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -9583,7 +9583,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -9613,7 +9613,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -9643,7 +9643,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -9673,7 +9673,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -9703,7 +9703,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -9733,7 +9733,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -9763,7 +9763,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -9793,7 +9793,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -9823,7 +9823,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -9853,7 +9853,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -9883,7 +9883,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -9913,7 +9913,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -9943,7 +9943,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -9973,7 +9973,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -10003,7 +10003,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -10033,7 +10033,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -10063,7 +10063,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -10093,7 +10093,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -10123,7 +10123,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -10153,7 +10153,7 @@ partial class Utility
     }
 
     public static Action<T1, T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -10183,7 +10183,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -10213,7 +10213,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -10243,7 +10243,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -10273,7 +10273,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -10303,7 +10303,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -10333,7 +10333,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -10363,7 +10363,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -10393,7 +10393,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -10423,7 +10423,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -10453,7 +10453,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -10483,7 +10483,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -10513,7 +10513,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -10543,7 +10543,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -10573,7 +10573,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -10603,7 +10603,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -10633,7 +10633,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -10663,7 +10663,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -10693,7 +10693,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -10723,7 +10723,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -10753,7 +10753,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -10783,7 +10783,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -10813,7 +10813,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -10843,7 +10843,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -10873,7 +10873,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -10903,7 +10903,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -10933,7 +10933,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -10963,7 +10963,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -10993,7 +10993,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -11023,7 +11023,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -11053,7 +11053,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -11083,7 +11083,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -11113,7 +11113,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -11143,7 +11143,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -11173,7 +11173,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -11203,7 +11203,7 @@ partial class Utility
     }
 
     public static Action<T6, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -11233,7 +11233,7 @@ partial class Utility
     }
 
     public static Action<T5, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -11263,7 +11263,7 @@ partial class Utility
     }
 
     public static Action<T5, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -11293,7 +11293,7 @@ partial class Utility
     }
 
     public static Action<T5, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -11323,7 +11323,7 @@ partial class Utility
     }
 
     public static Action<T4, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -11353,7 +11353,7 @@ partial class Utility
     }
 
     public static Action<T4, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -11383,7 +11383,7 @@ partial class Utility
     }
 
     public static Action<T4, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -11413,7 +11413,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -11443,7 +11443,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -11473,7 +11473,7 @@ partial class Utility
     }
 
     public static Action<T4, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -11503,7 +11503,7 @@ partial class Utility
     }
 
     public static Action<T3, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -11533,7 +11533,7 @@ partial class Utility
     }
 
     public static Action<T3, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -11563,7 +11563,7 @@ partial class Utility
     }
 
     public static Action<T3, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -11593,7 +11593,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -11623,7 +11623,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -11653,7 +11653,7 @@ partial class Utility
     }
 
     public static Action<T3, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -11683,7 +11683,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -11713,7 +11713,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -11743,7 +11743,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -11773,7 +11773,7 @@ partial class Utility
     }
 
     public static Action<T3, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -11803,7 +11803,7 @@ partial class Utility
     }
 
     public static Action<T2, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -11833,7 +11833,7 @@ partial class Utility
     }
 
     public static Action<T2, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -11863,7 +11863,7 @@ partial class Utility
     }
 
     public static Action<T2, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -11893,7 +11893,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -11923,7 +11923,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -11953,7 +11953,7 @@ partial class Utility
     }
 
     public static Action<T2, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -11983,7 +11983,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -12013,7 +12013,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -12043,7 +12043,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -12073,7 +12073,7 @@ partial class Utility
     }
 
     public static Action<T2, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -12103,7 +12103,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -12133,7 +12133,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -12163,7 +12163,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -12193,7 +12193,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -12223,7 +12223,7 @@ partial class Utility
     }
 
     public static Action<T2, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -12253,7 +12253,7 @@ partial class Utility
     }
 
     public static Action<T1, T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -12283,7 +12283,7 @@ partial class Utility
     }
 
     public static Action<T1, T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -12313,7 +12313,7 @@ partial class Utility
     }
 
     public static Action<T1, T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -12343,7 +12343,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -12373,7 +12373,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -12403,7 +12403,7 @@ partial class Utility
     }
 
     public static Action<T1, T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -12433,7 +12433,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -12463,7 +12463,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -12493,7 +12493,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -12523,7 +12523,7 @@ partial class Utility
     }
 
     public static Action<T1, T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -12553,7 +12553,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -12583,7 +12583,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -12613,7 +12613,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -12643,7 +12643,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -12673,7 +12673,7 @@ partial class Utility
     }
 
     public static Action<T1, T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -12703,7 +12703,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -12733,7 +12733,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -12763,7 +12763,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -12793,7 +12793,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -12823,7 +12823,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -12853,7 +12853,7 @@ partial class Utility
     }
 
     public static Action<T1, T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         Placeholder _3,
@@ -12883,7 +12883,7 @@ partial class Utility
     }
 
     public static Action<T7, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -12913,7 +12913,7 @@ partial class Utility
     }
 
     public static Action<T6, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -12943,7 +12943,7 @@ partial class Utility
     }
 
     public static Action<T6, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -12973,7 +12973,7 @@ partial class Utility
     }
 
     public static Action<T5, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13003,7 +13003,7 @@ partial class Utility
     }
 
     public static Action<T5, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13033,7 +13033,7 @@ partial class Utility
     }
 
     public static Action<T5, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13063,7 +13063,7 @@ partial class Utility
     }
 
     public static Action<T4, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13093,7 +13093,7 @@ partial class Utility
     }
 
     public static Action<T4, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13123,7 +13123,7 @@ partial class Utility
     }
 
     public static Action<T4, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13153,7 +13153,7 @@ partial class Utility
     }
 
     public static Action<T4, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13183,7 +13183,7 @@ partial class Utility
     }
 
     public static Action<T3, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -13213,7 +13213,7 @@ partial class Utility
     }
 
     public static Action<T3, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -13243,7 +13243,7 @@ partial class Utility
     }
 
     public static Action<T3, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -13273,7 +13273,7 @@ partial class Utility
     }
 
     public static Action<T3, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -13303,7 +13303,7 @@ partial class Utility
     }
 
     public static Action<T3, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -13333,7 +13333,7 @@ partial class Utility
     }
 
     public static Action<T2, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -13363,7 +13363,7 @@ partial class Utility
     }
 
     public static Action<T2, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -13393,7 +13393,7 @@ partial class Utility
     }
 
     public static Action<T2, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -13423,7 +13423,7 @@ partial class Utility
     }
 
     public static Action<T2, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -13453,7 +13453,7 @@ partial class Utility
     }
 
     public static Action<T2, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -13483,7 +13483,7 @@ partial class Utility
     }
 
     public static Action<T2, T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         Placeholder _3,
@@ -13513,7 +13513,7 @@ partial class Utility
     }
 
     public static Action<T1, T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -13543,7 +13543,7 @@ partial class Utility
     }
 
     public static Action<T1, T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -13573,7 +13573,7 @@ partial class Utility
     }
 
     public static Action<T1, T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -13603,7 +13603,7 @@ partial class Utility
     }
 
     public static Action<T1, T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -13633,7 +13633,7 @@ partial class Utility
     }
 
     public static Action<T1, T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,
@@ -13663,7 +13663,7 @@ partial class Utility
     }
 
     public static Action<T1, T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         Placeholder _3,
@@ -13693,7 +13693,7 @@ partial class Utility
     }
 
     public static Action<T1, T2> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         Placeholder _2,
         T3 arg3,
@@ -13723,7 +13723,7 @@ partial class Utility
     }
 
     public static Action<T8> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13753,7 +13753,7 @@ partial class Utility
     }
 
     public static Action<T7> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13783,7 +13783,7 @@ partial class Utility
     }
 
     public static Action<T6> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13813,7 +13813,7 @@ partial class Utility
     }
 
     public static Action<T5> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13843,7 +13843,7 @@ partial class Utility
     }
 
     public static Action<T4> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         T3 arg3,
@@ -13873,7 +13873,7 @@ partial class Utility
     }
 
     public static Action<T3> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         T2 arg2,
         Placeholder _3,
@@ -13903,7 +13903,7 @@ partial class Utility
     }
 
     public static Action<T2> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         T1 arg1,
         Placeholder _2,
         T3 arg3,
@@ -13933,7 +13933,7 @@ partial class Utility
     }
 
     public static Action<T1> Partial<T1, T2, T3, T4, T5, T6, T7, T8>(
-        this Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> fn,
         Placeholder _1,
         T2 arg2,
         T3 arg3,

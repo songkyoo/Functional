@@ -121,7 +121,7 @@ private void GenerateMethod(IReadOnlyList<bool> fixedArgumentStates)
     }
 
     public static <#= actionReturnType #> Partial<<#= typeParams #>>(
-        this Action<<#= typeParams #>> fn,
+        Action<<#= typeParams #>> fn,
         <#= string.Join($",{Environment.NewLine}        ", funcParameters) #>
     )
     {

@@ -30,6 +30,7 @@ for (int i = 2; i <= MaxCount; i++)
     {
         return <#= string.Join("", Enumerable.Range(j, i - j + 1).Select(j => $"arg{j} => ")) #>action(<#= args #>);
     }
+
 <#
     }
 }
