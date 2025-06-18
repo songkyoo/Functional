@@ -37,6 +37,7 @@
     <Exec Command="dotnet t4 Utility.Pipe.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Tuple.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Uncurry.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Utility.Flip.tt -p:MaxCount=8" />
   </Target>
 
 </Project>

@@ -64,26 +64,6 @@ public static partial class Utility
         }
     }
 
-    public static T Identity<T>(T value)
-    {
-        return value;
-    }
-
-    public static Func<T> Constant<T>(T value)
-    {
-        return () => value;
-    }
-
-    public static Action<T2, T1> Flip<T1, T2>(Action<T1, T2> action)
-    {
-        return (t2, t1) => action(t1, t2);
-    }
-
-    public static Func<T2, T1, TResult> Flip<T1, T2, TResult>(Func<T1, T2, TResult> fn)
-    {
-        return (t2, t1) => fn(t1, t2);
-    }
-
     public static T1 First<T1, T2>((T1, T2) tuple) => tuple.Item1;
 
     public static TKey First<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Key;
@@ -95,4 +75,44 @@ public static partial class Utility
     public static TValue Second<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Value;
 
     public static TValue Value<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Value;
+
+    public static Func<T, T> Identity<T>()
+    {
+        return static value => value;
+    }
+
+    public static Func<T> Constant<T>(T value)
+    {
+        return () => value;
+    }
+
+    public static Func<T, bool> Is<T>(T value)
+    {
+        return otherValue => EqualityComparer<T>.Default.Equals(otherValue, value);
+    }
+
+    public static Func<T, bool> Is<T>(T value, IEqualityComparer<T> comparer)
+    {
+        return otherValue => comparer.Equals(otherValue, value);
+    }
+
+    public static Func<T, bool> IsNot<T>(T value)
+    {
+        return otherValue => !EqualityComparer<T>.Default.Equals(otherValue, value);
+    }
+
+    public static Func<T, bool> IsNot<T>(T value, IEqualityComparer<T> comparer)
+    {
+        return otherValue => !comparer.Equals(otherValue, value);
+    }
+
+    public static Func<T?, bool> IsNull<T>()
+    {
+        return value => value == null;
+    }
+
+    public static Func<T?, bool> IsNotNull<T>()
+    {
+        return value => value != null;
+    }
 }
