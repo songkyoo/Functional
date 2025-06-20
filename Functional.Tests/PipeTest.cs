@@ -1,5 +1,7 @@
 using static Macaron.Functional.Utility;
 
+using Is = NUnit.Framework.Is;
+
 namespace Macaron.Functional.Tests;
 
 [TestFixture]
