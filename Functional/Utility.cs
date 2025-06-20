@@ -81,6 +81,11 @@ public static partial class Utility
         return static value => value;
     }
 
+    public static T Identity<T>(T value)
+    {
+        return value;
+    }
+
     public static Func<T> Constant<T>(T value)
     {
         return () => value;
@@ -108,11 +113,21 @@ public static partial class Utility
 
     public static Func<T?, bool> IsNull<T>()
     {
-        return value => value == null;
+        return static value => value == null;
+    }
+
+    public static bool IsNull<T>(T? value)
+    {
+        return value == null;
     }
 
     public static Func<T?, bool> IsNotNull<T>()
     {
-        return value => value != null;
+        return static value => value != null;
+    }
+
+    public static bool IsNotNull<T>(T? value)
+    {
+        return value != null;
     }
 }
