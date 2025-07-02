@@ -149,6 +149,26 @@ public readonly struct Either<TLeft, TRight>
         };
     }
 
+    public Either<TLeft, TRight> Tap(Action<TRight> action)
+    {
+        if (IsRight)
+        {
+            action.Invoke(_right!);
+        }
+
+        return this;
+    }
+
+    public Either<TLeft, TRight> TapLeft(Action<TLeft> action)
+    {
+        if (IsLeft)
+        {
+            action.Invoke(_left!);
+        }
+
+        return this;
+    }
+
     public TResult Match<TResult>(Func<TLeft, TResult> left, Func<TRight, TResult> right)
     {
         return IsRight ? right.Invoke(_right!) : left.Invoke(_left!);
