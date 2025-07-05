@@ -64,18 +64,6 @@ public static partial class Utility
         }
     }
 
-    public static T1 First<T1, T2>((T1, T2) tuple) => tuple.Item1;
-
-    public static TKey First<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Key;
-
-    public static TKey Key<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Key;
-
-    public static T2 Second<T1, T2>((T1, T2) tuple) => tuple.Item2;
-
-    public static TValue Second<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Value;
-
-    public static TValue Value<TKey, TValue>(KeyValuePair<TKey, TValue> pair) => pair.Value;
-
     public static Func<T, T> Identity<T>()
     {
         return static value => value;
