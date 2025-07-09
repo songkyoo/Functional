@@ -19,6 +19,48 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     }
     #endregion
 
+    #region Operator Overloadings
+    public static bool operator ==(Maybe<T> left, Maybe<T> right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Maybe<T> left, Maybe<T> right)
+    {
+        return !left.Equals(right);
+    }
+
+    public static bool operator ==(Maybe<T> left, JustMaybe<T> right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Maybe<T> left, JustMaybe<T> right)
+    {
+        return !left.Equals(right);
+    }
+
+    public static bool operator ==(Maybe<T> left, NothingMaybe right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Maybe<T> left, NothingMaybe right)
+    {
+        return !left.Equals(right);
+    }
+
+    public static bool operator ==(Maybe<T> left, NothingMaybe<T> right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Maybe<T> left, NothingMaybe<T> right)
+    {
+        return !left.Equals(right);
+    }
+    #endregion
+
     #region Fields
     private readonly bool? _isJust;
     private readonly T? _value;

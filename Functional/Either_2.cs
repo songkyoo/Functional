@@ -29,6 +29,58 @@ public readonly struct Either<TLeft, TRight>
     }
     #endregion
 
+    #region Operator Overloadings
+    public static bool operator ==(Either<TLeft, TRight> left, Either<TLeft, TRight> right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Either<TLeft, TRight> left, Either<TLeft, TRight> right)
+    {
+        return !(left == right);
+    }
+
+    public static bool operator ==(Either<TLeft, TRight> left, RightEither<TRight> right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Either<TLeft, TRight> left, RightEither<TRight> right)
+    {
+        return !(left == right);
+    }
+
+    public static bool operator ==(Either<TLeft, TRight> left, RightEither<TLeft, TRight> right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Either<TLeft, TRight> left, RightEither<TLeft, TRight> right)
+    {
+        return !(left == right);
+    }
+
+    public static bool operator ==(Either<TLeft, TRight> left, LeftEither<TLeft> right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Either<TLeft, TRight> left, LeftEither<TLeft> right)
+    {
+        return !(left == right);
+    }
+
+    public static bool operator ==(Either<TLeft, TRight> left, LeftEither<TLeft, TRight> right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Either<TLeft, TRight> left, LeftEither<TLeft, TRight> right)
+    {
+        return !(left == right);
+    }
+    #endregion
+
     #region Fields
     private readonly bool? _isRight;
     private readonly TLeft? _left;
