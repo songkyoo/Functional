@@ -3,22 +3,22 @@ namespace Macaron.Functional;
 
 partial class Utility
 {
-    public static void Nothing()
+    public static void NoOp()
     {
     }
 
-    public static void Nothing<T>(T value)
+    public static void NoOp<T>(T value)
     {
     }
 
-    public static void Nothing<T1, T2>(
+    public static void NoOp<T1, T2>(
         T1 value1,
         T2 value2
     )
     {
     }
 
-    public static void Nothing<T1, T2, T3>(
+    public static void NoOp<T1, T2, T3>(
         T1 value1,
         T2 value2,
         T3 value3
@@ -26,7 +26,7 @@ partial class Utility
     {
     }
 
-    public static void Nothing<T1, T2, T3, T4>(
+    public static void NoOp<T1, T2, T3, T4>(
         T1 value1,
         T2 value2,
         T3 value3,
@@ -35,7 +35,7 @@ partial class Utility
     {
     }
 
-    public static void Nothing<T1, T2, T3, T4, T5>(
+    public static void NoOp<T1, T2, T3, T4, T5>(
         T1 value1,
         T2 value2,
         T3 value3,
@@ -45,7 +45,7 @@ partial class Utility
     {
     }
 
-    public static void Nothing<T1, T2, T3, T4, T5, T6>(
+    public static void NoOp<T1, T2, T3, T4, T5, T6>(
         T1 value1,
         T2 value2,
         T3 value3,
@@ -56,7 +56,7 @@ partial class Utility
     {
     }
 
-    public static void Nothing<T1, T2, T3, T4, T5, T6, T7>(
+    public static void NoOp<T1, T2, T3, T4, T5, T6, T7>(
         T1 value1,
         T2 value2,
         T3 value3,
@@ -68,7 +68,7 @@ partial class Utility
     {
     }
 
-    public static void Nothing<T1, T2, T3, T4, T5, T6, T7, T8>(
+    public static void NoOp<T1, T2, T3, T4, T5, T6, T7, T8>(
         T1 value1,
         T2 value2,
         T3 value3,

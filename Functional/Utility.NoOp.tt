@@ -6,16 +6,16 @@ namespace Macaron.Functional;
 
 partial class Utility
 {
-    public static void Nothing()
+    public static void NoOp()
     {
     }
 
-    public static void Nothing<T>(T value)
+    public static void NoOp<T>(T value)
     {
     }
 
 <# for (int n = 2; n <= MaxCount; n++) { #>
-    public static void Nothing<<# for (int i = 1; i < n; ++i) { #>T<#= i #>, <# } #>T<#= n #>>(
+    public static void NoOp<<# for (int i = 1; i < n; ++i) { #>T<#= i #>, <# } #>T<#= n #>>(
 <# for (int i = 1; i < n; ++i) { #>
         T<#= i #> value<#= i #>,
 <# } #>

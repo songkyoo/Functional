@@ -37,7 +37,7 @@
     <Exec Command="dotnet t4 Utility.Curry.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Flip.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Item.tt -p:MaxCount=8" />
-    <Exec Command="dotnet t4 Utility.Nothing.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Utility.NoOp.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Partial.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Pipe.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Tuple.tt -p:MaxCount=8" />
