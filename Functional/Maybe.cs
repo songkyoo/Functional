@@ -17,6 +17,16 @@ public static partial class Maybe
         return new NothingMaybe<T>();
     }
 
+    public static Maybe<T> From<T>(T value, Func<T, bool> predicate)
+    {
+        return predicate(value) ? Just(value) : Nothing<T>();
+    }
+
+    public static Maybe<T> Of<T>(T? value)
+    {
+        return value != null ? Just(value) : Nothing<T>();
+    }
+
     public static Func<Maybe<T>, Maybe<TResult>> Lift<T, TResult>(Func<T, TResult> fn)
     {
         return maybe => maybe.Map(fn);

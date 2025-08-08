@@ -139,4 +139,13 @@ public class MaybeTest
 
         Assert.That(executed, Is.True);
     }
+
+    [Test]
+    public void From_PredicateReturnsTrueWithNullValue_ReturnsJust()
+    {
+        var maybe = From<object?>(null, value => true);
+
+        Assert.That(maybe.IsJust, Is.True);
+        Assert.That(maybe.Value, Is.Null);
+    }
 }
