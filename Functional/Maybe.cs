@@ -22,9 +22,14 @@ public static partial class Maybe
         return predicate(value) ? Just(value) : Nothing<T>();
     }
 
-    public static Maybe<T> Of<T>(T? value)
+    public static Maybe<T> Of<T>(T? value) where T : class
     {
         return value != null ? Just(value) : Nothing<T>();
+    }
+
+    public static Maybe<T> Of<T>(T? value) where T : struct
+    {
+        return value != null ? Just(value.Value) : Nothing<T>();
     }
 
     public static Func<Maybe<T>, Maybe<TResult>> Lift<T, TResult>(Func<T, TResult> fn)
