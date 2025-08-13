@@ -20,6 +20,23 @@ public static partial class Extensions
         }
     }
 
+    public static TResult Apply<T1, T2, TResult>(
+        this (T1, T2) tuple,
+        Func<T1, T2, TResult> fn
+    )
+    {
+        return fn(tuple.Item1, tuple.Item2);
+    }
+
+    public static TResult Apply<T1, T2, T3, TResult>(
+        this (T1, T2, T3) tuple,
+        Func<T1, T2, T3, TResult> fn
+    )
+    {
+        return fn(tuple.Item1, tuple.Item2, tuple.Item3);
+    }
+
+
     public static (TResult1, TResult2) Map<T1, T2, TResult1, TResult2>(
         this (T1, T2) tuple,
         Func<T1, TResult1> f1,
