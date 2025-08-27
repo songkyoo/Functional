@@ -36,7 +36,6 @@ public static partial class Extensions
         return fn(tuple.Item1, tuple.Item2, tuple.Item3);
     }
 
-
     public static (TResult1, TResult2) Map<T1, T2, TResult1, TResult2>(
         this (T1, T2) tuple,
         Func<T1, TResult1> f1,
@@ -54,6 +53,46 @@ public static partial class Extensions
     )
     {
         return (f1(tuple.Item1), f2(tuple.Item2), f3(tuple.Item3));
+    }
+
+    public static (TResult1, T2) MapFirst<T1, T2, TResult1>(
+        (T1, T2) tuple,
+        Func<T1, TResult1> fn
+    )
+    {
+        return (fn(tuple.Item1), tuple.Item2);
+    }
+
+    public static (T1, TResult2) MapSecond<T1, T2, TResult2>(
+        this (T1, T2) tuple,
+        Func<T2, TResult2> fn
+    )
+    {
+        return (tuple.Item1, fn(tuple.Item2));
+    }
+
+    public static (TResult1, T2, T3) MapFirst<T1, T2, T3, TResult1>(
+        this (T1, T2, T3) tuple,
+        Func<T1, TResult1> fn
+    )
+    {
+        return (fn(tuple.Item1), tuple.Item2, tuple.Item3);
+    }
+
+    public static (T1, TResult2, T3) MapSecond<T1, T2, T3, TResult2>(
+        this (T1, T2, T3) tuple,
+        Func<T2, TResult2> fn
+    )
+    {
+        return (tuple.Item1, fn(tuple.Item2), tuple.Item3);
+    }
+
+    public static (T1, T2, TResult3) MapThird<T1, T2, T3, TResult3>(
+        this (T1, T2, T3) tuple,
+        Func<T3, TResult3> fn
+    )
+    {
+        return (tuple.Item1, tuple.Item2, fn(tuple.Item3));
     }
 
     public static ((T1, T1), (T2, T2)) Zip<T1, T2>(
