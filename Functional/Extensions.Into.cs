@@ -3,63 +3,63 @@ namespace Macaron.Functional;
 
 partial class Extensions
 {
-    public static TResult Pipe<T, TResult>(
+    public static TResult Into<T, TResult>(
         this T self, Func<T, TResult> fn
     ) where T : notnull
     {
         return fn(self);
     }
 
-    public static TResult Pipe<T, TArg1, TResult>(
+    public static TResult Into<T, TArg1, TResult>(
         this T self, Func<TArg1, T, TResult> fn, TArg1 arg1
     ) where T : notnull
     {
         return fn(arg1, self);
     }
 
-    public static TResult Pipe<T, TArg1, TArg2, TResult>(
+    public static TResult Into<T, TArg1, TArg2, TResult>(
         this T self, Func<TArg1, TArg2, T, TResult> fn, TArg1 arg1, TArg2 arg2
     ) where T : notnull
     {
         return fn(arg1, arg2, self);
     }
 
-    public static TResult Pipe<T, TArg1, TArg2, TArg3, TResult>(
+    public static TResult Into<T, TArg1, TArg2, TArg3, TResult>(
         this T self, Func<TArg1, TArg2, TArg3, T, TResult> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3
     ) where T : notnull
     {
         return fn(arg1, arg2, arg3, self);
     }
 
-    public static TResult Pipe<T, TArg1, TArg2, TArg3, TArg4, TResult>(
+    public static TResult Into<T, TArg1, TArg2, TArg3, TArg4, TResult>(
         this T self, Func<TArg1, TArg2, TArg3, TArg4, T, TResult> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4
     ) where T : notnull
     {
         return fn(arg1, arg2, arg3, arg4, self);
     }
 
-    public static TResult Pipe<T, TArg1, TArg2, TArg3, TArg4, TArg5, TResult>(
+    public static TResult Into<T, TArg1, TArg2, TArg3, TArg4, TArg5, TResult>(
         this T self, Func<TArg1, TArg2, TArg3, TArg4, TArg5, T, TResult> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5
     ) where T : notnull
     {
         return fn(arg1, arg2, arg3, arg4, arg5, self);
     }
 
-    public static TResult Pipe<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TResult>(
+    public static TResult Into<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TResult>(
         this T self, Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, T, TResult> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6
     ) where T : notnull
     {
         return fn(arg1, arg2, arg3, arg4, arg5, arg6, self);
     }
 
-    public static TResult Pipe<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TResult>(
+    public static TResult Into<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TResult>(
         this T self, Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, T, TResult> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7
     ) where T : notnull
     {
         return fn(arg1, arg2, arg3, arg4, arg5, arg6, arg7, self);
     }
 
-    public static TResult Pipe<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TResult>(
+    public static TResult Into<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TResult>(
         this T self, Func<TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, T, TResult> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7, TArg8 arg8
     ) where T : notnull
     {

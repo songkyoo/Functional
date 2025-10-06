@@ -27,7 +27,7 @@
     <Exec Command="dotnet t4 Extensions.Curry.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Extensions.Let.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Extensions.Partial.tt -p:MaxCount=8" />
-    <Exec Command="dotnet t4 Extensions.Pipe.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Extensions.Into.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Extensions.Tap.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Extensions.Uncurry.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Maybe.Lift.tt -p:MaxCount=8" />
