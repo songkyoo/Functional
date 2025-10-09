@@ -2,21 +2,22 @@ namespace Macaron.Functional;
 
 public static partial class Utility
 {
-    public static void Run<T>(T value, Action<T> action)
+    public static void Run(Action action)
     {
-        action.Invoke(value);
+        action();
     }
 
-    public static TResult Run<T, TResult>(T value, Func<T, TResult> fn)
+    public static TResult Run<TResult>(Func<TResult> fn)
     {
-        return fn.Invoke(value);
+        return fn();
     }
 
-    public static Either<Exception, Placeholder> RunCatching<T>(T value, Action<T> fn)
+    public static Either<Exception, Placeholder> RunCatching(Action action)
     {
         try
         {
-            fn.Invoke(value);
+            action();
+
             return Either.Right(Placeholder._);
         }
         catch (Exception exception)
@@ -25,25 +26,11 @@ public static partial class Utility
         }
     }
 
-    public static Either<TException, Placeholder> RunCatching<TException, T>(T value, Action<T> fn)
-        where TException : Exception
+    public static Either<Exception, TResult> RunCatching<TResult>(Func<TResult> fn)
     {
         try
         {
-            fn.Invoke(value);
-            return Either.Right(Placeholder._);
-        }
-        catch (TException exception)
-        {
-            return Either.Left(exception);
-        }
-    }
-
-    public static Either<Exception, TResult> RunCatching<T, TResult>(T value, Func<T, TResult> fn)
-    {
-        try
-        {
-            return Either.Right(fn.Invoke(value));
+            return Either.Right(fn());
         }
         catch (Exception exception)
         {
@@ -51,14 +38,37 @@ public static partial class Utility
         }
     }
 
-    public static Either<TException, TResult> RunCatching<TException, T, TResult>(T value, Func<T, TResult> fn)
-        where TException : Exception
+    public static void Run<T>(Action<T> action, T context)
+    {
+        action(context);
+    }
+
+    public static TResult Run<T, TResult>(Func<T, TResult> fn, T context)
+    {
+        return fn(context);
+    }
+
+    public static Either<Exception, Placeholder> RunCatching<T>(Action<T> action, T context)
     {
         try
         {
-            return Either.Right(fn.Invoke(value));
+            action(context);
+
+            return Either.Right(Placeholder._);
         }
-        catch (TException exception)
+        catch (Exception exception)
+        {
+            return Either.Left(exception);
+        }
+    }
+
+    public static Either<Exception, TResult> RunCatching<T, TResult>(Func<T, TResult> fn, T context)
+    {
+        try
+        {
+            return Either.Right(fn(context));
+        }
+        catch (Exception exception)
         {
             return Either.Left(exception);
         }

@@ -48,28 +48,12 @@ public class EitherExtensionsTest
     }
 
     [Test]
-    public void GetOrThrow_Right_ReturnsRightValue()
-    {
-        var right = Right<Exception, string>("Foo");
-        Assert.That(right.GetOrThrow(), Is.EqualTo("Foo"));
-    }
-
-    [Test]
-    public void GetOrThrow_Left_Throws()
-    {
-        var exception = new InvalidOperationException("Foo");
-        var left = Left<Exception, string>(exception);
-
-        Assert.Throws<InvalidOperationException>(() => left.GetOrThrow());
-    }
-
-    [Test]
     public void GetOrElse_Right_ReturnsRight()
     {
         Either<string, string> right = Right("Foo");
 
         Assert.That(right.GetOrElse("Bar"), Is.EqualTo("Foo"));
-        Assert.That(right.GetOrElse(() => "Bar"), Is.EqualTo("Foo"));
+        Assert.That(right.GetOrElse(_ => "Bar"), Is.EqualTo("Foo"));
         Assert.That(right.GetOrElse(left => "Bar"), Is.EqualTo("Foo"));
     }
 
@@ -79,8 +63,8 @@ public class EitherExtensionsTest
         Either<string, string> left = Left("Foo");
 
         Assert.That(left.GetOrElse("Bar"), Is.EqualTo("Bar"));
-        Assert.That(left.GetOrElse(() => "Bar"), Is.EqualTo("Bar"));
-        Assert.That(left.GetOrElse(left => left), Is.EqualTo("Foo"));
+        Assert.That(left.GetOrElse(_ => "Bar"), Is.EqualTo("Bar"));
+        Assert.That(left.GetOrElse(left2 => left2), Is.EqualTo("Foo"));
     }
 
     [Test]
@@ -88,9 +72,9 @@ public class EitherExtensionsTest
     {
         Either<string, string> right = Right("Foo");
 
-        Assert.That(right.OrElse("Bar"), Is.EqualTo(Right("Foo")));
+        Assert.That(right.Recover("Bar"), Is.EqualTo(Right("Foo")));
         Assert.That(right.OrElse(Right("Bar")), Is.EqualTo(Right("Foo")));
-        Assert.That(right.OrElse(() => Right("Bar")), Is.EqualTo(Right("Foo")));
+        Assert.That(right.OrElse(_ => Right("Bar")), Is.EqualTo(Right("Foo")));
         Assert.That(right.OrElse(left => Right("Bar")), Is.EqualTo(Right("Foo")));
     }
 
@@ -99,10 +83,10 @@ public class EitherExtensionsTest
     {
         Either<string, string> left = Left("Foo");
 
-        Assert.That(left.OrElse("Bar"), Is.EqualTo(Right("Bar")));
+        Assert.That(left.Recover("Bar"), Is.EqualTo(Right("Bar")));
         Assert.That(left.OrElse(Right("Bar")), Is.EqualTo(Right("Bar")));
-        Assert.That(left.OrElse(() => Right("Bar")), Is.EqualTo(Right("Bar")));
-        Assert.That(left.OrElse(left => Right(left)), Is.EqualTo(Right("Foo")));
+        Assert.That(left.OrElse(_ => Right("Bar")), Is.EqualTo(Right("Bar")));
+        Assert.That(left.OrElse(left2 => Right(left2)), Is.EqualTo(Right("Foo")));
     }
 
     [Test]
@@ -136,7 +120,7 @@ public class EitherExtensionsTest
     public void Ensure_WithFuncLeftValueFailsPredicate_ReturnsLeft()
     {
         var right = Right<string, int>(42);
-        var result = right.Ensure(x => false, () => "generated");
+        var result = right.Ensure(x => false, _ => "generated");
 
         Assert.That(result, Is.EqualTo(Left<string, int>("generated")));
     }
@@ -148,43 +132,6 @@ public class EitherExtensionsTest
         var result = right.Ensure(x => x % 2 == 0, x => $"odd:{x}");
 
         Assert.That(result, Is.EqualTo(Left<string, int>("odd:7")));
-    }
-
-    [Test]
-    public void Ensure_WithReplacementEither_ReturnsReplacementOnFailure()
-    {
-        var right = Right<string, int>(0);
-        var replacement = Right<string, int>(42);
-        var result = right.Ensure(x => x > 0, replacement);
-
-        Assert.That(result, Is.EqualTo(replacement));
-    }
-
-    [Test]
-    public void Ensure_WithFuncReplacementEither_ReturnsReplacementOnFailure()
-    {
-        var right = Right<string, int>(7);
-        var result = right.Ensure(x => false, () => Right<string, int>(42));
-
-        Assert.That(result, Is.EqualTo(Right<string, int>(42)));
-    }
-
-    [Test]
-    public void Ensure_WithFuncRightReplacementEither_ReturnsReplacementOnFailure()
-    {
-        var right = Right<string, int>(7);
-        var result = right.Ensure(x => false, x => Right<string, int>(x * 2));
-
-        Assert.That(result, Is.EqualTo(Right<string, int>(14)));
-    }
-
-    [Test]
-    public void Ensure_WithFuncRightReplacementEither_PredicateTrue_ReturnsSelf()
-    {
-        var right = Right<string, int>(42);
-        var result = right.Ensure(x => true, x => Right<string, int>(x * 10));
-
-        Assert.That(result, Is.EqualTo(right));
     }
 
     [Test]

@@ -3,10 +3,6 @@ namespace Macaron.Functional;
 
 partial class Utility
 {
-    public static T1 Item1<T1, T2>(KeyValuePair<T1, T2> pair) => pair.Key;
-
-    public static T2 Item2<T1, T2>(KeyValuePair<T1, T2> pair) => pair.Value;
-
     public static T1 Item1<T1, T2>((T1, T2) tuple)
     {
         return tuple.Item1;

@@ -52,8 +52,8 @@ public class MaybeExtensionsTest
     {
         Maybe<string> just = Just("Foo");
 
-        Assert.That(just.OrElse("Bar"), Is.EqualTo(Just("Foo")));
-        Assert.That(just.OrElse(() => "Bar"), Is.EqualTo(Just("Foo")));
+        Assert.That(just.Recover("Bar"), Is.EqualTo(Just("Foo")));
+        Assert.That(just.Recover(() => "Bar"), Is.EqualTo(Just("Foo")));
         Assert.That(just.OrElse(Just("Bar")), Is.EqualTo(Just("Foo")));
         Assert.That(just.OrElse(() => Just("Bar")), Is.EqualTo(Just("Foo")));
     }
@@ -63,8 +63,8 @@ public class MaybeExtensionsTest
     {
         Maybe<string> nothing = Nothing();
 
-        Assert.That(nothing.OrElse("Bar"), Is.EqualTo(Just("Bar")));
-        Assert.That(nothing.OrElse(() => "Bar"), Is.EqualTo(Just("Bar")));
+        Assert.That(nothing.Recover("Bar"), Is.EqualTo(Just("Bar")));
+        Assert.That(nothing.Recover(() => "Bar"), Is.EqualTo(Just("Bar")));
         Assert.That(nothing.OrElse(Just("Bar")), Is.EqualTo(Just("Bar")));
         Assert.That(nothing.OrElse(() => Just("Bar")), Is.EqualTo(Just("Bar")));
     }
@@ -131,16 +131,5 @@ public class MaybeExtensionsTest
         var result = fn.Apply(arg);
 
         Assert.That(result.IsNothing, Is.True);
-    }
-
-    [Test]
-    public void LinqQuery_WithMaybeType_ShouldFilterAndTransformCorrectly()
-    {
-        var maybe = Just("Foo");
-        var just = from x in maybe where x.Length > 2 select x.ToUpper();
-        var nothing = from x in maybe where x.Length < 2 select x.ToUpper();
-
-        Assert.That(just.Value, Is.EqualTo("FOO"));
-        Assert.That(nothing.IsNothing, Is.True);
     }
 }

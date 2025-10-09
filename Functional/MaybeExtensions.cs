@@ -2,30 +2,9 @@ namespace Macaron.Functional;
 
 public static partial class MaybeExtensions
 {
-    public static T? GetOrNull<T>(this Maybe<T> maybe)
-        where T : class
+    public static Maybe<TResult> Apply<T, TResult>(this Maybe<Func<T, TResult>> fn, Maybe<T> maybe)
     {
-        return maybe.IsJust ? maybe.Value : null;
-    }
-
-    public static T GetOrElse<T>(this Maybe<T> maybe, T value)
-    {
-        return maybe.IsJust ? maybe.Value : value;
-    }
-
-    public static T GetOrElse<T>(this Maybe<T> maybe, Func<T> getValue)
-    {
-        return maybe.IsJust ? maybe.Value : getValue();
-    }
-
-    public static Maybe<T> OrElse<T>(this Maybe<T> maybe, T value)
-    {
-        return maybe.IsJust ? maybe : Maybe.Just(value);
-    }
-
-    public static Maybe<T> OrElse<T>(this Maybe<T> maybe, Func<T> getValue)
-    {
-        return maybe.IsJust ? maybe : Maybe.Just(getValue());
+        return fn.FlatMap(maybe.Map);
     }
 
     public static Maybe<T> OrElse<T>(this Maybe<T> maybe, Maybe<T> other)
@@ -48,42 +27,61 @@ public static partial class MaybeExtensions
         return maybe;
     }
 
+    public static Maybe<T> Recover<T>(
+        this Maybe<T> maybe,
+        T value
+    )
+    {
+        return maybe.IsJust ? maybe : Maybe.Just(value);
+    }
+
+    public static Maybe<T> Recover<T>(
+        this Maybe<T> maybe,
+        Func<T> getValue
+    )
+    {
+        return maybe.IsJust ? maybe : Maybe.Just(getValue());
+    }
+
+    public static T? GetOrNull<T>(this Maybe<T> maybe)
+        where T : class
+    {
+        return maybe.IsJust ? maybe.Value : null;
+    }
+
+    public static T GetOrElse<T>(this Maybe<T> maybe, T value)
+    {
+        return maybe.IsJust ? maybe.Value : value;
+    }
+
+    public static T GetOrElse<T>(this Maybe<T> maybe, Func<T> getValue)
+    {
+        return maybe.IsJust ? maybe.Value : getValue();
+    }
+
     public static bool TryGet<T>(this Maybe<T> maybe, out T value)
     {
         if (maybe.IsJust)
         {
             value = maybe.Value;
+
             return true;
         }
         else
         {
             value = default!;
+
             return false;
         }
     }
 
-    public static Maybe<TResult> Apply<T, TResult>(this Maybe<Func<T, TResult>> fn, Maybe<T> maybe)
+    public static Either<TLeft, TRight> ToEither<TLeft, TRight>(this Maybe<TRight> maybe, TLeft left)
     {
-        return fn.FlatMap(maybe.Map);
+        return maybe.IsJust ? Either.Right<TLeft, TRight>(maybe.Value) : Either.Left<TLeft, TRight>(left);
     }
 
-    public static Maybe<TResult> Select<T, TResult>(this Maybe<T> maybe, Func<T, TResult> selector)
+    public static Either<TLeft, TRight> ToEither<TLeft, TRight>(this Maybe<TRight> maybe, Func<TLeft> getLeft)
     {
-        return maybe.Map(selector);
-    }
-
-    public static Maybe<TResult> SelectMany<T, TResult>(this Maybe<T> maybe, Func<T, Maybe<TResult>> selector)
-    {
-        return maybe.FlatMap(selector);
-    }
-
-    public static Maybe<T> Where<T>(this Maybe<T> maybe, Func<T, bool> predicate)
-    {
-        if (maybe.IsJust)
-        {
-            return predicate(maybe.Value) ? maybe : Maybe.Nothing<T>();
-        }
-
-        return maybe;
+        return maybe.IsJust ? Either.Right<TLeft, TRight>(maybe.Value) : Either.Left<TLeft, TRight>(getLeft());
     }
 }

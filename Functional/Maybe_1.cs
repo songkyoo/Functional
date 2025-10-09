@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Macaron.Functional;
 
 public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>, IEquatable<NothingMaybe>
@@ -67,11 +69,12 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     #endregion
 
     #region Properties
+    [MemberNotNullWhen(true, nameof(_value))]
     public bool IsJust => _isJust ?? throw new InvalidOperationException("Maybe is not initialized.");
 
     public bool IsNothing => !IsJust;
 
-    public T Value => IsJust ? _value! : throw new InvalidOperationException("Maybe is not Just.");
+    public T Value => IsJust ? _value : throw new InvalidOperationException("Maybe is not Just.");
     #endregion
 
     #region Constructors
@@ -90,7 +93,7 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
             Maybe<T> maybe => Equals(maybe),
             JustMaybe<T> just => Equals(just),
             NothingMaybe nothing => Equals(nothing),
-            _ => false
+            _ => false,
         };
     }
 
@@ -101,6 +104,11 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
 
     public override string ToString()
     {
+        if (_isJust is null)
+        {
+            return "Maybe";
+        }
+
         return IsJust ? $"Just({_value})" : "Nothing";
     }
     #endregion
@@ -131,8 +139,8 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     {
         return IsJust switch
         {
-            true => Maybe.Just(fn.Invoke(_value!)),
-            false => Maybe.Nothing()
+            true => Maybe.Just(fn(_value)),
+            false => Maybe.Nothing<TResult>(),
         };
     }
 
@@ -140,8 +148,8 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     {
         return IsJust switch
         {
-            true => fn.Invoke(_value!),
-            false => Maybe.Nothing()
+            true => fn(_value),
+            false => Maybe.Nothing<TResult>(),
         };
     }
 
@@ -149,27 +157,37 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     {
         if (IsJust)
         {
-            action.Invoke(_value!);
+            action(_value);
         }
 
         return this;
     }
 
-    public TResult Match<TResult>(Func<T, TResult> just, Func<TResult> nothing)
+    public Maybe<T> TapNothing(Action action)
     {
-        return IsJust ? just.Invoke(_value!) : nothing.Invoke();
+        if (IsNothing)
+        {
+            action();
+        }
+
+        return this;
     }
 
     public void Match(Action<T> just, Action nothing)
     {
         if (IsJust)
         {
-            just.Invoke(_value!);
+            just(_value);
         }
         else
         {
-            nothing.Invoke();
+            nothing();
         }
+    }
+
+    public TResult Match<TResult>(Func<T, TResult> just, Func<TResult> nothing)
+    {
+        return IsJust ? just(_value) : nothing();
     }
     #endregion
 }

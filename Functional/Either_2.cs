@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Macaron.Functional;
 
 public readonly struct Either<TLeft, TRight>
@@ -88,13 +90,17 @@ public readonly struct Either<TLeft, TRight>
     #endregion
 
     #region Properties
+    [MemberNotNullWhen(true, nameof(_left))]
+    [MemberNotNullWhen(false, nameof(_right))]
     public bool IsLeft => !IsRight;
 
+    [MemberNotNullWhen(true, nameof(_right))]
+    [MemberNotNullWhen(false, nameof(_left))]
     public bool IsRight => _isRight ?? throw new InvalidOperationException("Either is not initialized.");
 
-    public TLeft Left => IsLeft ? _left! : throw new InvalidOperationException("Either is not Left.");
+    public TLeft Left => IsLeft ? _left : throw new InvalidOperationException("Either is not Left.");
 
-    public TRight Right => IsRight ? _right! : throw new InvalidOperationException("Either is not Right.");
+    public TRight Right => IsRight ? _right : throw new InvalidOperationException("Either is not Right.");
     #endregion
 
     #region Constructors
@@ -116,7 +122,7 @@ public readonly struct Either<TLeft, TRight>
             LeftEither<TLeft, TRight> left => Equals(left),
             RightEither<TRight> right => Equals(right),
             RightEither<TLeft, TRight> right => Equals(right),
-            _ => false
+            _ => false,
         };
     }
 
@@ -127,6 +133,11 @@ public readonly struct Either<TLeft, TRight>
 
     public override string ToString()
     {
+        if (_isRight is null)
+        {
+            return "Either";
+        }
+
         return IsRight ? $"Right({_right})" : $"Left({_left})";
     }
     #endregion
@@ -135,8 +146,8 @@ public readonly struct Either<TLeft, TRight>
     public bool Equals(Either<TLeft, TRight> other)
     {
         return _isRight == other._isRight
-               && EqualityComparer<TRight?>.Default.Equals(_right, other._right)
-               && EqualityComparer<TLeft?>.Default.Equals(_left, other._left);
+            && EqualityComparer<TRight?>.Default.Equals(_right, other._right)
+            && EqualityComparer<TLeft?>.Default.Equals(_left, other._left);
     }
     #endregion
 
@@ -171,15 +182,15 @@ public readonly struct Either<TLeft, TRight>
     #region Methods
     public Either<TLeft, TResult> Map<TResult>(Func<TRight, TResult> fn)
     {
-        return IsRight ? Either.Right(fn.Invoke(_right!)) : Either.Left<TLeft, TResult>(_left!);
+        return IsRight ? Either.Right<TLeft, TResult>(fn(_right)) : Either.Left<TLeft, TResult>(_left);
     }
 
     public Either<TResult, TRight> MapLeft<TResult>(Func<TLeft, TResult> fn)
     {
-        return IsRight switch
+        return IsLeft switch
         {
-            true => Either.Right<TResult, TRight>(_right!),
-            false => Either.Left(fn.Invoke(_left!))
+            true => Either.Left<TResult, TRight>(fn(_left)),
+            false => Either.Right<TResult, TRight>(_right),
         };
     }
 
@@ -187,17 +198,17 @@ public readonly struct Either<TLeft, TRight>
     {
         return IsRight switch
         {
-            true => fn.Invoke(_right!),
-            false => Either.Left<TLeft, TResult>(_left!)
+            true => fn(_right),
+            false => Either.Left<TLeft, TResult>(_left),
         };
     }
 
     public Either<TResult, TRight> FlatMapLeft<TResult>(Func<TLeft, Either<TResult, TRight>> fn)
     {
-        return IsRight switch
+        return IsLeft switch
         {
-            true => Either.Right<TResult, TRight>(_right!),
-            false => fn.Invoke(_left!)
+            true => fn(_left),
+            false => Either.Right<TResult, TRight>(_right),
         };
     }
 
@@ -205,7 +216,7 @@ public readonly struct Either<TLeft, TRight>
     {
         if (IsRight)
         {
-            action.Invoke(_right!);
+            action(_right);
         }
 
         return this;
@@ -215,27 +226,27 @@ public readonly struct Either<TLeft, TRight>
     {
         if (IsLeft)
         {
-            action.Invoke(_left!);
+            action(_left);
         }
 
         return this;
-    }
-
-    public TResult Match<TResult>(Func<TLeft, TResult> left, Func<TRight, TResult> right)
-    {
-        return IsRight ? right.Invoke(_right!) : left.Invoke(_left!);
     }
 
     public void Match(Action<TLeft> left, Action<TRight> right)
     {
         if (IsRight)
         {
-            right.Invoke(_right!);
+            right(_right);
         }
         else
         {
-            left.Invoke(_left!);
+            left(_left);
         }
+    }
+
+    public TResult Match<TResult>(Func<TLeft, TResult> left, Func<TRight, TResult> right)
+    {
+        return IsRight ? right(_right) : left(_left);
     }
     #endregion
 }

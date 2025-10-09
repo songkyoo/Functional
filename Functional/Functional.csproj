@@ -18,6 +18,13 @@
     <RepositoryUrl>https://github.com/songkyoo/Functional</RepositoryUrl>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Nullable" Version="1.3.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
   <Target Name="TransformT4TextTemplates" BeforeTargets="BeforeBuild">
     <Exec Command="dotnet tool restore" />
     <Exec Command="dotnet t4 Either.Lift.tt -p:MaxCount=8" />
