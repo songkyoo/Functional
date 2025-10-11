@@ -5,7 +5,7 @@
   },
   "displayName": "Functional Internal",
   "license": "Unlicense",
-  "licenseUrl": "https://unlicense.org/",
+  "licensesUrl": "https://unlicense.org/",
   "name": "com.macaron-games.functional.internal",
   "unity": "2022.3",
   "version": "1.0.0"
