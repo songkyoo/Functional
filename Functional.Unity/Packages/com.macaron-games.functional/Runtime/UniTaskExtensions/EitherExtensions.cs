@@ -266,7 +266,7 @@ namespace Macaron.Functional.UniTaskExtensions
         {
             cancellationToken.ThrowIfCancellationRequested();
 
-            var result = await either;
+            var result = await either.AttachExternalCancellation(cancellationToken);
 
             if (result.IsLeft)
             {

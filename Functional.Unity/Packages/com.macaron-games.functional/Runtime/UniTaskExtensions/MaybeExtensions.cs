@@ -136,7 +136,7 @@ namespace Macaron.Functional.UniTaskExtensions
         {
             cancellationToken.ThrowIfCancellationRequested();
 
-            var result = await maybe;
+            var result = await maybe.AttachExternalCancellation(cancellationToken);
 
             if (result.IsJust)
             {
@@ -165,7 +165,7 @@ namespace Macaron.Functional.UniTaskExtensions
         }
         #endregion
 
-        #region TapAsync
+        #region TapNothingAsync
         public static async UniTask<Maybe<T>> TapNothingAsync<T>(
             this Maybe<T> maybe,
             Func<CancellationToken, UniTask> fnAsync,
