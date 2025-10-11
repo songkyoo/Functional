@@ -74,6 +74,22 @@ public static partial class Utility
         }
     }
 
+    public static void Use<T>(T disposable, Action<T> action) where T : IDisposable
+    {
+        using (disposable)
+        {
+            action(disposable);
+        }
+    }
+
+    public static TResult Use<T, TResult>(T disposable, Func<T, TResult> fn) where T : IDisposable
+    {
+        using (disposable)
+        {
+            return fn(disposable);
+        }
+    }
+
     public static Func<T, T> Identity<T>()
     {
         return static value => value;

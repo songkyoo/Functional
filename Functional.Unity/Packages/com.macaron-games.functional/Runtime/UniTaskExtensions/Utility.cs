@@ -144,6 +144,52 @@ namespace Macaron.Functional.UniTaskExtensions
                 return Either.Left<Exception, TResult>(exception);
             }
         }
+
+        public static async UniTask UseAsync<T>(T disposable, Action<T> action)
+            where T : IAsyncDisposable
+        {
+            await using (disposable)
+            {
+                action(disposable);
+            }
+        }
+
+        public static async UniTask<TResult> UseAsync<T, TResult>(T disposable, Func<T, TResult> fn)
+            where T : IAsyncDisposable
+        {
+            await using (disposable)
+            {
+                return fn(disposable);
+            }
+        }
+
+        public static async UniTask UseAsync<T>(
+            T disposable,
+            Func<T, CancellationToken, UniTask> fnAsync,
+            CancellationToken cancellationToken = default
+        ) where T : IAsyncDisposable
+        {
+            await using (disposable)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+
+                await fnAsync(disposable, cancellationToken);
+            }
+        }
+
+        public static async UniTask<TResult> UseAsync<T, TResult>(
+            T disposable,
+            Func<T, CancellationToken, UniTask<TResult>> fnAsync,
+            CancellationToken cancellationToken = default
+        ) where T : IAsyncDisposable
+        {
+            await using (disposable)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+
+                return await fnAsync(disposable, cancellationToken);
+            }
+        }
     }
 }
 #endif
