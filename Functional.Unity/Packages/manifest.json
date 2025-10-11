@@ -1,5 +1,6 @@
 {
   "dependencies": {
+	"com.macaron-games.functional.internal": "file:../../Functional/bin/Debug/netstandard2.1",
     "com.unity.2d.animation": "12.0.2",
     "com.unity.2d.aseprite": "2.0.1",
     "com.unity.2d.psdimporter": "11.0.1",

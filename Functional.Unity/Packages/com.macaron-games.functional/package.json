@@ -1,0 +1,12 @@
+{
+  "author": {
+    "name": "Gyu Song",
+    "url": "https://github.com/songkyoo"
+  },
+  "displayName": "Functional",
+  "license": "Unlicense",
+  "licenseUrl": "https://unlicense.org/",
+  "name": "com.macaron-games.functional",
+  "unity": "2022.3",
+  "version": "1.0.0"
+}

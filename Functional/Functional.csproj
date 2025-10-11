@@ -49,6 +49,10 @@
     <Exec Command="dotnet t4 Utility.Pipe.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Tuple.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Uncurry.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 ../Functional.Unity/Packages/com.macaron-games.functional/Runtime/UniTaskExtensions/Extensions.AlsoAsync.tt -p:MaxCount=7" />
+    <Exec Command="dotnet t4 ../Functional.Unity/Packages/com.macaron-games.functional/Runtime/UniTaskExtensions/Extensions.IntoAsync.tt -p:MaxCount=7" />
+    <Exec Command="dotnet t4 ../Functional.Unity/Packages/com.macaron-games.functional/Runtime/UniTaskExtensions/Extensions.LetAsync.tt -p:MaxCount=7" />
+    <Exec Command="dotnet t4 ../Functional.Unity/Packages/com.macaron-games.functional/Runtime/UniTaskExtensions/Extensions.TapAsync.tt -p:MaxCount=7" />
   </Target>
 
 </Project>
