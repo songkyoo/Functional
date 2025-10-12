@@ -1,0 +1,28 @@
+{
+    "name": "MacaronGames.Functional.UniTaskExtensions.Tests",
+    "rootNamespace": "Macaron.Functional.UniTaskExtensions.Tests",
+    "references": [
+        "MacaronGames.Functional.UniTaskExtensions",
+        "UniTask"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Macaron.Functional.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.cysharp.unitask",
+            "expression": "",
+            "define": "MACARON_FUNCTIONAL_UNITASK"
+        }
+    ],
+    "noEngineReferences": false
+}
