@@ -1,4 +1,4 @@
-﻿using static Macaron.Functional.Either;
+using static Macaron.Functional.Either;
 
 namespace Macaron.Functional.Tests;
 
@@ -51,42 +51,106 @@ public class EitherExtensionsTest
     public void GetOrElse_Right_ReturnsRight()
     {
         Either<string, string> right = Right("Foo");
+        var valueFactoryInvoked = false;
 
         Assert.That(right.GetOrElse("Bar"), Is.EqualTo("Foo"));
-        Assert.That(right.GetOrElse(_ => "Bar"), Is.EqualTo("Foo"));
-        Assert.That(right.GetOrElse(left => "Bar"), Is.EqualTo("Foo"));
+        Assert.That(right.GetOrElse(_ =>
+        {
+            valueFactoryInvoked = true;
+
+            return "Bar";
+        }), Is.EqualTo("Foo"));
+        Assert.That(right.GetOrElse(left =>
+        {
+            valueFactoryInvoked = true;
+
+            return "Bar";
+        }), Is.EqualTo("Foo"));
+        Assert.That(valueFactoryInvoked, Is.False);
     }
 
     [Test]
     public void GetOrElse_Left_ReturnsRightValue()
     {
         Either<string, string> left = Left("Foo");
+        var valueFactoryCalls = 0;
 
         Assert.That(left.GetOrElse("Bar"), Is.EqualTo("Bar"));
-        Assert.That(left.GetOrElse(_ => "Bar"), Is.EqualTo("Bar"));
-        Assert.That(left.GetOrElse(left2 => left2), Is.EqualTo("Foo"));
+        Assert.That(left.GetOrElse(_ =>
+        {
+            valueFactoryCalls++;
+
+            return "Bar";
+        }), Is.EqualTo("Bar"));
+        Assert.That(left.GetOrElse(left2 =>
+        {
+            valueFactoryCalls++;
+
+            return left2;
+        }), Is.EqualTo("Foo"));
+        Assert.That(valueFactoryCalls, Is.EqualTo(2));
     }
 
     [Test]
     public void OrElse_Right_ReturnsSelf()
     {
         Either<string, string> right = Right("Foo");
+        var recoverInvoked = false;
+        var orElseInvoked = false;
 
         Assert.That(right.Recover("Bar"), Is.EqualTo(Right("Foo")));
+        Assert.That(right.Recover(_ =>
+        {
+            recoverInvoked = true;
+
+            return "Bar";
+        }), Is.EqualTo(Right("Foo")));
         Assert.That(right.OrElse(Right("Bar")), Is.EqualTo(Right("Foo")));
-        Assert.That(right.OrElse(_ => Right("Bar")), Is.EqualTo(Right("Foo")));
-        Assert.That(right.OrElse(left => Right("Bar")), Is.EqualTo(Right("Foo")));
+        Assert.That(right.OrElse(_ =>
+        {
+            orElseInvoked = true;
+
+            return Right("Bar");
+        }), Is.EqualTo(Right("Foo")));
+        Assert.That(right.OrElse(left =>
+        {
+            orElseInvoked = true;
+
+            return Right("Bar");
+        }), Is.EqualTo(Right("Foo")));
+        Assert.That(recoverInvoked, Is.False);
+        Assert.That(orElseInvoked, Is.False);
     }
 
     [Test]
     public void OrElse_Left_ReturnsRight()
     {
         Either<string, string> left = Left("Foo");
+        var recoverCalls = 0;
+        var orElseCalls = 0;
 
         Assert.That(left.Recover("Bar"), Is.EqualTo(Right("Bar")));
+        Assert.That(left.Recover(_ =>
+        {
+            recoverCalls++;
+
+            return "Bar";
+        }), Is.EqualTo(Right("Bar")));
         Assert.That(left.OrElse(Right("Bar")), Is.EqualTo(Right("Bar")));
-        Assert.That(left.OrElse(_ => Right("Bar")), Is.EqualTo(Right("Bar")));
-        Assert.That(left.OrElse(left2 => Right(left2)), Is.EqualTo(Right("Foo")));
+        Assert.That(left.OrElse(_ =>
+        {
+            orElseCalls++;
+
+            return Right("Bar");
+        }), Is.EqualTo(Right("Bar")));
+        Assert.That(left.OrElse(left2 =>
+        {
+            orElseCalls++;
+
+            return Right(left2);
+        }), Is.EqualTo(Right("Foo")));
+        Assert.That(recoverCalls, Is.EqualTo(1));
+        Assert.That(orElseCalls, Is.EqualTo(2));
     }
 
     [Test]
@@ -172,6 +236,79 @@ public class EitherExtensionsTest
 
         Assert.That(result, Is.False);
         Assert.That(value, Is.Null);
+    }
+
+    [Test]
+    public void GetLeftOrElse_Left_ReturnsLeftWithoutInvokingFallback()
+    {
+        var left = Left<string, int>("err");
+        var fallbackInvoked = false;
+
+        Assert.That(left.GetLeftOrElse("fallback"), Is.EqualTo("err"));
+        Assert.That(left.GetLeftOrElse(_ =>
+        {
+            fallbackInvoked = true;
+
+            return "fallback";
+        }), Is.EqualTo("err"));
+        Assert.That(fallbackInvoked, Is.False);
+    }
+
+    [Test]
+    public void GetLeftOrElse_Right_UsesRightValue()
+    {
+        var right = Right<string, int>(7);
+        var calls = 0;
+
+        Assert.That(right.GetLeftOrElse("fallback"), Is.EqualTo("fallback"));
+        Assert.That(right.GetLeftOrElse(value =>
+        {
+            calls++;
+
+            return $"from:{value}";
+        }), Is.EqualTo("from:7"));
+        Assert.That(calls, Is.EqualTo(1));
+    }
+
+    [Test]
+    public void Recover_Right_DoesNotInvokeFactory()
+    {
+        var right = Right<string, int>(7);
+        var invoked = false;
+        var result = right.Recover(_ =>
+        {
+            invoked = true;
+
+            return 10;
+        });
+
+        Assert.That(result, Is.EqualTo(right));
+        Assert.That(invoked, Is.False);
+    }
+
+    [Test]
+    public void Recover_Left_UsesFactoryValue()
+    {
+        var left = Left<string, int>("error");
+        var result = left.Recover(value => value.Length);
+
+        Assert.That(result, Is.EqualTo(Right<string, int>(5)));
+    }
+
+    [Test]
+    public void ToMaybe_Right_ReturnsJust()
+    {
+        var right = Right<string, int>(42);
+
+        Assert.That(right.ToMaybe(), Is.EqualTo(Maybe.Just(42)));
+    }
+
+    [Test]
+    public void ToMaybe_Left_ReturnsNothing()
+    {
+        var left = Left<string, int>("error");
+
+        Assert.That(left.ToMaybe(), Is.EqualTo(Maybe.Nothing<int>()));
     }
 
     [Test]

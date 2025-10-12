@@ -148,4 +148,47 @@ public class MaybeTest
         Assert.That(maybe.IsJust, Is.True);
         Assert.That(maybe.Value, Is.Null);
     }
+
+    [Test]
+    public void From_PredicateReturnsFalse_ReturnsNothing()
+    {
+        var maybe = From("value", value => value.Length == 0);
+
+        Assert.That(maybe.IsNothing, Is.True);
+    }
+
+    [Test]
+    public void Of_ReferenceValue_ReturnsJust()
+    {
+        var maybe = Of("value");
+
+        Assert.That(maybe.IsJust, Is.True);
+        Assert.That(maybe.Value, Is.EqualTo("value"));
+    }
+
+    [Test]
+    public void Of_NullReference_ReturnsNothing()
+    {
+        var maybe = Of<string>(null);
+
+        Assert.That(maybe.IsNothing, Is.True);
+    }
+
+    [Test]
+    public void Of_ValueType_ReturnsJust()
+    {
+        var maybe = Of<int>(7);
+
+        Assert.That(maybe.IsJust, Is.True);
+        Assert.That(maybe.Value, Is.EqualTo(7));
+    }
+
+    [Test]
+    public void Of_NullValueType_ReturnsNothing()
+    {
+        int? nullable = null;
+        var maybe = Of(nullable);
+
+        Assert.That(maybe.IsNothing, Is.True);
+    }
 }
