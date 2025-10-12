@@ -11,32 +11,20 @@ namespace Macaron.Functional.UniTaskExtensions
     partial class Extensions
     {
         public static async UniTask<T> AlsoAsync<T>(
-            this T self, Func<T, CancellationToken, UniTask> fn, CancellationToken cancellationToken
-        ) where T : notnull
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-
-            await fn(self, cancellationToken);
-
-            return self;
-        }
-
-        public static async UniTask<T> AlsoAsync<T>(
-            this UniTask<T> self, Func<T, CancellationToken, UniTask> fn, CancellationToken cancellationToken
+            this UniTask<T> self, Func<T, CancellationToken, UniTask> fnAsync, CancellationToken cancellationToken
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             var result = await self.AttachExternalCancellation(cancellationToken);
 
-            await fn(result, cancellationToken);
+            await fnAsync(result, cancellationToken);
 
             return result;
         }
 
         public static async UniTask<T> AlsoAsync<T>(
             this UniTask<T> self, Action<T> action, CancellationToken cancellationToken
-
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -49,32 +37,20 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1>(
-            this T self, Func<T, TArg1, CancellationToken, UniTask> fn, TArg1 arg1, CancellationToken cancellationToken
-        ) where T : notnull
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-
-            await fn(self, arg1, cancellationToken);
-
-            return self;
-        }
-
-        public static async UniTask<T> AlsoAsync<T, TArg1>(
-            this UniTask<T> self, Func<T, TArg1, CancellationToken, UniTask> fn, TArg1 arg1, CancellationToken cancellationToken
+            this UniTask<T> self, Func<T, TArg1, CancellationToken, UniTask> fnAsync, TArg1 arg1, CancellationToken cancellationToken
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             var result = await self.AttachExternalCancellation(cancellationToken);
 
-            await fn(result, arg1, cancellationToken);
+            await fnAsync(result, arg1, cancellationToken);
 
             return result;
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1>(
             this UniTask<T> self, Action<T, TArg1> action, TArg1 arg1, CancellationToken cancellationToken
-
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -87,32 +63,20 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2>(
-            this T self, Func<T, TArg1, TArg2, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, CancellationToken cancellationToken
-        ) where T : notnull
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-
-            await fn(self, arg1, arg2, cancellationToken);
-
-            return self;
-        }
-
-        public static async UniTask<T> AlsoAsync<T, TArg1, TArg2>(
-            this UniTask<T> self, Func<T, TArg1, TArg2, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, CancellationToken cancellationToken
+            this UniTask<T> self, Func<T, TArg1, TArg2, CancellationToken, UniTask> fnAsync, TArg1 arg1, TArg2 arg2, CancellationToken cancellationToken
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             var result = await self.AttachExternalCancellation(cancellationToken);
 
-            await fn(result, arg1, arg2, cancellationToken);
+            await fnAsync(result, arg1, arg2, cancellationToken);
 
             return result;
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2>(
             this UniTask<T> self, Action<T, TArg1, TArg2> action, TArg1 arg1, TArg2 arg2, CancellationToken cancellationToken
-
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -125,32 +89,20 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3>(
-            this T self, Func<T, TArg1, TArg2, TArg3, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, CancellationToken cancellationToken
-        ) where T : notnull
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-
-            await fn(self, arg1, arg2, arg3, cancellationToken);
-
-            return self;
-        }
-
-        public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3>(
-            this UniTask<T> self, Func<T, TArg1, TArg2, TArg3, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, CancellationToken cancellationToken
+            this UniTask<T> self, Func<T, TArg1, TArg2, TArg3, CancellationToken, UniTask> fnAsync, TArg1 arg1, TArg2 arg2, TArg3 arg3, CancellationToken cancellationToken
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             var result = await self.AttachExternalCancellation(cancellationToken);
 
-            await fn(result, arg1, arg2, arg3, cancellationToken);
+            await fnAsync(result, arg1, arg2, arg3, cancellationToken);
 
             return result;
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3>(
             this UniTask<T> self, Action<T, TArg1, TArg2, TArg3> action, TArg1 arg1, TArg2 arg2, TArg3 arg3, CancellationToken cancellationToken
-
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -163,32 +115,20 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4>(
-            this T self, Func<T, TArg1, TArg2, TArg3, TArg4, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, CancellationToken cancellationToken
-        ) where T : notnull
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-
-            await fn(self, arg1, arg2, arg3, arg4, cancellationToken);
-
-            return self;
-        }
-
-        public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4>(
-            this UniTask<T> self, Func<T, TArg1, TArg2, TArg3, TArg4, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, CancellationToken cancellationToken
+            this UniTask<T> self, Func<T, TArg1, TArg2, TArg3, TArg4, CancellationToken, UniTask> fnAsync, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, CancellationToken cancellationToken
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             var result = await self.AttachExternalCancellation(cancellationToken);
 
-            await fn(result, arg1, arg2, arg3, arg4, cancellationToken);
+            await fnAsync(result, arg1, arg2, arg3, arg4, cancellationToken);
 
             return result;
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4>(
             this UniTask<T> self, Action<T, TArg1, TArg2, TArg3, TArg4> action, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, CancellationToken cancellationToken
-
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -201,32 +141,20 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5>(
-            this T self, Func<T, TArg1, TArg2, TArg3, TArg4, TArg5, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, CancellationToken cancellationToken
-        ) where T : notnull
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-
-            await fn(self, arg1, arg2, arg3, arg4, arg5, cancellationToken);
-
-            return self;
-        }
-
-        public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5>(
-            this UniTask<T> self, Func<T, TArg1, TArg2, TArg3, TArg4, TArg5, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, CancellationToken cancellationToken
+            this UniTask<T> self, Func<T, TArg1, TArg2, TArg3, TArg4, TArg5, CancellationToken, UniTask> fnAsync, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, CancellationToken cancellationToken
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             var result = await self.AttachExternalCancellation(cancellationToken);
 
-            await fn(result, arg1, arg2, arg3, arg4, arg5, cancellationToken);
+            await fnAsync(result, arg1, arg2, arg3, arg4, arg5, cancellationToken);
 
             return result;
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5>(
             this UniTask<T> self, Action<T, TArg1, TArg2, TArg3, TArg4, TArg5> action, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, CancellationToken cancellationToken
-
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -239,32 +167,20 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>(
-            this T self, Func<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, CancellationToken cancellationToken
-        ) where T : notnull
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-
-            await fn(self, arg1, arg2, arg3, arg4, arg5, arg6, cancellationToken);
-
-            return self;
-        }
-
-        public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>(
-            this UniTask<T> self, Func<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, CancellationToken cancellationToken
+            this UniTask<T> self, Func<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, CancellationToken, UniTask> fnAsync, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, CancellationToken cancellationToken
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             var result = await self.AttachExternalCancellation(cancellationToken);
 
-            await fn(result, arg1, arg2, arg3, arg4, arg5, arg6, cancellationToken);
+            await fnAsync(result, arg1, arg2, arg3, arg4, arg5, arg6, cancellationToken);
 
             return result;
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6>(
             this UniTask<T> self, Action<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6> action, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, CancellationToken cancellationToken
-
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -277,32 +193,20 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>(
-            this T self, Func<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7, CancellationToken cancellationToken
-        ) where T : notnull
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-
-            await fn(self, arg1, arg2, arg3, arg4, arg5, arg6, arg7, cancellationToken);
-
-            return self;
-        }
-
-        public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>(
-            this UniTask<T> self, Func<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, CancellationToken, UniTask> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7, CancellationToken cancellationToken
+            this UniTask<T> self, Func<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, CancellationToken, UniTask> fnAsync, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7, CancellationToken cancellationToken
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             var result = await self.AttachExternalCancellation(cancellationToken);
 
-            await fn(result, arg1, arg2, arg3, arg4, arg5, arg6, arg7, cancellationToken);
+            await fnAsync(result, arg1, arg2, arg3, arg4, arg5, arg6, arg7, cancellationToken);
 
             return result;
         }
 
         public static async UniTask<T> AlsoAsync<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7>(
             this UniTask<T> self, Action<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7> action, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7, CancellationToken cancellationToken
-
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();

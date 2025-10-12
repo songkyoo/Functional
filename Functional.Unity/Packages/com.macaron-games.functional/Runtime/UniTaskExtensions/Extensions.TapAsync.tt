@@ -15,32 +15,20 @@ namespace Macaron.Functional.UniTaskExtensions
     {
 <# for (var i = 0; i <= MaxCount; i++) { #>
         public static async UniTask<T> TapAsync<T<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #><# } #>>(
-            this T self, Func<<# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>T, CancellationToken, UniTask> fn<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #> arg<#= j #><# } #>, CancellationToken cancellationToken
-        ) where T : notnull
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-
-            await fn(<# for (var j = 1; j <= i; j++) { #>arg<#= j #>, <# } #>self, cancellationToken);
-
-            return self;
-        }
-
-        public static async UniTask<T> TapAsync<T<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #><# } #>>(
-            this UniTask<T> self, Func<<# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>T, CancellationToken, UniTask> fn<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #> arg<#= j #><# } #>, CancellationToken cancellationToken
+            this UniTask<T> self, Func<<# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>T, CancellationToken, UniTask> fnAsync<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #> arg<#= j #><# } #>, CancellationToken cancellationToken
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             var result = await self.AttachExternalCancellation(cancellationToken);
 
-            await fn(<# for (var j = 1; j <= i; j++) { #>arg<#= j #>, <# } #>result, cancellationToken);
+            await fnAsync(<# for (var j = 1; j <= i; j++) { #>arg<#= j #>, <# } #>result, cancellationToken);
 
             return result;
         }
 
         public static async UniTask<T> TapAsync<T<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #><# } #>>(
             this UniTask<T> self, Action<<# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>T> action<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #> arg<#= j #><# } #>, CancellationToken cancellationToken
-
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();

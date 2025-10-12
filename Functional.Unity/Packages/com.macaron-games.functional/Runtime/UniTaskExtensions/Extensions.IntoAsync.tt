@@ -14,29 +14,19 @@ namespace Macaron.Functional.UniTaskExtensions
     partial class Extensions
     {
 <# for (var i = 0; i <= MaxCount; i++) { #>
-        public static UniTask<TResult> IntoAsync<T, <# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>TResult>(
-            this T self, Func<<# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>T, CancellationToken, UniTask<TResult>> fn<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #> arg<#= j #><# } #>, CancellationToken cancellationToken
-        ) where T : notnull
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-
-            return fn(<# for (var j = 1; j <= i; j++) { #>arg<#= j #>, <# } #>self, cancellationToken);
-        }
-
         public static async UniTask<TResult> IntoAsync<T, <# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>TResult>(
-            this UniTask<T> self, Func<<# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>T, CancellationToken, UniTask<TResult>> fn<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #> arg<#= j #><# } #>, CancellationToken cancellationToken
+            this UniTask<T> self, Func<<# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>T, CancellationToken, UniTask<TResult>> fnAsync<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #> arg<#= j #><# } #>, CancellationToken cancellationToken
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             var result = await self.AttachExternalCancellation(cancellationToken);
 
-            return await fn(<# for (var j = 1; j <= i; j++) { #>arg<#= j #>, <# } #>result, cancellationToken);
+            return await fnAsync(<# for (var j = 1; j <= i; j++) { #>arg<#= j #>, <# } #>result, cancellationToken);
         }
 
         public static async UniTask<TResult> IntoAsync<T, <# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>TResult>(
             this UniTask<T> self, Func<<# for (var j = 1; j <= i; j++) { #>TArg<#= j #>, <# } #>T, TResult> fn<# for (var j = 1; j <= i; j++) { #>, TArg<#= j #> arg<#= j #><# } #>, CancellationToken cancellationToken
-
         ) where T : notnull
         {
             cancellationToken.ThrowIfCancellationRequested();
