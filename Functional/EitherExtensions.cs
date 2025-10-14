@@ -10,6 +10,11 @@ public static partial class EitherExtensions
         return fn.FlatMap(either.Map);
     }
 
+    public static Either<TRight, TLeft> Swap<TLeft, TRight>(this Either<TLeft, TRight> either)
+    {
+        return either.IsRight ? Either.Left<TRight, TLeft>(either.Right) : Either.Right<TRight, TLeft>(either.Left);
+    }
+
     public static Either<TLeft, TRight> OrElse<TLeft, TRight>(
         this Either<TLeft, TRight> either,
         Either<TLeft, TRight> other
