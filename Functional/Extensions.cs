@@ -44,22 +44,6 @@ public static partial class Extensions
         return fn(tuple.Item1, tuple.Item2, tuple.Item3);
     }
 
-    public static ((T1, T1), (T2, T2)) Zip<T1, T2>(
-        this (T1, T2) tuple,
-        (T1, T2) other
-    )
-    {
-        return ((tuple.Item1, other.Item1), (tuple.Item2, other.Item2));
-    }
-
-    public static ((T1, T1), (T2, T2), (T3, T3)) Zip<T1, T2, T3>(
-        this (T1, T2, T3) tuple,
-        (T1, T2, T3) other
-    )
-    {
-        return ((tuple.Item1, other.Item1), (tuple.Item2, other.Item2), (tuple.Item3, other.Item3));
-    }
-
     public static (TResult1, TResult2) ZipWith<T1, T2, TResult1, TResult2>(
         this (T1, T2) tuple,
         (T1, T2) other,

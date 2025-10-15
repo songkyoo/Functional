@@ -161,22 +161,6 @@ public static partial class Utility
         return fn(tuple.Item1, tuple.Item2, tuple.Item3);
     }
 
-    public static ((T1, T1), (T2, T2)) Zip<T1, T2>(
-        (T1, T2) left,
-        (T1, T2) right
-    )
-    {
-        return ((left.Item1, right.Item1), (left.Item2, right.Item2));
-    }
-
-    public static ((T1, T1), (T2, T2), (T3, T3)) Zip<T1, T2, T3>(
-        (T1, T2, T3) left,
-        (T1, T2, T3) right
-    )
-    {
-        return ((left.Item1, right.Item1), (left.Item2, right.Item2), (left.Item3, right.Item3));
-    }
-
     public static (TResult1, TResult2) ZipWith<T1, T2, TResult1, TResult2>(
         (T1, T2) left,
         (T1, T2) right,
