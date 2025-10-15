@@ -3,49 +3,49 @@ namespace Macaron.Functional;
 
 partial class Maybe
 {
-    public static Func<Maybe<T1>, Maybe<T2>,  Maybe<TResult>> Lift<T1, T2, TResult>(
+    public static Func<Maybe<T1>, Maybe<T2>,  Maybe<TResult>> Lift2<T1, T2, TResult>(
         Func<T1, T2, TResult> fn
     )
     {
         return (maybe1, maybe2) => Maybe.Just(fn).Apply(maybe1, maybe2);
     }
 
-    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>,  Maybe<TResult>> Lift<T1, T2, T3, TResult>(
+    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>,  Maybe<TResult>> Lift3<T1, T2, T3, TResult>(
         Func<T1, T2, T3, TResult> fn
     )
     {
         return (maybe1, maybe2, maybe3) => Maybe.Just(fn).Apply(maybe1, maybe2, maybe3);
     }
 
-    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>, Maybe<T4>,  Maybe<TResult>> Lift<T1, T2, T3, T4, TResult>(
+    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>, Maybe<T4>,  Maybe<TResult>> Lift4<T1, T2, T3, T4, TResult>(
         Func<T1, T2, T3, T4, TResult> fn
     )
     {
         return (maybe1, maybe2, maybe3, maybe4) => Maybe.Just(fn).Apply(maybe1, maybe2, maybe3, maybe4);
     }
 
-    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>, Maybe<T4>, Maybe<T5>,  Maybe<TResult>> Lift<T1, T2, T3, T4, T5, TResult>(
+    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>, Maybe<T4>, Maybe<T5>,  Maybe<TResult>> Lift5<T1, T2, T3, T4, T5, TResult>(
         Func<T1, T2, T3, T4, T5, TResult> fn
     )
     {
         return (maybe1, maybe2, maybe3, maybe4, maybe5) => Maybe.Just(fn).Apply(maybe1, maybe2, maybe3, maybe4, maybe5);
     }
 
-    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>, Maybe<T4>, Maybe<T5>, Maybe<T6>,  Maybe<TResult>> Lift<T1, T2, T3, T4, T5, T6, TResult>(
+    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>, Maybe<T4>, Maybe<T5>, Maybe<T6>,  Maybe<TResult>> Lift6<T1, T2, T3, T4, T5, T6, TResult>(
         Func<T1, T2, T3, T4, T5, T6, TResult> fn
     )
     {
         return (maybe1, maybe2, maybe3, maybe4, maybe5, maybe6) => Maybe.Just(fn).Apply(maybe1, maybe2, maybe3, maybe4, maybe5, maybe6);
     }
 
-    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>, Maybe<T4>, Maybe<T5>, Maybe<T6>, Maybe<T7>,  Maybe<TResult>> Lift<T1, T2, T3, T4, T5, T6, T7, TResult>(
+    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>, Maybe<T4>, Maybe<T5>, Maybe<T6>, Maybe<T7>,  Maybe<TResult>> Lift7<T1, T2, T3, T4, T5, T6, T7, TResult>(
         Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn
     )
     {
         return (maybe1, maybe2, maybe3, maybe4, maybe5, maybe6, maybe7) => Maybe.Just(fn).Apply(maybe1, maybe2, maybe3, maybe4, maybe5, maybe6, maybe7);
     }
 
-    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>, Maybe<T4>, Maybe<T5>, Maybe<T6>, Maybe<T7>, Maybe<T8>,  Maybe<TResult>> Lift<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+    public static Func<Maybe<T1>, Maybe<T2>, Maybe<T3>, Maybe<T4>, Maybe<T5>, Maybe<T6>, Maybe<T7>, Maybe<T8>,  Maybe<TResult>> Lift8<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
         Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn
     )
     {

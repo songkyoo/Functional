@@ -3,49 +3,49 @@ namespace Macaron.Functional;
 
 partial class Either
 {
-    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TResult>> Lift<TLeft, TRight1, TRight2, TResult>(
+    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TResult>> Lift2<TLeft, TRight1, TRight2, TResult>(
         Func<TRight1, TRight2, TResult> fn
     )
     {
         return (either1, either2) => Either.Right<TLeft, Func<TRight1, TRight2, TResult>>(fn).Apply(either1, either2);
     }
 
-    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TResult>> Lift<TLeft, TRight1, TRight2, TRight3, TResult>(
+    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TResult>> Lift3<TLeft, TRight1, TRight2, TRight3, TResult>(
         Func<TRight1, TRight2, TRight3, TResult> fn
     )
     {
         return (either1, either2, either3) => Either.Right<TLeft, Func<TRight1, TRight2, TRight3, TResult>>(fn).Apply(either1, either2, either3);
     }
 
-    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TRight4>, Either<TLeft, TResult>> Lift<TLeft, TRight1, TRight2, TRight3, TRight4, TResult>(
+    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TRight4>, Either<TLeft, TResult>> Lift4<TLeft, TRight1, TRight2, TRight3, TRight4, TResult>(
         Func<TRight1, TRight2, TRight3, TRight4, TResult> fn
     )
     {
         return (either1, either2, either3, either4) => Either.Right<TLeft, Func<TRight1, TRight2, TRight3, TRight4, TResult>>(fn).Apply(either1, either2, either3, either4);
     }
 
-    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TRight4>, Either<TLeft, TRight5>, Either<TLeft, TResult>> Lift<TLeft, TRight1, TRight2, TRight3, TRight4, TRight5, TResult>(
+    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TRight4>, Either<TLeft, TRight5>, Either<TLeft, TResult>> Lift5<TLeft, TRight1, TRight2, TRight3, TRight4, TRight5, TResult>(
         Func<TRight1, TRight2, TRight3, TRight4, TRight5, TResult> fn
     )
     {
         return (either1, either2, either3, either4, either5) => Either.Right<TLeft, Func<TRight1, TRight2, TRight3, TRight4, TRight5, TResult>>(fn).Apply(either1, either2, either3, either4, either5);
     }
 
-    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TRight4>, Either<TLeft, TRight5>, Either<TLeft, TRight6>, Either<TLeft, TResult>> Lift<TLeft, TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TResult>(
+    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TRight4>, Either<TLeft, TRight5>, Either<TLeft, TRight6>, Either<TLeft, TResult>> Lift6<TLeft, TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TResult>(
         Func<TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TResult> fn
     )
     {
         return (either1, either2, either3, either4, either5, either6) => Either.Right<TLeft, Func<TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TResult>>(fn).Apply(either1, either2, either3, either4, either5, either6);
     }
 
-    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TRight4>, Either<TLeft, TRight5>, Either<TLeft, TRight6>, Either<TLeft, TRight7>, Either<TLeft, TResult>> Lift<TLeft, TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TRight7, TResult>(
+    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TRight4>, Either<TLeft, TRight5>, Either<TLeft, TRight6>, Either<TLeft, TRight7>, Either<TLeft, TResult>> Lift7<TLeft, TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TRight7, TResult>(
         Func<TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TRight7, TResult> fn
     )
     {
         return (either1, either2, either3, either4, either5, either6, either7) => Either.Right<TLeft, Func<TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TRight7, TResult>>(fn).Apply(either1, either2, either3, either4, either5, either6, either7);
     }
 
-    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TRight4>, Either<TLeft, TRight5>, Either<TLeft, TRight6>, Either<TLeft, TRight7>, Either<TLeft, TRight8>, Either<TLeft, TResult>> Lift<TLeft, TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TRight7, TRight8, TResult>(
+    public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TRight3>, Either<TLeft, TRight4>, Either<TLeft, TRight5>, Either<TLeft, TRight6>, Either<TLeft, TRight7>, Either<TLeft, TRight8>, Either<TLeft, TResult>> Lift8<TLeft, TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TRight7, TRight8, TResult>(
         Func<TRight1, TRight2, TRight3, TRight4, TRight5, TRight6, TRight7, TRight8, TResult> fn
     )
     {

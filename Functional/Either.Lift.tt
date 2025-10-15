@@ -7,7 +7,7 @@ namespace Macaron.Functional;
 partial class Either
 {
 <# for (int i = 2; i <= MaxCount; i++) { #>
-    public static Func<<# for (int j = 1; j <= i; j++) { #>Either<TLeft, TRight<#= j #>>, <# } #>Either<TLeft, TResult>> Lift<TLeft, <# for (int j = 1; j <= i; j++) { #>TRight<#= j #>, <# } #>TResult>(
+    public static Func<<# for (int j = 1; j <= i; j++) { #>Either<TLeft, TRight<#= j #>>, <# } #>Either<TLeft, TResult>> Lift<#= i #><TLeft, <# for (int j = 1; j <= i; j++) { #>TRight<#= j #>, <# } #>TResult>(
         Func<<# for (int j = 1; j <= i; j++) { #>TRight<#= j #>, <# } #>TResult> fn
     )
     {
