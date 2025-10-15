@@ -31,9 +31,4 @@ public static partial class Maybe
     {
         return value != null ? Just(value.Value) : Nothing<T>();
     }
-
-    public static Func<Maybe<T>, Maybe<TResult>> Lift<T, TResult>(Func<T, TResult> fn)
-    {
-        return maybe => maybe.Map(fn);
-    }
 }

@@ -3,6 +3,23 @@ namespace Macaron.Functional;
 
 partial class MaybeExtensions
 {
+    public static Maybe<TResult> Apply<T, TResult>(
+        this Maybe<Func<T, TResult>> fn,
+        Maybe<T> maybe
+    )
+    {
+        if (fn.IsNothing || maybe.IsNothing)
+        {
+            return Maybe.Nothing();
+        }
+
+        var f = fn.Value;
+        var value = maybe.Value;
+        var result = f(value);
+
+        return Maybe.Just(result);
+    }
+
     public static Maybe<TResult> Apply<T1, T2, TResult>(
         this Maybe<Func<T1, T2, TResult>> fn,
         Maybe<T1> maybe1,

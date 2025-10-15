@@ -6,12 +6,19 @@ namespace Macaron.Functional;
 
 partial class Maybe
 {
-<# for (int i = 2; i <= MaxCount; i++) { #>
-    public static Func<<# for (int j = 1; j <= i; j++) { #>Maybe<T<#= j #>>, <# } #> Maybe<TResult>> Lift<#= i #><<# for (int j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult>(
-        Func<<# for (int j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult> fn
+    public static Func<Maybe<T>,  Maybe<TResult>> Lift<T, TResult>(
+        Func<T, TResult> fn
     )
     {
-        return (<# for (int j = 1; j <= i; j++) { #>maybe<#= j #><# if (j < i) { #>, <# } #><# } #>) => Maybe.Just(fn).Apply(<# for (int j = 1; j <= i; j++) { #>maybe<#= j #><# if (j < i) { #>, <# } #><# } #>);
+        return maybe => Maybe.Just(fn).Apply(maybe);
+    }
+
+<# for (var i = 2; i <= MaxCount; i++) { #>
+    public static Func<<# for (var j = 1; j <= i; j++) { #>Maybe<T<#= j #>>, <# } #> Maybe<TResult>> Lift<#= i #><<# for (var j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult>(
+        Func<<# for (var j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult> fn
+    )
+    {
+        return (<# for (var j = 1; j <= i; j++) { #>maybe<#= j #><# if (j < i) { #>, <# } #><# } #>) => Maybe.Just(fn).Apply(<# for (var j = 1; j <= i; j++) { #>maybe<#= j #><# if (j < i) { #>, <# } #><# } #>);
     }
 
 <# } #>

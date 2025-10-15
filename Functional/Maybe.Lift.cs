@@ -3,6 +3,13 @@ namespace Macaron.Functional;
 
 partial class Maybe
 {
+    public static Func<Maybe<T>,  Maybe<TResult>> Lift<T, TResult>(
+        Func<T, TResult> fn
+    )
+    {
+        return maybe => Maybe.Just(fn).Apply(maybe);
+    }
+
     public static Func<Maybe<T1>, Maybe<T2>,  Maybe<TResult>> Lift2<T1, T2, TResult>(
         Func<T1, T2, TResult> fn
     )

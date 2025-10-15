@@ -2,11 +2,6 @@ namespace Macaron.Functional;
 
 public static partial class MaybeExtensions
 {
-    public static Maybe<TResult> Apply<T, TResult>(this Maybe<Func<T, TResult>> fn, Maybe<T> maybe)
-    {
-        return fn.FlatMap(maybe.Map);
-    }
-
     public static Maybe<T> OrElse<T>(this Maybe<T> maybe, Maybe<T> other)
     {
         return maybe.IsJust ? maybe : other;
@@ -27,18 +22,12 @@ public static partial class MaybeExtensions
         return maybe;
     }
 
-    public static Maybe<T> Recover<T>(
-        this Maybe<T> maybe,
-        T value
-    )
+    public static Maybe<T> Recover<T>(this Maybe<T> maybe, T value)
     {
         return maybe.IsJust ? maybe : Maybe.Just(value);
     }
 
-    public static Maybe<T> Recover<T>(
-        this Maybe<T> maybe,
-        Func<T> getValue
-    )
+    public static Maybe<T> Recover<T>(this Maybe<T> maybe, Func<T> getValue)
     {
         return maybe.IsJust ? maybe : Maybe.Just(getValue());
     }

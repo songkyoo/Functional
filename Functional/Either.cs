@@ -21,11 +21,4 @@ public static partial class Either
     {
         return new RightEither<TLeft, TRight>(value);
     }
-
-    public static Func<Either<TLeft, TRight>, Either<TLeft, TResult>> Lift<TLeft, TRight, TResult>(
-        Func<TRight, TResult> fn
-    )
-    {
-        return either => either.Map(fn);
-    }
 }

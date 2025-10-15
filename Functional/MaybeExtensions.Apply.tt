@@ -6,25 +6,42 @@ namespace Macaron.Functional;
 
 partial class MaybeExtensions
 {
-<# for (int i = 2; i <= MaxCount; i++) { #>
-    public static Maybe<TResult> Apply<<# for (int j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult>(
-        this Maybe<Func<<# for (int j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult>> fn,
-<# for (int j = 1; j < i; j++) { #>
-        Maybe<T<#= j #>> maybe<#= j #>,
-<# } #>
-        Maybe<T<#= i #>> maybe<#= i #>
+    public static Maybe<TResult> Apply<T, TResult>(
+        this Maybe<Func<T, TResult>> fn,
+        Maybe<T> maybe
     )
     {
-        if (fn.IsNothing<# for (int j = 1; j <= i; j++) { #> || maybe<#= j #>.IsNothing<# } #>)
+        if (fn.IsNothing || maybe.IsNothing)
         {
             return Maybe.Nothing();
         }
 
         var f = fn.Value;
-<# for (int j = 1; j <= i; j++) { #>
+        var value = maybe.Value;
+        var result = f(value);
+
+        return Maybe.Just(result);
+    }
+
+<# for (var i = 2; i <= MaxCount; i++) { #>
+    public static Maybe<TResult> Apply<<# for (var j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult>(
+        this Maybe<Func<<# for (var j = 1; j <= i; j++) { #>T<#= j #>, <# } #>TResult>> fn,
+<# for (var j = 1; j < i; j++) { #>
+        Maybe<T<#= j #>> maybe<#= j #>,
+<# } #>
+        Maybe<T<#= i #>> maybe<#= i #>
+    )
+    {
+        if (fn.IsNothing<# for (var j = 1; j <= i; j++) { #> || maybe<#= j #>.IsNothing<# } #>)
+        {
+            return Maybe.Nothing();
+        }
+
+        var f = fn.Value;
+<# for (var j = 1; j <= i; j++) { #>
         var value<#= j #> = maybe<#= j #>.Value;
 <# } #>
-        var result = f(<# for (int j = 1; j <= i; j++) { #>value<#= j #><# if (j < i) { #>, <# } #><# } #>);
+        var result = f(<# for (var j = 1; j <= i; j++) { #>value<#= j #><# if (j < i) { #>, <# } #><# } #>);
 
         return Maybe.Just(result);
     }

@@ -3,6 +3,13 @@ namespace Macaron.Functional;
 
 partial class Either
 {
+    public static Func<Either<TLeft, TRight>, Either<TLeft, TResult>> Lift2<TLeft, TRight, TResult>(
+        Func<TRight, TResult> fn
+    )
+    {
+        return either => Either.Right<TLeft, Func<TRight, TResult>>(fn).Apply(either);
+    }
+
     public static Func<Either<TLeft, TRight1>, Either<TLeft, TRight2>, Either<TLeft, TResult>> Lift2<TLeft, TRight1, TRight2, TResult>(
         Func<TRight1, TRight2, TResult> fn
     )
