@@ -28,7 +28,7 @@ public static partial class Extensions
         }
     }
 
-    public static TResult Then<T1, T2, TResult>(
+    public static TResult Apply<T1, T2, TResult>(
         this (T1, T2) tuple,
         Func<T1, T2, TResult> fn
     )
@@ -36,7 +36,7 @@ public static partial class Extensions
         return fn(tuple.Item1, tuple.Item2);
     }
 
-    public static TResult Then<T1, T2, T3, TResult>(
+    public static TResult Apply<T1, T2, T3, TResult>(
         this (T1, T2, T3) tuple,
         Func<T1, T2, T3, TResult> fn
     )

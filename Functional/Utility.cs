@@ -145,7 +145,7 @@ public static partial class Utility
         return value != null;
     }
 
-    public static TResult Then<T1, T2, TResult>(
+    public static TResult Apply<T1, T2, TResult>(
         (T1, T2) tuple,
         Func<T1, T2, TResult> fn
     )
@@ -153,7 +153,7 @@ public static partial class Utility
         return fn(tuple.Item1, tuple.Item2);
     }
 
-    public static TResult Then<T1, T2, T3, TResult>(
+    public static TResult Apply<T1, T2, T3, TResult>(
         (T1, T2, T3) tuple,
         Func<T1, T2, T3, TResult> fn
     )
