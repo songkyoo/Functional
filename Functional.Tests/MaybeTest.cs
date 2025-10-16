@@ -141,23 +141,6 @@ public class MaybeTest
     }
 
     [Test]
-    public void From_PredicateReturnsTrueWithNullValue_ReturnsJust()
-    {
-        var maybe = From<object?>(null, value => true);
-
-        Assert.That(maybe.IsJust, Is.True);
-        Assert.That(maybe.Value, Is.Null);
-    }
-
-    [Test]
-    public void From_PredicateReturnsFalse_ReturnsNothing()
-    {
-        var maybe = From("value", value => value.Length == 0);
-
-        Assert.That(maybe.IsNothing, Is.True);
-    }
-
-    [Test]
     public void Of_ReferenceValue_ReturnsJust()
     {
         var maybe = Of("value");

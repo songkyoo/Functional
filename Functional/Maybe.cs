@@ -17,11 +17,6 @@ public static partial class Maybe
         return new NothingMaybe<T>();
     }
 
-    public static Maybe<T> From<T>(T value, Func<T, bool> predicate)
-    {
-        return predicate(value) ? Just(value) : Nothing<T>();
-    }
-
     public static Maybe<T> Of<T>(T? value) where T : class
     {
         return value != null ? Just(value) : Nothing<T>();
