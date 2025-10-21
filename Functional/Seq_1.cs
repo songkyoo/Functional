@@ -2,11 +2,11 @@ using System.Collections;
 
 namespace Macaron.Functional;
 
-public sealed class Seq<T> : IReadOnlyCollection<T>
+public sealed partial class Seq<T> : IReadOnlyCollection<T>
 {
     #region Fields
-    readonly T _head;
-    readonly Seq<T>? _tail;
+    private readonly T _head;
+    private readonly Seq<T>? _tail;
     #endregion
 
     #region Properties
@@ -47,22 +47,17 @@ public sealed class Seq<T> : IReadOnlyCollection<T>
         }
     }
 
-    public IEnumerator<T> GetEnumerator()
-    {
-        var seq = this;
-
-        while (seq != null)
-        {
-            yield return seq.Head;
-
-            seq = seq.Tail;
-        }
-    }
+    IEnumerator<T> IEnumerable<T>.GetEnumerator() => GetEnumerator();
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     #endregion
 
     #region Methods
+    public Enumerator GetEnumerator()
+    {
+        return new Enumerator(this);
+    }
+
     public Seq<T> Prepend(T value)
     {
         return new Seq<T>(value, this);
