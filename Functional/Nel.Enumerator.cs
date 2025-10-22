@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 
 namespace Macaron.Functional;
 
-partial class Seq<T>
+partial class Nel<T>
 {
     public struct Enumerator : IEnumerator<T>
     {
@@ -16,17 +16,17 @@ partial class Seq<T>
         #endregion
 
         #region Fields
-        private readonly Seq<T> _initial;
+        private readonly Nel<T> _initial;
         private Seq<T>? _current;
         private T _currentValue;
         private State _state;
         #endregion
 
         #region Constructors
-        internal Enumerator(Seq<T> seq)
+        internal Enumerator(Nel<T> nel)
         {
-            _initial = seq;
-            _current = seq;
+            _initial = nel;
+            _current = null;
             _currentValue = default!;
             _state = State.Before;
         }
@@ -52,7 +52,7 @@ partial class Seq<T>
         {
             switch (_current)
             {
-                case Node node:
+                case Seq<T>.Node node:
                 {
                     _currentValue = node.Head;
                     _current = node.Tail;
@@ -60,13 +60,21 @@ partial class Seq<T>
 
                     return true;
                 }
-                case Empty:
+                case Seq<T>.Empty:
                 {
                     _current = null;
                     _currentValue = default!;
                     _state = State.After;
 
                     return false;
+                }
+                case null when _state == State.Before:
+                {
+                    _currentValue = _initial.Head;
+                    _current = _initial.Tail;
+                    _state = State.Valid;
+
+                    return true;
                 }
                 case null:
                 {
@@ -82,7 +90,7 @@ partial class Seq<T>
 
         public void Reset()
         {
-            _current = _initial;
+            _current = null;
             _currentValue = default!;
             _state = State.Before;
         }

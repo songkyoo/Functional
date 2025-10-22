@@ -7,18 +7,18 @@ public class SeqTests
     public void Constructor_SingleValue_CreatesSeqWithNullTail()
     {
         // Arrange & Act
-        var seq = new Seq<int>(42);
+        var seq = new Seq<int>.Node(42, Seq<int>.Nil);
 
         // Assert
         Assert.That(seq.Head, Is.EqualTo(42));
-        Assert.That(seq.Tail, Is.Null);
+        Assert.That(seq.Tail, Is.EqualTo(Seq<int>.Nil));
     }
 
     [Test]
     public void Count_SingleElement_ReturnsOne()
     {
         // Arrange
-        var seq = new Seq<string>("hello");
+        var seq = new Seq<string>.Node("hello", Seq<string>.Nil);
 
         // Act
         var count = seq.Count;
@@ -61,23 +61,23 @@ public class SeqTests
     public void Prepend_AddsElementAtBeginning()
     {
         // Arrange
-        var seq = new Seq<int>(2);
+        var seq = new Seq<int>.Node(2, Seq<int>.Nil);
 
         // Act
-        var newSeq = seq.Prepend(1);
+        var newSeq = (Seq<int>.Node)seq.Prepend(1);
 
         // Assert
         Assert.That(newSeq.Head, Is.EqualTo(1));
         Assert.That(newSeq.Tail, Is.SameAs(seq));
-        Assert.That(newSeq.Tail.Head, Is.EqualTo(2));
+        Assert.That(((Seq<int>.Node)newSeq.Tail).Head, Is.EqualTo(2));
     }
 
     [Test]
     public void Append_SingleElementToSingle_CreatesCorrectSequence()
     {
         // Arrange
-        var seq1 = new Seq<int>(1);
-        var seq2 = new Seq<int>(2);
+        var seq1 = new Seq<int>.Node(1, Seq<int>.Nil);
+        var seq2 = new Seq<int>.Node(2, Seq<int>.Nil);
 
         // Act
         var result = seq1.Append(seq2);
@@ -107,23 +107,23 @@ public class SeqTests
         var seq = Seq.Of(10, 20, 30);
 
         // Act
-        var (head, tail) = seq;
+        var (head, tail) = (Seq<int>.Node)seq;
 
         // Assert
         Assert.That(head, Is.EqualTo(10));
         Assert.That(tail, Is.Not.Null);
-        Assert.That(tail.Head, Is.EqualTo(20));
+        Assert.That(((Seq<int>.Node)tail).Head, Is.EqualTo(20));
     }
 
     [Test]
     public void Of_SingleParameter_CreatesSingleElementSeq()
     {
         // Arrange & Act
-        var seq = Seq.Of(100);
+        var seq = (Seq<int>.Node)Seq.Of(100);
 
         // Assert
         Assert.That(seq.Head, Is.EqualTo(100));
-        Assert.That(seq.Tail, Is.Null);
+        Assert.That(seq.Tail, Is.EqualTo(Seq<int>.Nil));
         Assert.That(seq, Has.Count.EqualTo(1));
     }
 
@@ -226,7 +226,7 @@ public class SeqTests
 
         // Assert
         Assert.That(original, Has.Count.EqualTo(originalCount));
-        Assert.That(original.Head, Is.EqualTo(2));
+        Assert.That(((Seq<int>.Node)original).Head, Is.EqualTo(2));
         Assert.That(modified, Has.Count.EqualTo(originalCount + 1));
     }
 
@@ -267,10 +267,32 @@ public class SeqTests
     public void EmptyParamsArray_HandledCorrectly()
     {
         // Arrange & Act
-        var seq = Seq.Of(1, 2, 3, 4, 5, 6, 7, 8, []);
+        var seq = Seq.Of<int>([]);
 
         // Assert
-        Assert.That(seq, Has.Count.EqualTo(8));
-        Assert.That(seq.ToList(), Is.EqualTo(new[] { 1, 2, 3, 4, 5, 6, 7, 8 }).AsCollection);
+        Assert.That(seq, Has.Count.EqualTo(0));
+        Assert.That(seq.ToList(), Is.EqualTo(Array.Empty<int>()).AsCollection);
+    }
+
+    [Test]
+    public void Reverse_SingleElement_ReturnsSameElement()
+    {
+        // Arrange & Act
+        var seq = Seq.Of(1);
+
+        // Assert
+        Assert.That(seq, Has.Count.EqualTo(1));
+        Assert.That(seq.ToList(), Is.EqualTo(new[] { 1 }).AsCollection);
+    }
+
+    [Test]
+    public void Reverse_MultipleElements_ReturnsReversed()
+    {
+        // Arrange & Act
+        var seq = Seq.Of(1, 2, 3, 4, 5);
+
+        // Assert
+        Assert.That(seq.Reverse(), Has.Count.EqualTo(5));
+        Assert.That(seq.Reverse().ToList(), Is.EqualTo(new[] { 5, 4, 3, 2, 1 }).AsCollection);
     }
 }

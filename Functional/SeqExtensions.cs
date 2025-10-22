@@ -2,9 +2,10 @@ namespace Macaron.Functional;
 
 public static class SeqExtensions
 {
-    public static void Deconstruct<T>(this Seq<T> seq, out T head, out Seq<T>? tail)
+    public static Maybe<Nel<T>> ToNel<T>(this Seq<T> seq) => seq switch
     {
-        head = seq.Head;
-        tail = seq.Tail;
-    }
+        Seq<T>.Node node => Maybe.Just(new Nel<T>(node.Head, node.Tail)),
+        Seq<T>.Empty => Maybe.Nothing(),
+        _ => throw new InvalidOperationException("Unexpected sequence type."),
+    };
 }
