@@ -67,4 +67,68 @@ partial class Extensions
         return self;
     }
 
+    public static T Also<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8>(
+        this T self, Action<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8> action, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7, TArg8 arg8
+    ) where T : notnull
+    {
+        action(self, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+        return self;
+    }
+
+    public static (T1, T2) Also<T1, T2>(
+        this (T1, T2) self, Action<T1, T2> action, T1 arg1, T2 arg2
+    )
+    {
+        action(self.Item1, self.Item2);
+        return self;
+    }
+
+    public static (T1, T2, T3) Also<T1, T2, T3>(
+        this (T1, T2, T3) self, Action<T1, T2, T3> action, T1 arg1, T2 arg2, T3 arg3
+    )
+    {
+        action(self.Item1, self.Item2, self.Item3);
+        return self;
+    }
+
+    public static (T1, T2, T3, T4) Also<T1, T2, T3, T4>(
+        this (T1, T2, T3, T4) self, Action<T1, T2, T3, T4> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4
+    )
+    {
+        action(self.Item1, self.Item2, self.Item3, self.Item4);
+        return self;
+    }
+
+    public static (T1, T2, T3, T4, T5) Also<T1, T2, T3, T4, T5>(
+        this (T1, T2, T3, T4, T5) self, Action<T1, T2, T3, T4, T5> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5
+    )
+    {
+        action(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5);
+        return self;
+    }
+
+    public static (T1, T2, T3, T4, T5, T6) Also<T1, T2, T3, T4, T5, T6>(
+        this (T1, T2, T3, T4, T5, T6) self, Action<T1, T2, T3, T4, T5, T6> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6
+    )
+    {
+        action(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5, self.Item6);
+        return self;
+    }
+
+    public static (T1, T2, T3, T4, T5, T6, T7) Also<T1, T2, T3, T4, T5, T6, T7>(
+        this (T1, T2, T3, T4, T5, T6, T7) self, Action<T1, T2, T3, T4, T5, T6, T7> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7
+    )
+    {
+        action(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5, self.Item6, self.Item7);
+        return self;
+    }
+
+    public static (T1, T2, T3, T4, T5, T6, T7, T8) Also<T1, T2, T3, T4, T5, T6, T7, T8>(
+        this (T1, T2, T3, T4, T5, T6, T7, T8) self, Action<T1, T2, T3, T4, T5, T6, T7, T8> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8
+    )
+    {
+        action(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5, self.Item6, self.Item7, self.Item8);
+        return self;
+    }
+
 }

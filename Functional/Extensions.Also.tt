@@ -17,4 +17,15 @@ partial class Extensions
     }
 
 <# } #>
+<# for (int i = 2; i <= MaxCount; i++) { #>
+    public static (<# for (int j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>) Also<<# for (int j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>>(
+        this (<# for (int j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>) self, Action<<# for (int j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>> action<# for (int j = 1; j <= i; j++) { #>, T<#= j #> arg<#= j #><# } #>
+
+    )
+    {
+        action(<# for (int j = 1; j < i; j++) { #>self.Item<#= j #>, <# } #>self.Item<#= i #>);
+        return self;
+    }
+
+<# } #>
 }

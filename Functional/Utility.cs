@@ -145,38 +145,6 @@ public static partial class Utility
         return value != null;
     }
 
-    public static void Apply<T1, T2>(
-        (T1, T2) tuple,
-        Action<T1, T2> action
-    )
-    {
-        action(tuple.Item1, tuple.Item2);
-    }
-
-    public static void Apply<T1, T2, T3>(
-        (T1, T2, T3) tuple,
-        Action<T1, T2, T3> action
-    )
-    {
-        action(tuple.Item1, tuple.Item2, tuple.Item3);
-    }
-
-    public static TResult Apply<T1, T2, TResult>(
-        (T1, T2) tuple,
-        Func<T1, T2, TResult> fn
-    )
-    {
-        return fn(tuple.Item1, tuple.Item2);
-    }
-
-    public static TResult Apply<T1, T2, T3, TResult>(
-        (T1, T2, T3) tuple,
-        Func<T1, T2, T3, TResult> fn
-    )
-    {
-        return fn(tuple.Item1, tuple.Item2, tuple.Item3);
-    }
-
     public static (TResult1, TResult2) ZipWith<T1, T2, TResult1, TResult2>(
         (T1, T2) left,
         (T1, T2) right,

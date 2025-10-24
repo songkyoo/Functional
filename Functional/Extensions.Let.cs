@@ -59,4 +59,60 @@ partial class Extensions
         return fn(self, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
     }
 
+    public static TResult Let<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TResult>(
+        this T self, Func<T, TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TResult> fn, TArg1 arg1, TArg2 arg2, TArg3 arg3, TArg4 arg4, TArg5 arg5, TArg6 arg6, TArg7 arg7, TArg8 arg8
+    ) where T : notnull
+    {
+        return fn(self, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+    }
+
+    public static TResult Let<T1, T2, TResult>(
+        this (T1, T2) self, Func<T1, T2, TResult> fn
+    )
+    {
+        return fn(self.Item1, self.Item2);
+    }
+
+    public static TResult Let<T1, T2, T3, TResult>(
+        this (T1, T2, T3) self, Func<T1, T2, T3, TResult> fn
+    )
+    {
+        return fn(self.Item1, self.Item2, self.Item3);
+    }
+
+    public static TResult Let<T1, T2, T3, T4, TResult>(
+        this (T1, T2, T3, T4) self, Func<T1, T2, T3, T4, TResult> fn
+    )
+    {
+        return fn(self.Item1, self.Item2, self.Item3, self.Item4);
+    }
+
+    public static TResult Let<T1, T2, T3, T4, T5, TResult>(
+        this (T1, T2, T3, T4, T5) self, Func<T1, T2, T3, T4, T5, TResult> fn
+    )
+    {
+        return fn(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5);
+    }
+
+    public static TResult Let<T1, T2, T3, T4, T5, T6, TResult>(
+        this (T1, T2, T3, T4, T5, T6) self, Func<T1, T2, T3, T4, T5, T6, TResult> fn
+    )
+    {
+        return fn(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5, self.Item6);
+    }
+
+    public static TResult Let<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        this (T1, T2, T3, T4, T5, T6, T7) self, Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn
+    )
+    {
+        return fn(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5, self.Item6, self.Item7);
+    }
+
+    public static TResult Let<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        this (T1, T2, T3, T4, T5, T6, T7, T8) self, Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn
+    )
+    {
+        return fn(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5, self.Item6, self.Item7, self.Item8);
+    }
+
 }
