@@ -10,8 +10,8 @@ namespace Macaron.Functional.UniTaskExtensions
     public static class Utility
     {
         public static UniTask RunAsync(
-            Func<CancellationToken, UniTask> fnAsync,
-            CancellationToken cancellationToken = default
+            CancellationToken cancellationToken,
+            Func<CancellationToken, UniTask> fnAsync
         )
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -20,8 +20,8 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static UniTask<TResult> RunAsync<TResult>(
-            Func<CancellationToken, UniTask<TResult>> fnAsync,
-            CancellationToken cancellationToken = default
+            CancellationToken cancellationToken,
+            Func<CancellationToken, UniTask<TResult>> fnAsync
         )
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -30,8 +30,8 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static async UniTask<Either<Exception, Placeholder>> RunCatchingAsync(
-            Func<CancellationToken, UniTask> fnAsync,
-            CancellationToken cancellationToken = default
+            CancellationToken cancellationToken,
+            Func<CancellationToken, UniTask> fnAsync
         )
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -53,8 +53,8 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static async UniTask<Either<Exception, TResult>> RunCatchingAsync<TResult>(
-            Func<CancellationToken, UniTask<TResult>> fnAsync,
-            CancellationToken cancellationToken = default
+            CancellationToken cancellationToken,
+            Func<CancellationToken, UniTask<TResult>> fnAsync
         )
         {
             cancellationToken.ThrowIfCancellationRequested();
@@ -76,38 +76,38 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static UniTask RunAsync<T>(
-            Func<T, CancellationToken, UniTask> fnAsync,
-            T context,
-            CancellationToken cancellationToken = default
+            T value,
+            CancellationToken cancellationToken,
+            Func<T, CancellationToken, UniTask> fnAsync
         )
         {
             cancellationToken.ThrowIfCancellationRequested();
 
-            return fnAsync(context, cancellationToken);
+            return fnAsync(value, cancellationToken);
         }
 
         public static UniTask<TResult> RunAsync<T, TResult>(
-            Func<T, CancellationToken, UniTask<TResult>> fnAsync,
-            T context,
-            CancellationToken cancellationToken = default
+            T value,
+            CancellationToken cancellationToken,
+            Func<T, CancellationToken, UniTask<TResult>> fnAsync
         )
         {
             cancellationToken.ThrowIfCancellationRequested();
 
-            return fnAsync(context, cancellationToken);
+            return fnAsync(value, cancellationToken);
         }
 
         public static async UniTask<Either<Exception, Placeholder>> RunCatchingAsync<T>(
-            Func<T, CancellationToken, UniTask> fnAsync,
-            T context,
-            CancellationToken cancellationToken = default
+            T value,
+            CancellationToken cancellationToken,
+            Func<T, CancellationToken, UniTask> fnAsync
         )
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             try
             {
-                await fnAsync(context, cancellationToken);
+                await fnAsync(value, cancellationToken);
 
                 return Either.Right<Exception, Placeholder>(Placeholder._);
             }
@@ -122,16 +122,16 @@ namespace Macaron.Functional.UniTaskExtensions
         }
 
         public static async UniTask<Either<Exception, TResult>> RunCatchingAsync<T, TResult>(
-            Func<T, CancellationToken, UniTask<TResult>> fnAsync,
-            T context,
-            CancellationToken cancellationToken = default
+            T value,
+            CancellationToken cancellationToken,
+            Func<T, CancellationToken, UniTask<TResult>> fnAsync
         )
         {
             cancellationToken.ThrowIfCancellationRequested();
 
             try
             {
-                var result = await fnAsync(context, cancellationToken);
+                var result = await fnAsync(value, cancellationToken);
 
                 return Either.Right<Exception, TResult>(result);
             }
@@ -165,8 +165,8 @@ namespace Macaron.Functional.UniTaskExtensions
 
         public static async UniTask UseAsync<T>(
             T disposable,
-            Func<T, CancellationToken, UniTask> fnAsync,
-            CancellationToken cancellationToken = default
+            CancellationToken cancellationToken,
+            Func<T, CancellationToken, UniTask> fnAsync
         ) where T : IAsyncDisposable
         {
             await using (disposable)
@@ -179,8 +179,8 @@ namespace Macaron.Functional.UniTaskExtensions
 
         public static async UniTask<TResult> UseAsync<T, TResult>(
             T disposable,
-            Func<T, CancellationToken, UniTask<TResult>> fnAsync,
-            CancellationToken cancellationToken = default
+            CancellationToken cancellationToken,
+            Func<T, CancellationToken, UniTask<TResult>> fnAsync
         ) where T : IAsyncDisposable
         {
             await using (disposable)

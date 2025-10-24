@@ -21,6 +21,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
             CancellationToken? observedToken = null;
 
             await Utility.RunAsync(
+                cts.Token,
                 token =>
                 {
                     observedToken = token;
@@ -28,8 +29,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
                     Assert.That(token, Is.EqualTo(cts.Token));
 
                     return UniTask.CompletedTask;
-                },
-                cts.Token
+                }
             );
 
             Assert.That(observedToken, Is.EqualTo(cts.Token));
@@ -42,7 +42,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
 
             cts.Cancel();
 
-            var task = Utility.RunAsync(_ => UniTask.CompletedTask, cts.Token);
+            var task = Utility.RunAsync(cts.Token, _ => UniTask.CompletedTask);
 
             try
             {
@@ -60,13 +60,14 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
         public async Task RunAsync_WithContext_ReturnsResult()
         {
             var result = await Utility.RunAsync(
+                "ctx",
+                CancellationToken.None,
                 (context, _) =>
                 {
                     Assert.That(context, Is.EqualTo("ctx"));
 
                     return UniTask.FromResult(context.Length);
-                },
-                "ctx"
+                }
             );
 
             Assert.That(result, Is.EqualTo(3));
@@ -75,7 +76,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
         [Test]
         public async Task RunCatchingAsync_ReturnsRightOnSuccess()
         {
-            var result = await Utility.RunCatchingAsync(_ => UniTask.CompletedTask);
+            var result = await Utility.RunCatchingAsync(CancellationToken.None, _ => UniTask.CompletedTask);
 
             Assert.That(result.IsRight, Is.True);
             Assert.That(result.Right, Is.EqualTo(Placeholder._));
@@ -84,7 +85,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
         [Test]
         public async Task RunCatchingAsync_ReturnsLeftOnException()
         {
-            var result = await Utility.RunCatchingAsync(_ =>
+            var result = await Utility.RunCatchingAsync(CancellationToken.None, _ =>
             {
                 return UniTask.FromException(new InvalidOperationException("boom"));
             });
@@ -100,7 +101,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
 
             cts.Cancel();
 
-            var task = Utility.RunCatchingAsync(_ => UniTask.CompletedTask, cts.Token);
+            var task = Utility.RunCatchingAsync(cts.Token, _ => UniTask.CompletedTask);
 
             try
             {
@@ -116,7 +117,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
         [Test]
         public async Task RunCatchingAsync_WithContext_ReturnsLeftOnException()
         {
-            var result = await Utility.RunCatchingAsync<string>(_ => UniTask.FromException<string>(new InvalidOperationException("boom")));
+            var result = await Utility.RunCatchingAsync<string>(CancellationToken.None, _ => UniTask.FromException<string>(new InvalidOperationException("boom")));
 
             Assert.That(result.IsLeft, Is.True);
             Assert.That(result.Left, Is.TypeOf<InvalidOperationException>());
@@ -126,13 +127,14 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
         public async Task RunCatchingAsync_WithContext_ReturnsRightOnSuccess()
         {
             var result = await Utility.RunCatchingAsync<string>(
+                "ctx",
+                CancellationToken.None,
                 (context, _) =>
                 {
                     Assert.That(context, Is.EqualTo("ctx"));
 
                     return UniTask.CompletedTask;
-                },
-                "ctx"
+                }
             );
 
             Assert.That(result, Is.EqualTo(Right<Exception, Placeholder>(Placeholder._)));
