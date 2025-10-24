@@ -144,25 +144,4 @@ public static partial class Utility
     {
         return value != null;
     }
-
-    public static (TResult1, TResult2) ZipWith<T1, T2, TResult1, TResult2>(
-        (T1, T2) left,
-        (T1, T2) right,
-        Func<T1, T1, TResult1> f1,
-        Func<T2, T2, TResult2> f2
-    )
-    {
-        return (f1(left.Item1, right.Item1), f2(left.Item2, right.Item2));
-    }
-
-    public static (TResult1, TResult2, TResult3) ZipWith<T1, T2, T3, TResult1, TResult2, TResult3>(
-        (T1, T2, T3) left,
-        (T1, T2, T3) right,
-        Func<T1, T1, TResult1> f1,
-        Func<T2, T2, TResult2> f2,
-        Func<T3, T3, TResult3> f3
-    )
-    {
-        return (f1(left.Item1, right.Item1), f2(left.Item2, right.Item2), f3(left.Item3, right.Item3));
-    }
 }
