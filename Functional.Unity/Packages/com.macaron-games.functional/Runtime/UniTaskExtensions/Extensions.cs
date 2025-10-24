@@ -29,8 +29,8 @@ namespace Macaron.Functional.UniTaskExtensions
 
         public static async UniTask UseAsync<T>(
             this T disposable,
-            Func<T, CancellationToken, UniTask> fnAsync,
-            CancellationToken cancellationToken = default
+            CancellationToken cancellationToken,
+            Func<T, CancellationToken, UniTask> fnAsync
         ) where T : IAsyncDisposable
         {
             await using (disposable)
@@ -43,8 +43,8 @@ namespace Macaron.Functional.UniTaskExtensions
 
         public static async UniTask<TResult> UseAsync<T, TResult>(
             this T disposable,
-            Func<T, CancellationToken, UniTask<TResult>> fnAsync,
-            CancellationToken cancellationToken = default
+            CancellationToken cancellationToken,
+            Func<T, CancellationToken, UniTask<TResult>> fnAsync
         ) where T : IAsyncDisposable
         {
             await using (disposable)

@@ -59,7 +59,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
 
             cts.Cancel();
 
-            var task = disposable.UseAsync((_, _) => UniTask.CompletedTask, cts.Token);
+            var task = disposable.UseAsync(cts.Token, (_, _) => UniTask.CompletedTask);
 
             try
             {
@@ -79,7 +79,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
         public async Task UseAsync_ValueAsyncFunc_ReturnsResultAndDisposes()
         {
             var disposable = new TrackingAsyncDisposable();
-            var result = await disposable.UseAsync((_, _) => UniTask.FromResult(7));
+            var result = await disposable.UseAsync(CancellationToken.None, (_, _) => UniTask.FromResult(7));
 
             Assert.That(result, Is.EqualTo(7));
             Assert.That(disposable.Disposed, Is.True);
@@ -120,7 +120,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
 
             cts.Cancel();
 
-            var task = Utility.UseAsync(disposable, (_, _) => UniTask.CompletedTask, cts.Token);
+            var task = Utility.UseAsync(disposable, cts.Token, (_, _) => UniTask.CompletedTask);
 
             try
             {
@@ -140,7 +140,7 @@ namespace Macaron.Functional.UniTaskExtensions.Tests
         public async Task UtilityUseAsync_ReturnsResultForAsyncFunc()
         {
             var disposable = new TrackingAsyncDisposable();
-            var result = await Utility.UseAsync(disposable, (_, _) => UniTask.FromResult(11));
+            var result = await Utility.UseAsync(disposable, CancellationToken.None, (_, _) => UniTask.FromResult(11));
 
             Assert.That(result, Is.EqualTo(11));
             Assert.That(disposable.Disposed, Is.True);
