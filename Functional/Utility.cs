@@ -38,21 +38,21 @@ public static partial class Utility
         }
     }
 
-    public static void Run<T>(Action<T> action, T context)
+    public static void Run<T>(T value, Action<T> action)
     {
-        action(context);
+        action(value);
     }
 
-    public static TResult Run<T, TResult>(Func<T, TResult> fn, T context)
+    public static TResult Run<T, TResult>(T value, Func<T, TResult> fn)
     {
-        return fn(context);
+        return fn(value);
     }
 
-    public static Either<Exception, Placeholder> RunCatching<T>(Action<T> action, T context)
+    public static Either<Exception, Placeholder> RunCatching<T>(T value, Action<T> action)
     {
         try
         {
-            action(context);
+            action(value);
 
             return Either.Right(Placeholder._);
         }
@@ -62,11 +62,11 @@ public static partial class Utility
         }
     }
 
-    public static Either<Exception, TResult> RunCatching<T, TResult>(Func<T, TResult> fn, T context)
+    public static Either<Exception, TResult> RunCatching<T, TResult>(T value, Func<T, TResult> fn)
     {
         try
         {
-            return Either.Right(fn(context));
+            return Either.Right(fn(value));
         }
         catch (Exception exception)
         {
