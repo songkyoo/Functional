@@ -25,57 +25,5 @@ partial class Utility
         );
     }
 
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<(<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>)> ToTupled<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>>(
-        Action<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>> action
-    )
-    {
-        return tuple => action(
-<# for (var j = 1; j < i; j++) { #>
-            tuple.Item<#= j #>,
-<# } #>
-            tuple.Item<#= i #>
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<(<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>), TResult> ToTupled<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>, TResult>(
-        Func<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>, TResult> fn
-    )
-    {
-        return tuple => fn(
-<# for (var j = 1; j < i; j++) { #>
-            tuple.Item<#= j #>,
-<# } #>
-            tuple.Item<#= i #>
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>> FromTupled<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>>(
-        Action<(<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>)> action
-    )
-    {
-        return (<# for (var j = 1; j < i; j++) { #>p<#= j #>, <# } #>p<#= i #>) => action((
-<# for (var j = 1; j < i; j++) { #>
-            p<#= j #>,
-<# } #>
-            p<#= i #>
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>, TResult> FromTupled<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>, TResult>(
-        Func<(<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>), TResult> fn
-    )
-    {
-        return (<# for (int j = 1; j < i; j++) { #>p<#= j #>, <# } #>p<#= i #>) => fn((
-<# for (int j = 1; j < i; j++) { #>
-            p<#= j #>,
-<# } #>
-            p<#= i #>
-        ));
-    }
-
 <# } #>
 }

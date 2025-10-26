@@ -18,50 +18,6 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<(T1, T2)> ToTupled<T1, T2>(
-        Action<T1, T2> action
-    )
-    {
-        return tuple => action(
-            tuple.Item1,
-            tuple.Item2
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<(T1, T2), TResult> ToTupled<T1, T2, TResult>(
-        Func<T1, T2, TResult> fn
-    )
-    {
-        return tuple => fn(
-            tuple.Item1,
-            tuple.Item2
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<T1, T2> FromTupled<T1, T2>(
-        Action<(T1, T2)> action
-    )
-    {
-        return (p1, p2) => action((
-            p1,
-            p2
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<T1, T2, TResult> FromTupled<T1, T2, TResult>(
-        Func<(T1, T2), TResult> fn
-    )
-    {
-        return (p1, p2) => fn((
-            p1,
-            p2
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (T1, T2, T3) Tuple<T1, T2, T3>(
         T1 value1,
         T2 value2,
@@ -73,54 +29,6 @@ partial class Utility
             value2,
             value3
         );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<(T1, T2, T3)> ToTupled<T1, T2, T3>(
-        Action<T1, T2, T3> action
-    )
-    {
-        return tuple => action(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<(T1, T2, T3), TResult> ToTupled<T1, T2, T3, TResult>(
-        Func<T1, T2, T3, TResult> fn
-    )
-    {
-        return tuple => fn(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<T1, T2, T3> FromTupled<T1, T2, T3>(
-        Action<(T1, T2, T3)> action
-    )
-    {
-        return (p1, p2, p3) => action((
-            p1,
-            p2,
-            p3
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<T1, T2, T3, TResult> FromTupled<T1, T2, T3, TResult>(
-        Func<(T1, T2, T3), TResult> fn
-    )
-    {
-        return (p1, p2, p3) => fn((
-            p1,
-            p2,
-            p3
-        ));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -137,58 +45,6 @@ partial class Utility
             value3,
             value4
         );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<(T1, T2, T3, T4)> ToTupled<T1, T2, T3, T4>(
-        Action<T1, T2, T3, T4> action
-    )
-    {
-        return tuple => action(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3,
-            tuple.Item4
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<(T1, T2, T3, T4), TResult> ToTupled<T1, T2, T3, T4, TResult>(
-        Func<T1, T2, T3, T4, TResult> fn
-    )
-    {
-        return tuple => fn(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3,
-            tuple.Item4
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<T1, T2, T3, T4> FromTupled<T1, T2, T3, T4>(
-        Action<(T1, T2, T3, T4)> action
-    )
-    {
-        return (p1, p2, p3, p4) => action((
-            p1,
-            p2,
-            p3,
-            p4
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<T1, T2, T3, T4, TResult> FromTupled<T1, T2, T3, T4, TResult>(
-        Func<(T1, T2, T3, T4), TResult> fn
-    )
-    {
-        return (p1, p2, p3, p4) => fn((
-            p1,
-            p2,
-            p3,
-            p4
-        ));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -210,62 +66,6 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<(T1, T2, T3, T4, T5)> ToTupled<T1, T2, T3, T4, T5>(
-        Action<T1, T2, T3, T4, T5> action
-    )
-    {
-        return tuple => action(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3,
-            tuple.Item4,
-            tuple.Item5
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<(T1, T2, T3, T4, T5), TResult> ToTupled<T1, T2, T3, T4, T5, TResult>(
-        Func<T1, T2, T3, T4, T5, TResult> fn
-    )
-    {
-        return tuple => fn(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3,
-            tuple.Item4,
-            tuple.Item5
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<T1, T2, T3, T4, T5> FromTupled<T1, T2, T3, T4, T5>(
-        Action<(T1, T2, T3, T4, T5)> action
-    )
-    {
-        return (p1, p2, p3, p4, p5) => action((
-            p1,
-            p2,
-            p3,
-            p4,
-            p5
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<T1, T2, T3, T4, T5, TResult> FromTupled<T1, T2, T3, T4, T5, TResult>(
-        Func<(T1, T2, T3, T4, T5), TResult> fn
-    )
-    {
-        return (p1, p2, p3, p4, p5) => fn((
-            p1,
-            p2,
-            p3,
-            p4,
-            p5
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (T1, T2, T3, T4, T5, T6) Tuple<T1, T2, T3, T4, T5, T6>(
         T1 value1,
         T2 value2,
@@ -283,66 +83,6 @@ partial class Utility
             value5,
             value6
         );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<(T1, T2, T3, T4, T5, T6)> ToTupled<T1, T2, T3, T4, T5, T6>(
-        Action<T1, T2, T3, T4, T5, T6> action
-    )
-    {
-        return tuple => action(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3,
-            tuple.Item4,
-            tuple.Item5,
-            tuple.Item6
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<(T1, T2, T3, T4, T5, T6), TResult> ToTupled<T1, T2, T3, T4, T5, T6, TResult>(
-        Func<T1, T2, T3, T4, T5, T6, TResult> fn
-    )
-    {
-        return tuple => fn(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3,
-            tuple.Item4,
-            tuple.Item5,
-            tuple.Item6
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<T1, T2, T3, T4, T5, T6> FromTupled<T1, T2, T3, T4, T5, T6>(
-        Action<(T1, T2, T3, T4, T5, T6)> action
-    )
-    {
-        return (p1, p2, p3, p4, p5, p6) => action((
-            p1,
-            p2,
-            p3,
-            p4,
-            p5,
-            p6
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<T1, T2, T3, T4, T5, T6, TResult> FromTupled<T1, T2, T3, T4, T5, T6, TResult>(
-        Func<(T1, T2, T3, T4, T5, T6), TResult> fn
-    )
-    {
-        return (p1, p2, p3, p4, p5, p6) => fn((
-            p1,
-            p2,
-            p3,
-            p4,
-            p5,
-            p6
-        ));
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -368,70 +108,6 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<(T1, T2, T3, T4, T5, T6, T7)> ToTupled<T1, T2, T3, T4, T5, T6, T7>(
-        Action<T1, T2, T3, T4, T5, T6, T7> action
-    )
-    {
-        return tuple => action(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3,
-            tuple.Item4,
-            tuple.Item5,
-            tuple.Item6,
-            tuple.Item7
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<(T1, T2, T3, T4, T5, T6, T7), TResult> ToTupled<T1, T2, T3, T4, T5, T6, T7, TResult>(
-        Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn
-    )
-    {
-        return tuple => fn(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3,
-            tuple.Item4,
-            tuple.Item5,
-            tuple.Item6,
-            tuple.Item7
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<T1, T2, T3, T4, T5, T6, T7> FromTupled<T1, T2, T3, T4, T5, T6, T7>(
-        Action<(T1, T2, T3, T4, T5, T6, T7)> action
-    )
-    {
-        return (p1, p2, p3, p4, p5, p6, p7) => action((
-            p1,
-            p2,
-            p3,
-            p4,
-            p5,
-            p6,
-            p7
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<T1, T2, T3, T4, T5, T6, T7, TResult> FromTupled<T1, T2, T3, T4, T5, T6, T7, TResult>(
-        Func<(T1, T2, T3, T4, T5, T6, T7), TResult> fn
-    )
-    {
-        return (p1, p2, p3, p4, p5, p6, p7) => fn((
-            p1,
-            p2,
-            p3,
-            p4,
-            p5,
-            p6,
-            p7
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (T1, T2, T3, T4, T5, T6, T7, T8) Tuple<T1, T2, T3, T4, T5, T6, T7, T8>(
         T1 value1,
         T2 value2,
@@ -453,74 +129,6 @@ partial class Utility
             value7,
             value8
         );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<(T1, T2, T3, T4, T5, T6, T7, T8)> ToTupled<T1, T2, T3, T4, T5, T6, T7, T8>(
-        Action<T1, T2, T3, T4, T5, T6, T7, T8> action
-    )
-    {
-        return tuple => action(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3,
-            tuple.Item4,
-            tuple.Item5,
-            tuple.Item6,
-            tuple.Item7,
-            tuple.Item8
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<(T1, T2, T3, T4, T5, T6, T7, T8), TResult> ToTupled<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
-        Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn
-    )
-    {
-        return tuple => fn(
-            tuple.Item1,
-            tuple.Item2,
-            tuple.Item3,
-            tuple.Item4,
-            tuple.Item5,
-            tuple.Item6,
-            tuple.Item7,
-            tuple.Item8
-        );
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Action<T1, T2, T3, T4, T5, T6, T7, T8> FromTupled<T1, T2, T3, T4, T5, T6, T7, T8>(
-        Action<(T1, T2, T3, T4, T5, T6, T7, T8)> action
-    )
-    {
-        return (p1, p2, p3, p4, p5, p6, p7, p8) => action((
-            p1,
-            p2,
-            p3,
-            p4,
-            p5,
-            p6,
-            p7,
-            p8
-        ));
-    }
-
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> FromTupled<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
-        Func<(T1, T2, T3, T4, T5, T6, T7, T8), TResult> fn
-    )
-    {
-        return (p1, p2, p3, p4, p5, p6, p7, p8) => fn((
-            p1,
-            p2,
-            p3,
-            p4,
-            p5,
-            p6,
-            p7,
-            p8
-        ));
     }
 
 }

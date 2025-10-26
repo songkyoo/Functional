@@ -44,9 +44,11 @@
     <Exec Command="dotnet t4 Utility.Compose.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Curry.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Flip.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Utility.FromTupled.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.NoOp.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Partial.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Pipe.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Utility.ToTupled.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Tuple.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Uncurry.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.ZipWith.tt -p:MaxCount=8" />
