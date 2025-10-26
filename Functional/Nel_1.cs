@@ -2,7 +2,7 @@
 
 namespace Macaron.Functional;
 
-public sealed partial class Nel<T> : IReadOnlyCollection<T>
+public sealed partial class Nel<T> : IEnumerable<T>
 {
     #region Fields
     private readonly T _head;
@@ -36,9 +36,7 @@ public sealed partial class Nel<T> : IReadOnlyCollection<T>
     }
     #endregion
 
-    #region IReadOnlyCollection<T> Interface
-    public int Count => Tail.Count + 1;
-
+    #region IEnumerable<T> Interface
     IEnumerator<T> IEnumerable<T>.GetEnumerator() => GetEnumerator();
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

@@ -12,7 +12,7 @@ public class NelTests
         // Assert
         Assert.That(nel.Head, Is.EqualTo(42));
         Assert.That(nel.Tail, Is.EqualTo(Seq<int>.Nil));
-        Assert.That(nel, Has.Count.EqualTo(1));
+        Assert.That(nel.Count(), Is.EqualTo(1));
     }
 
     [Test]
@@ -27,7 +27,7 @@ public class NelTests
         // Assert
         Assert.That(nel.Head, Is.EqualTo(1));
         Assert.That(nel.Tail.ToList(), Is.EqualTo(new[] { 2, 3 }).AsCollection);
-        Assert.That(nel, Has.Count.EqualTo(3));
+        Assert.That(nel.Count(), Is.EqualTo(3));
     }
 
     [Test]
@@ -42,14 +42,14 @@ public class NelTests
         // Assert
         Assert.That(nel.Head, Is.EqualTo(1));
         Assert.That(nel.Tail.ToList(), Is.EqualTo(new[] { 2, 3, 4 }).AsCollection);
-        Assert.That(nel, Has.Count.EqualTo(4));
+        Assert.That(nel.Count(), Is.EqualTo(4));
     }
 
     [Test]
     public void Count_SingleAndMultiple()
     {
-        Assert.That(Nel.Of("a"), Has.Count.EqualTo(1));
-        Assert.That(Nel.Of(1, 2, 3, 4), Has.Count.EqualTo(4));
+        Assert.That(Nel.Of("a").Count(), Is.EqualTo(1));
+        Assert.That(Nel.Of(1, 2, 3, 4).Count(), Is.EqualTo(4));
     }
 
     [Test]
@@ -71,13 +71,13 @@ public class NelTests
     {
         // Arrange
         var original = Nel.Of(2, 3);
-        var originalCount = original.Count;
+        var originalCount = original.Count();
 
         // Act
         var modified = original.Prepend(1);
 
         // Assert
-        Assert.That(original, Has.Count.EqualTo(originalCount));
+        Assert.That(original.Count(), Is.EqualTo(originalCount));
         Assert.That(original.Head, Is.EqualTo(2));
         Assert.That(modified.Head, Is.EqualTo(1));
         Assert.That(modified.ToList(), Is.EqualTo(new[] { 1, 2, 3 }).AsCollection);
@@ -121,7 +121,7 @@ public class NelTests
         var reversed = nel.Reverse();
 
         // Assert
-        Assert.That(reversed, Has.Count.EqualTo(5));
+        Assert.That(reversed.Count(), Is.EqualTo(5));
         Assert.That(reversed.ToList(), Is.EqualTo(new[] { 5, 4, 3, 2, 1 }).AsCollection);
     }
 
@@ -155,7 +155,7 @@ public class NelTests
         var nel = Nel.Of(1, []);
 
         // Assert
-        Assert.That(nel, Has.Count.EqualTo(1));
+        Assert.That(nel.Count(), Is.EqualTo(1));
         Assert.That(nel.ToList(), Is.EqualTo(new[] { 1 }).AsCollection);
     }
 

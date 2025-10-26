@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace Macaron.Functional;
 
-public abstract partial class Seq<T> : IReadOnlyCollection<T>
+public abstract partial class Seq<T> : IEnumerable<T>
 {
     #region Constants
     public static readonly Seq<T> Nil = new Empty();
@@ -29,21 +29,6 @@ public abstract partial class Seq<T> : IReadOnlyCollection<T>
         public T Head => _head;
 
         public Seq<T> Tail => _tail;
-
-        public new int Count
-        {
-            get
-            {
-                var count = 0;
-
-                for (Seq<T> seq = this; seq is Node node; seq = node.Tail)
-                {
-                    count += 1;
-                }
-
-                return count;
-            }
-        }
         #endregion
 
         #region Constructors
@@ -68,22 +53,7 @@ public abstract partial class Seq<T> : IReadOnlyCollection<T>
     public bool IsEmpty => this is Empty;
     #endregion
 
-    #region IReadOnlyCollection<T> Interface
-    public int Count
-    {
-        get
-        {
-            var count = 0;
-
-            for (var seq = this; seq is Node node; seq = node.Tail)
-            {
-                count += 1;
-            }
-
-            return count;
-        }
-    }
-
+    #region IEnumerable<T> Interface
     IEnumerator<T> IEnumerable<T>.GetEnumerator() => GetEnumerator();
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

@@ -21,7 +21,7 @@ public class SeqTests
         var seq = new Seq<string>.Node("hello", Seq<string>.Nil);
 
         // Act
-        var count = seq.Count;
+        var count = seq.Count();
 
         // Assert
         Assert.That(count, Is.EqualTo(1));
@@ -34,7 +34,7 @@ public class SeqTests
         var seq = Seq.Of(1, 2, 3, 4, 5);
 
         // Act
-        var count = seq.Count;
+        var count = seq.Count();
 
         // Assert
         Assert.That(count, Is.EqualTo(5));
@@ -124,7 +124,7 @@ public class SeqTests
         // Assert
         Assert.That(seq.Head, Is.EqualTo(100));
         Assert.That(seq.Tail, Is.EqualTo(Seq<int>.Nil));
-        Assert.That(seq, Has.Count.EqualTo(1));
+        Assert.That(seq.Count(), Is.EqualTo(1));
     }
 
     [Test]
@@ -144,7 +144,7 @@ public class SeqTests
         var seq = Seq.Of(1, 2, 3, 4, 5, 6, 7, 8);
 
         // Assert
-        Assert.That(seq, Has.Count.EqualTo(8));
+        Assert.That(seq.Count(), Is.EqualTo(8));
         Assert.That(seq.ToList(), Is.EqualTo(new[] { 1, 2, 3, 4, 5, 6, 7, 8 }).AsCollection);
     }
 
@@ -219,15 +219,15 @@ public class SeqTests
     {
         // Arrange
         var original = Seq.Of(2, 3);
-        var originalCount = original.Count;
+        var originalCount = original.Count();
 
         // Act
         var modified = original.Prepend(1);
 
         // Assert
-        Assert.That(original, Has.Count.EqualTo(originalCount));
+        Assert.That(original.Count(), Is.EqualTo(originalCount));
         Assert.That(((Seq<int>.Node)original).Head, Is.EqualTo(2));
-        Assert.That(modified, Has.Count.EqualTo(originalCount + 1));
+        Assert.That(modified.Count(), Is.EqualTo(originalCount + 1));
     }
 
     [Test]
@@ -258,9 +258,9 @@ public class SeqTests
         var doubleSeq = Seq.Of(1.1, 2.2, 3.3);
 
         // Assert
-        Assert.That(intSeq, Has.Count.EqualTo(3));
-        Assert.That(stringSeq, Has.Count.EqualTo(3));
-        Assert.That(doubleSeq, Has.Count.EqualTo(3));
+        Assert.That(intSeq.Count(), Is.EqualTo(3));
+        Assert.That(stringSeq.Count(), Is.EqualTo(3));
+        Assert.That(doubleSeq.Count(), Is.EqualTo(3));
     }
 
     [Test]
@@ -270,7 +270,7 @@ public class SeqTests
         var seq = Seq.Of<int>([]);
 
         // Assert
-        Assert.That(seq, Has.Count.EqualTo(0));
+        Assert.That(seq.Count(), Is.EqualTo(0));
         Assert.That(seq.ToList(), Is.EqualTo(Array.Empty<int>()).AsCollection);
     }
 
@@ -281,7 +281,7 @@ public class SeqTests
         var seq = Seq.Of(1);
 
         // Assert
-        Assert.That(seq, Has.Count.EqualTo(1));
+        Assert.That(seq.Count(), Is.EqualTo(1));
         Assert.That(seq.ToList(), Is.EqualTo(new[] { 1 }).AsCollection);
     }
 
@@ -292,7 +292,7 @@ public class SeqTests
         var seq = Seq.Of(1, 2, 3, 4, 5);
 
         // Assert
-        Assert.That(seq.Reverse(), Has.Count.EqualTo(5));
+        Assert.That(seq.Reverse().Count(), Is.EqualTo(5));
         Assert.That(seq.Reverse().ToList(), Is.EqualTo(new[] { 5, 4, 3, 2, 1 }).AsCollection);
     }
 }
