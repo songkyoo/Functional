@@ -11,14 +11,14 @@ partial class Utility
 {
 <# for (var i = 2; i < MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (<#= GenericTypes(i + 1) #>) Append<<#= GenericTypes(i + 1) #>>((<#= GenericTypes(i) #>) tuple, T<#= i + 1 #> item)
+    public static (<#= GenericTypes(i + 1) #>) Cons<<#= GenericTypes(i + 1) #>>(T1 value, (<#= GenericTypes(i + 1, skipCount: 1) #>) tuple)
     {
-        return (<# for (var j = 1; j <= i; j++) { #>tuple.Item<#= j #>, <# } #>item);
+        return (value<# for (var j = 1; j <= i; j++) { #>, tuple.Item<#= j #><# } #>);
     }
 
 <# } #>
 }
 
 <#+
-    string GenericTypes(int n) => string.Join(", ", Enumerable.Range(1, n).Select(i => $"T{i}"));
+    string GenericTypes(int n, int skipCount = 0) => string.Join(", ", Enumerable.Range(1, n).Skip(skipCount).Select(i => $"T{i}"));
 #>

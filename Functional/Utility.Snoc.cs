@@ -3,40 +3,40 @@ using System.Runtime.CompilerServices;
 
 namespace Macaron.Functional;
 
-partial class Extensions
+partial class Utility
 {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3) Append<T1, T2, T3>(this (T1, T2) tuple, T3 value)
+    public static (T1, T2, T3) Append<T1, T2, T3>((T1, T2) tuple, T3 value)
     {
         return (tuple.Item1, tuple.Item2, value);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3, T4) Append<T1, T2, T3, T4>(this (T1, T2, T3) tuple, T4 value)
+    public static (T1, T2, T3, T4) Append<T1, T2, T3, T4>((T1, T2, T3) tuple, T4 value)
     {
         return (tuple.Item1, tuple.Item2, tuple.Item3, value);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3, T4, T5) Append<T1, T2, T3, T4, T5>(this (T1, T2, T3, T4) tuple, T5 value)
+    public static (T1, T2, T3, T4, T5) Append<T1, T2, T3, T4, T5>((T1, T2, T3, T4) tuple, T5 value)
     {
         return (tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, value);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3, T4, T5, T6) Append<T1, T2, T3, T4, T5, T6>(this (T1, T2, T3, T4, T5) tuple, T6 value)
+    public static (T1, T2, T3, T4, T5, T6) Append<T1, T2, T3, T4, T5, T6>((T1, T2, T3, T4, T5) tuple, T6 value)
     {
         return (tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, value);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3, T4, T5, T6, T7) Append<T1, T2, T3, T4, T5, T6, T7>(this (T1, T2, T3, T4, T5, T6) tuple, T7 value)
+    public static (T1, T2, T3, T4, T5, T6, T7) Append<T1, T2, T3, T4, T5, T6, T7>((T1, T2, T3, T4, T5, T6) tuple, T7 value)
     {
         return (tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6, value);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3, T4, T5, T6, T7, T8) Append<T1, T2, T3, T4, T5, T6, T7, T8>(this (T1, T2, T3, T4, T5, T6, T7) tuple, T8 value)
+    public static (T1, T2, T3, T4, T5, T6, T7, T8) Append<T1, T2, T3, T4, T5, T6, T7, T8>((T1, T2, T3, T4, T5, T6, T7) tuple, T8 value)
     {
         return (tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6, tuple.Item7, value);
     }

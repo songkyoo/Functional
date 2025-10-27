@@ -3,40 +3,40 @@ using System.Runtime.CompilerServices;
 
 namespace Macaron.Functional;
 
-partial class Extensions
+partial class Utility
 {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3) Prepend<T1, T2, T3>(this (T2, T3) tuple, T1 value)
+    public static (T1, T2, T3) Cons<T1, T2, T3>(T1 value, (T2, T3) tuple)
     {
         return (value, tuple.Item1, tuple.Item2);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3, T4) Prepend<T1, T2, T3, T4>(this (T2, T3, T4) tuple, T1 value)
+    public static (T1, T2, T3, T4) Cons<T1, T2, T3, T4>(T1 value, (T2, T3, T4) tuple)
     {
         return (value, tuple.Item1, tuple.Item2, tuple.Item3);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3, T4, T5) Prepend<T1, T2, T3, T4, T5>(this (T2, T3, T4, T5) tuple, T1 value)
+    public static (T1, T2, T3, T4, T5) Cons<T1, T2, T3, T4, T5>(T1 value, (T2, T3, T4, T5) tuple)
     {
         return (value, tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3, T4, T5, T6) Prepend<T1, T2, T3, T4, T5, T6>(this (T2, T3, T4, T5, T6) tuple, T1 value)
+    public static (T1, T2, T3, T4, T5, T6) Cons<T1, T2, T3, T4, T5, T6>(T1 value, (T2, T3, T4, T5, T6) tuple)
     {
         return (value, tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3, T4, T5, T6, T7) Prepend<T1, T2, T3, T4, T5, T6, T7>(this (T2, T3, T4, T5, T6, T7) tuple, T1 value)
+    public static (T1, T2, T3, T4, T5, T6, T7) Cons<T1, T2, T3, T4, T5, T6, T7>(T1 value, (T2, T3, T4, T5, T6, T7) tuple)
     {
         return (value, tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (T1, T2, T3, T4, T5, T6, T7, T8) Prepend<T1, T2, T3, T4, T5, T6, T7, T8>(this (T2, T3, T4, T5, T6, T7, T8) tuple, T1 value)
+    public static (T1, T2, T3, T4, T5, T6, T7, T8) Cons<T1, T2, T3, T4, T5, T6, T7, T8>(T1 value, (T2, T3, T4, T5, T6, T7, T8) tuple)
     {
         return (value, tuple.Item1, tuple.Item2, tuple.Item3, tuple.Item4, tuple.Item5, tuple.Item6, tuple.Item7);
     }

@@ -11,9 +11,9 @@ partial class Extensions
 {
 <# for (var i = 2; i < MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static (<#= GenericTypes(i + 1) #>) Prepend<<#= GenericTypes(i + 1) #>>(this (<#= GenericTypes(i + 1, skipCount: 1) #>) tuple, T1 item)
+    public static (<#= GenericTypes(i + 1) #>) Prepend<<#= GenericTypes(i + 1) #>>(this (<#= GenericTypes(i + 1, skipCount: 1) #>) tuple, T1 value)
     {
-        return (item<# for (var j = 1; j <= i; j++) { #>, tuple.Item<#= j #><# } #>);
+        return (value<# for (var j = 1; j <= i; j++) { #>, tuple.Item<#= j #><# } #>);
     }
 
 <# } #>
