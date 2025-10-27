@@ -44,7 +44,6 @@ partial class Extensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>) Also<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>>(
         this (<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>) self, Action<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>> action
-
     )
     {
         action(<# for (var j = 1; j < i; j++) { #>self.Item<#= j #>, <# } #>self.Item<#= i #>);
