@@ -84,28 +84,28 @@ public class NelTests
     }
 
     [Test]
-    public void Append_WithSeq_AppendsToTail()
+    public void Concat_WithSeq_AppendsToTail()
     {
         // Arrange
         var head = Nel.Of(1, 2);
         var other = Seq.Of(3, 4);
 
         // Act
-        var result = head.Append(other);
+        var result = head.Concat(other);
 
         // Assert
         Assert.That(result.ToList(), Is.EqualTo(new[] { 1, 2, 3, 4 }).AsCollection);
     }
 
     [Test]
-    public void Append_WithNel_AppendsToTail()
+    public void Concat_WithNel_AppendsToTail()
     {
         // Arrange
         var left = Nel.Of(1, 2);
         var right = Nel.Of(3, 4);
 
         // Act
-        var result = left.Append(right);
+        var result = left.Concat(right);
 
         // Assert
         Assert.That(result.ToList(), Is.EqualTo(new[] { 1, 2, 3, 4 }).AsCollection);

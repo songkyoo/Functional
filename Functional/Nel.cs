@@ -83,8 +83,8 @@ public static class Nel
     public static Nel<T> Cons<T>(T head1, T head2, T head3, T head4, T head5, T head6, T head7, T head8, Nel<T> tail) => new(head1, Seq.Cons(head2, head3, head4, head5, head6, head7, head8, tail.ToSeq()));
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Nel<T> Concat<T>(Nel<T> first, Seq<T> second) => first.Append(second);
+    public static Nel<T> Concat<T>(Nel<T> first, Seq<T> second) => first.Concat(second);
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Nel<T> Concat<T>(Nel<T> first, Nel<T> second) => first.Append(second);
+    public static Nel<T> Concat<T>(Nel<T> first, Nel<T> second) => first.Concat(second);
 }

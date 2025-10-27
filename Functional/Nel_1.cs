@@ -47,17 +47,17 @@ public sealed partial class Nel<T> : IEnumerable<T>
 
     public Nel<T> Prepend(T value) => new(value, new Seq<T>.Node(_head, _tail));
 
-    public Nel<T> Append(Seq<T> other)
+    public Nel<T> Concat(Seq<T> other)
     {
         return other != null
-            ? new Nel<T>(_head, _tail.Append(other))
+            ? new Nel<T>(_head, _tail.Concat(other))
             : throw new ArgumentNullException(nameof(other));
     }
 
-    public Nel<T> Append(Nel<T> other)
+    public Nel<T> Concat(Nel<T> other)
     {
         return other != null
-            ? new Nel<T>(_head, _tail.Append(other.ToSeq()))
+            ? new Nel<T>(_head, _tail.Concat(other.ToSeq()))
             : throw new ArgumentNullException(nameof(other));
     }
 

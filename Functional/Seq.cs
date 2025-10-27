@@ -71,5 +71,5 @@ public static class Seq
     public static Seq<T> Cons<T>(T head1, T head2, T head3, T head4, T head5, T head6, T head7, T head8, Seq<T> tail) => new Seq<T>.Node(head1, new Seq<T>.Node(head2, new Seq<T>.Node(head3, new Seq<T>.Node(head4, new Seq<T>.Node(head5, new Seq<T>.Node(head6, new Seq<T>.Node(head7, new Seq<T>.Node(head8, tail))))))));
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Seq<T> Concat<T>(Seq<T> first, Seq<T> second) => first.Append(second);
+    public static Seq<T> Concat<T>(Seq<T> first, Seq<T> second) => first.Concat(second);
 }

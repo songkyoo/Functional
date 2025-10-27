@@ -64,7 +64,7 @@ public abstract partial class Seq<T> : IEnumerable<T>
 
     public Seq<T> Prepend(T value) => new Node(value, tail: this);
 
-    public Seq<T> Append(Seq<T> other)
+    public Seq<T> Concat(Seq<T> other)
     {
         if (other == null)
         {

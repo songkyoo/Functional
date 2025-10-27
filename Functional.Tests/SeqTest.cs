@@ -73,28 +73,28 @@ public class SeqTests
     }
 
     [Test]
-    public void Append_SingleElementToSingle_CreatesCorrectSequence()
+    public void Concat_SingleElementToSingle_CreatesCorrectSequence()
     {
         // Arrange
         var seq1 = new Seq<int>.Node(1, Seq<int>.Nil);
         var seq2 = new Seq<int>.Node(2, Seq<int>.Nil);
 
         // Act
-        var result = seq1.Append(seq2);
+        var result = seq1.Concat(seq2);
 
         // Assert
         Assert.That(result.ToList(), Is.EqualTo(new[] { 1, 2 }).AsCollection);
     }
 
     [Test]
-    public void Append_MultipleToMultiple_CreatesCorrectSequence()
+    public void Concat_MultipleToMultiple_CreatesCorrectSequence()
     {
         // Arrange
         var seq1 = Seq.Of(1, 2, 3);
         var seq2 = Seq.Of(4, 5, 6);
 
         // Act
-        var result = seq1.Append(seq2);
+        var result = seq1.Concat(seq2);
 
         // Assert
         Assert.That(result.ToList(), Is.EqualTo(new[] { 1, 2, 3, 4, 5, 6 }).AsCollection);
@@ -240,7 +240,7 @@ public class SeqTests
         // Act
         var result = seq1
             .Prepend(0)
-            .Append(seq2)
+            .Concat(seq2)
             .Prepend(-1);
 
         // Assert
