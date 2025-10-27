@@ -148,7 +148,8 @@ partial class Extensions
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (T1, T2) Also<T1, T2>(
-        this (T1, T2) self, Action<T1, T2> action, T1 arg1, T2 arg2
+        this (T1, T2) self, Action<T1, T2> action
+
     )
     {
         action(self.Item1, self.Item2);
@@ -157,7 +158,8 @@ partial class Extensions
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (T1, T2, T3) Also<T1, T2, T3>(
-        this (T1, T2, T3) self, Action<T1, T2, T3> action, T1 arg1, T2 arg2, T3 arg3
+        this (T1, T2, T3) self, Action<T1, T2, T3> action
+
     )
     {
         action(self.Item1, self.Item2, self.Item3);
@@ -166,7 +168,8 @@ partial class Extensions
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (T1, T2, T3, T4) Also<T1, T2, T3, T4>(
-        this (T1, T2, T3, T4) self, Action<T1, T2, T3, T4> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4
+        this (T1, T2, T3, T4) self, Action<T1, T2, T3, T4> action
+
     )
     {
         action(self.Item1, self.Item2, self.Item3, self.Item4);
@@ -175,7 +178,8 @@ partial class Extensions
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (T1, T2, T3, T4, T5) Also<T1, T2, T3, T4, T5>(
-        this (T1, T2, T3, T4, T5) self, Action<T1, T2, T3, T4, T5> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5
+        this (T1, T2, T3, T4, T5) self, Action<T1, T2, T3, T4, T5> action
+
     )
     {
         action(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5);
@@ -184,7 +188,8 @@ partial class Extensions
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (T1, T2, T3, T4, T5, T6) Also<T1, T2, T3, T4, T5, T6>(
-        this (T1, T2, T3, T4, T5, T6) self, Action<T1, T2, T3, T4, T5, T6> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6
+        this (T1, T2, T3, T4, T5, T6) self, Action<T1, T2, T3, T4, T5, T6> action
+
     )
     {
         action(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5, self.Item6);
@@ -193,7 +198,8 @@ partial class Extensions
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (T1, T2, T3, T4, T5, T6, T7) Also<T1, T2, T3, T4, T5, T6, T7>(
-        this (T1, T2, T3, T4, T5, T6, T7) self, Action<T1, T2, T3, T4, T5, T6, T7> action, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7
+        this (T1, T2, T3, T4, T5, T6, T7) self, Action<T1, T2, T3, T4, T5, T6, T7> action
+
     )
     {
         action(self.Item1, self.Item2, self.Item3, self.Item4, self.Item5, self.Item6, self.Item7);

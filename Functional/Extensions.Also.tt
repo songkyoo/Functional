@@ -43,7 +43,7 @@ partial class Extensions
 <# for (var i = 2; i <= MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static (<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>) Also<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>>(
-        this (<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>) self, Action<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>> action<# for (var j = 1; j <= i; j++) { #>, T<#= j #> arg<#= j #><# } #>
+        this (<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>) self, Action<<# for (var j = 1; j < i; j++) { #>T<#= j #>, <# } #>T<#= i #>> action
 
     )
     {
