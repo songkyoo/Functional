@@ -5,7 +5,9 @@ namespace Macaron.Functional;
 partial class Utility
 {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Either<Exception, Placeholder> RunCatching(Action action)
+    public static Either<Exception, Placeholder> RunCatching(
+        Action action
+    )
     {
         try
         {
@@ -20,7 +22,9 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Either<Exception, TResult> RunCatching<TResult>(Func<TResult> fn)
+    public static Either<Exception, TResult> RunCatching<TResult>(
+        Func<TResult> fn
+    )
     {
         try
         {
@@ -33,7 +37,10 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Either<Exception, Placeholder> RunCatching<T>(T value, Action<T> action)
+    public static Either<Exception, Placeholder> RunCatching<T>(
+        T value,
+        Action<T> action
+    )
     {
         try
         {
@@ -48,7 +55,10 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Either<Exception, TResult> RunCatching<T, TResult>(T value, Func<T, TResult> fn)
+    public static Either<Exception, TResult> RunCatching<T, TResult>(
+        T value,
+        Func<T, TResult> fn
+    )
     {
         try
         {
