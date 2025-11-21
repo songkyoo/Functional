@@ -53,10 +53,13 @@
     <Exec Command="dotnet t4 Utility.NoOp.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Partial.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Pipe.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Utility.Run.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Utility.RunCatching.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Snoc.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.ToTupled.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Tuple.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Uncurry.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 Utility.Use.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.ZipWith.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 ../Functional.Unity/Packages/com.macaron-games.functional/Runtime/UniTaskExtensions/Extensions.AlsoAsync.tt -p:MaxCount=7" />
     <Exec Command="dotnet t4 ../Functional.Unity/Packages/com.macaron-games.functional/Runtime/UniTaskExtensions/Extensions.IntoAsync.tt -p:MaxCount=7" />

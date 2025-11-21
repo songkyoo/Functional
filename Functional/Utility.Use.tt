@@ -11,19 +11,16 @@ partial class Utility
 {
 <#
 string DisposableTypeParams(int count) => string.Join(", ", Enumerable.Range(1, count).Select(n => $"T{n}"));
-string DisposableParams(int count) => string.Join(",\n", Enumerable.Range(1, count).Select(n => $"        T{n} disposable{n},"));
+string DisposableParams(int count) => string.Join(", ", Enumerable.Range(1, count).Select(n => $"T{n} disposable{n}"));
 string DisposableConstraints(int count) => string.Join("\n", Enumerable.Range(1, count).Select(n => $"        where T{n} : IDisposable"));
 string DisposableUsings(int count) => string.Join("\n", Enumerable.Range(1, count).Select(n => $"        using (disposable{n})"));
-string ActionArgs(int count, string prefix) => string.Join(count >= 6 ? ",\n" : ", ", Enumerable.Range(1, count).Select(n => count >= 6 ? $"                {prefix}{n}" : $"{prefix}{n}"));
+string ActionArgs(int count, string prefix) => string.Join(", ", Enumerable.Range(1, count).Select(n => $"{prefix}{n}"));
 string TupleTypeParams(int count) => "(" + string.Join(", ", Enumerable.Range(1, count).Select(n => $"T{n}")) + ")";
 string TupleDisposables(int count) => string.Join("\n", Enumerable.Range(1, count).Select(n => $"        using (disposable.Item{n})"));
-string TupleActionArgs(int count) => string.Join(count >= 6 ? ",\n" : ", ", Enumerable.Range(1, count).Select(n => count >= 6 ? $"                disposable.Item{n}" : $"disposable.Item{n}"));
+string TupleActionArgs(int count) => string.Join(", ", Enumerable.Range(1, count).Select(n => $"disposable.Item{n}"));
 #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T>(
-        T disposable,
-        Action<T> action
-    )
+    public static void Use<T>(T disposable, Action<T> action)
         where T : IDisposable
     {
         using (disposable)
@@ -34,39 +31,30 @@ string TupleActionArgs(int count) => string.Join(count >= 6 ? ",\n" : ", ", Enum
 
 <# for (var i = 2; i <= MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<<#= DisposableTypeParams(i) #>>(
-<#= DisposableParams(i) #>
-        Action<<#= DisposableTypeParams(i) #> action
-    )
+    public static void Use<<#= DisposableTypeParams(i) #>>(<#= DisposableParams(i) #>, Action<<#= DisposableTypeParams(i) #>> action)
 <#= DisposableConstraints(i) #>
     {
 <#= DisposableUsings(i) #>
         {
-            action(<#= ActionArgs(i, "disposable") #><#= i >= 6 ? "\n" : "" #>);
+            action(<#= ActionArgs(i, "disposable") #>);
         }
     }
 
 <# } #>
 <# for (var i = 2; i <= MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<<#= DisposableTypeParams(i) #>>(
-        <#= TupleTypeParams(i) #> disposable,
-        Action<<#= DisposableTypeParams(i) #> action
-    )
+    public static void Use<<#= DisposableTypeParams(i) #>>(<#= TupleTypeParams(i) #> disposable, Action<<#= DisposableTypeParams(i) #>> action)
 <#= DisposableConstraints(i) #>
     {
 <#= TupleDisposables(i) #>
         {
-            action(<#= TupleActionArgs(i) #><#= i >= 6 ? "\n" : "" #>);
+            action(<#= TupleActionArgs(i) #>);
         }
     }
 
 <# } #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T, TResult>(
-        T disposable,
-        Func<T, TResult> fn
-    )
+    public static TResult Use<T, TResult>(T disposable, Func<T, TResult> fn)
         where T : IDisposable
     {
         using (disposable)
@@ -77,30 +65,24 @@ string TupleActionArgs(int count) => string.Join(count >= 6 ? ",\n" : ", ", Enum
 
 <# for (var i = 2; i <= MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<<#= DisposableTypeParams(i) #>, TResult>(
-<#= DisposableParams(i) #>
-        Func<<#= DisposableTypeParams(i) #>, TResult> fn
-    )
+    public static TResult Use<<#= DisposableTypeParams(i) #>, TResult>(<#= DisposableParams(i) #>, Func<<#= DisposableTypeParams(i) #>, TResult> fn)
 <#= DisposableConstraints(i) #>
     {
 <#= DisposableUsings(i) #>
         {
-            return fn(<#= ActionArgs(i, "disposable") #><#= i >= 6 ? "\n" : "" #>);
+            return fn(<#= ActionArgs(i, "disposable") #>);
         }
     }
 
 <# } #>
 <# for (var i = 2; i <= MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<<#= DisposableTypeParams(i) #>, TResult>(
-        <#= TupleTypeParams(i) #> disposable,
-        Func<<#= DisposableTypeParams(i) #>, TResult> fn
-    )
+    public static TResult Use<<#= DisposableTypeParams(i) #>, TResult>(<#= TupleTypeParams(i) #> disposable, Func<<#= DisposableTypeParams(i) #>, TResult> fn)
 <#= DisposableConstraints(i) #>
     {
 <#= TupleDisposables(i) #>
         {
-            return fn(<#= TupleActionArgs(i) #><#= i >= 6 ? "\n" : "" #>);
+            return fn(<#= TupleActionArgs(i) #>);
         }
     }
 

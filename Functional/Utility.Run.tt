@@ -35,10 +35,7 @@ partial class Utility
 
 <# for (var i = 2; i <= MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Run<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>>(
-<#= string.Join(",\n", Enumerable.Range(1, i).Select(n => $"        T{n} value{n},")) #>
-        Action<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #> action
-    )
+    public static void Run<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>>(<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n} value{n}")) #>, Action<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>> action)
     {
         action(<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"value{n}")) #>);
     }
@@ -46,10 +43,7 @@ partial class Utility
 <# } #>
 <# for (var i = 2; i <= MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Run<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>>(
-        (<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>) value,
-        Action<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #> action
-    )
+    public static void Run<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>>((<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>) value, Action<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>> action)
     {
         action(<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"value.Item{n}")) #>);
     }
@@ -57,10 +51,7 @@ partial class Utility
 <# } #>
 <# for (var i = 2; i <= MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Run<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>, TResult>(
-<#= string.Join(",\n", Enumerable.Range(1, i).Select(n => $"        T{n} value{n},")) #>
-        Func<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>, TResult> fn
-    )
+    public static TResult Run<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>, TResult>(<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n} value{n}")) #>, Func<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>, TResult> fn)
     {
         return fn(<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"value{n}")) #>);
     }
@@ -68,10 +59,7 @@ partial class Utility
 <# } #>
 <# for (var i = 2; i <= MaxCount; i++) { #>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Run<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>, TResult>(
-        (<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>) value,
-        Func<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>, TResult> fn
-    )
+    public static TResult Run<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>, TResult>((<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>) value, Func<<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"T{n}")) #>, TResult> fn)
     {
         return fn(<#= string.Join(", ", Enumerable.Range(1, i).Select(n => $"value.Item{n}")) #>);
     }

@@ -6,10 +6,7 @@ namespace Macaron.Functional;
 partial class Utility
 {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T>(
-        T disposable,
-        Action<T> action
-    )
+    public static void Use<T>(T disposable, Action<T> action)
         where T : IDisposable
     {
         using (disposable)
@@ -19,11 +16,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2>(
-        T1 disposable1,
-        T2 disposable2,
-        Action<T1, T2> action
-    )
+    public static void Use<T1, T2>(T1 disposable1, T2 disposable2, Action<T1, T2> action)
         where T1 : IDisposable
         where T2 : IDisposable
     {
@@ -35,12 +28,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        Action<T1, T2, T3> action
-    )
+    public static void Use<T1, T2, T3>(T1 disposable1, T2 disposable2, T3 disposable3, Action<T1, T2, T3> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -54,13 +42,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3, T4>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        T4 disposable4,
-        Action<T1, T2, T3, T4> action
-    )
+    public static void Use<T1, T2, T3, T4>(T1 disposable1, T2 disposable2, T3 disposable3, T4 disposable4, Action<T1, T2, T3, T4> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -76,14 +58,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3, T4, T5>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        T4 disposable4,
-        T5 disposable5,
-        Action<T1, T2, T3, T4, T5> action
-    )
+    public static void Use<T1, T2, T3, T4, T5>(T1 disposable1, T2 disposable2, T3 disposable3, T4 disposable4, T5 disposable5, Action<T1, T2, T3, T4, T5> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -101,15 +76,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3, T4, T5, T6>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        T4 disposable4,
-        T5 disposable5,
-        T6 disposable6,
-        Action<T1, T2, T3, T4, T5, T6> action
-    )
+    public static void Use<T1, T2, T3, T4, T5, T6>(T1 disposable1, T2 disposable2, T3 disposable3, T4 disposable4, T5 disposable5, T6 disposable6, Action<T1, T2, T3, T4, T5, T6> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -129,16 +96,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3, T4, T5, T6, T7>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        T4 disposable4,
-        T5 disposable5,
-        T6 disposable6,
-        T7 disposable7,
-        Action<T1, T2, T3, T4, T5, T6, T7> action
-    )
+    public static void Use<T1, T2, T3, T4, T5, T6, T7>(T1 disposable1, T2 disposable2, T3 disposable3, T4 disposable4, T5 disposable5, T6 disposable6, T7 disposable7, Action<T1, T2, T3, T4, T5, T6, T7> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -160,17 +118,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3, T4, T5, T6, T7, T8>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        T4 disposable4,
-        T5 disposable5,
-        T6 disposable6,
-        T7 disposable7,
-        T8 disposable8,
-        Action<T1, T2, T3, T4, T5, T6, T7, T8> action
-    )
+    public static void Use<T1, T2, T3, T4, T5, T6, T7, T8>(T1 disposable1, T2 disposable2, T3 disposable3, T4 disposable4, T5 disposable5, T6 disposable6, T7 disposable7, T8 disposable8, Action<T1, T2, T3, T4, T5, T6, T7, T8> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -189,24 +137,12 @@ partial class Utility
         using (disposable7)
         using (disposable8)
         {
-            action(
-                disposable1,
-                disposable2,
-                disposable3,
-                disposable4,
-                disposable5,
-                disposable6,
-                disposable7,
-                disposable8
-            );
+            action(disposable1, disposable2, disposable3, disposable4, disposable5, disposable6, disposable7, disposable8);
         }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2>(
-        (T1, T2) disposable,
-        Action<T1, T2> action
-    )
+    public static void Use<T1, T2>((T1, T2) disposable, Action<T1, T2> action)
         where T1 : IDisposable
         where T2 : IDisposable
     {
@@ -218,10 +154,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3>(
-        (T1, T2, T3) disposable,
-        Action<T1, T2, T3> action
-    )
+    public static void Use<T1, T2, T3>((T1, T2, T3) disposable, Action<T1, T2, T3> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -235,10 +168,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3, T4>(
-        (T1, T2, T3, T4) disposable,
-        Action<T1, T2, T3, T4> action
-    )
+    public static void Use<T1, T2, T3, T4>((T1, T2, T3, T4) disposable, Action<T1, T2, T3, T4> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -254,10 +184,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3, T4, T5>(
-        (T1, T2, T3, T4, T5) disposable,
-        Action<T1, T2, T3, T4, T5> action
-    )
+    public static void Use<T1, T2, T3, T4, T5>((T1, T2, T3, T4, T5) disposable, Action<T1, T2, T3, T4, T5> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -275,10 +202,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3, T4, T5, T6>(
-        (T1, T2, T3, T4, T5, T6) disposable,
-        Action<T1, T2, T3, T4, T5, T6> action
-    )
+    public static void Use<T1, T2, T3, T4, T5, T6>((T1, T2, T3, T4, T5, T6) disposable, Action<T1, T2, T3, T4, T5, T6> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -293,22 +217,12 @@ partial class Utility
         using (disposable.Item5)
         using (disposable.Item6)
         {
-            action(
-                disposable.Item1,
-                disposable.Item2,
-                disposable.Item3,
-                disposable.Item4,
-                disposable.Item5,
-                disposable.Item6
-            );
+            action(disposable.Item1, disposable.Item2, disposable.Item3, disposable.Item4, disposable.Item5, disposable.Item6);
         }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<T1, T2, T3, T4, T5, T6, T7>(
-        (T1, T2, T3, T4, T5, T6, T7) disposable,
-        Action<T1, T2, T3, T4, T5, T6, T7> action
-    )
+    public static void Use<T1, T2, T3, T4, T5, T6, T7>((T1, T2, T3, T4, T5, T6, T7) disposable, Action<T1, T2, T3, T4, T5, T6, T7> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -325,32 +239,12 @@ partial class Utility
         using (disposable.Item6)
         using (disposable.Item7)
         {
-            action(
-                disposable.Item1,
-                disposable.Item2,
-                disposable.Item3,
-                disposable.Item4,
-                disposable.Item5,
-                disposable.Item6,
-                disposable.Item7
-            );
+            action(disposable.Item1, disposable.Item2, disposable.Item3, disposable.Item4, disposable.Item5, disposable.Item6, disposable.Item7);
         }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Use<
-        T1,
-        T2,
-        T3,
-        T4,
-        T5,
-        T6,
-        T7,
-        T8
-    >(
-        (T1, T2, T3, T4, T5, T6, T7, T8) disposable,
-        Action<T1, T2, T3, T4, T5, T6, T7, T8> action
-    )
+    public static void Use<T1, T2, T3, T4, T5, T6, T7, T8>((T1, T2, T3, T4, T5, T6, T7, T8) disposable, Action<T1, T2, T3, T4, T5, T6, T7, T8> action)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -369,24 +263,12 @@ partial class Utility
         using (disposable.Item7)
         using (disposable.Item8)
         {
-            action(
-                disposable.Item1,
-                disposable.Item2,
-                disposable.Item3,
-                disposable.Item4,
-                disposable.Item5,
-                disposable.Item6,
-                disposable.Item7,
-                disposable.Item8
-            );
+            action(disposable.Item1, disposable.Item2, disposable.Item3, disposable.Item4, disposable.Item5, disposable.Item6, disposable.Item7, disposable.Item8);
         }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T, TResult>(
-        T disposable,
-        Func<T, TResult> fn
-    )
+    public static TResult Use<T, TResult>(T disposable, Func<T, TResult> fn)
         where T : IDisposable
     {
         using (disposable)
@@ -396,11 +278,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, TResult>(
-        T1 disposable1,
-        T2 disposable2,
-        Func<T1, T2, TResult> fn
-    )
+    public static TResult Use<T1, T2, TResult>(T1 disposable1, T2 disposable2, Func<T1, T2, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
     {
@@ -412,12 +290,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, TResult>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        Func<T1, T2, T3, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, TResult>(T1 disposable1, T2 disposable2, T3 disposable3, Func<T1, T2, T3, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -431,13 +304,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, T4, TResult>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        T4 disposable4,
-        Func<T1, T2, T3, T4, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, T4, TResult>(T1 disposable1, T2 disposable2, T3 disposable3, T4 disposable4, Func<T1, T2, T3, T4, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -453,14 +320,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, T4, T5, TResult>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        T4 disposable4,
-        T5 disposable5,
-        Func<T1, T2, T3, T4, T5, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, T4, T5, TResult>(T1 disposable1, T2 disposable2, T3 disposable3, T4 disposable4, T5 disposable5, Func<T1, T2, T3, T4, T5, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -478,15 +338,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, T4, T5, T6, TResult>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        T4 disposable4,
-        T5 disposable5,
-        T6 disposable6,
-        Func<T1, T2, T3, T4, T5, T6, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, T4, T5, T6, TResult>(T1 disposable1, T2 disposable2, T3 disposable3, T4 disposable4, T5 disposable5, T6 disposable6, Func<T1, T2, T3, T4, T5, T6, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -506,16 +358,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, T4, T5, T6, T7, TResult>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        T4 disposable4,
-        T5 disposable5,
-        T6 disposable6,
-        T7 disposable7,
-        Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, T4, T5, T6, T7, TResult>(T1 disposable1, T2 disposable2, T3 disposable3, T4 disposable4, T5 disposable5, T6 disposable6, T7 disposable7, Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -537,17 +380,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
-        T1 disposable1,
-        T2 disposable2,
-        T3 disposable3,
-        T4 disposable4,
-        T5 disposable5,
-        T6 disposable6,
-        T7 disposable7,
-        T8 disposable8,
-        Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(T1 disposable1, T2 disposable2, T3 disposable3, T4 disposable4, T5 disposable5, T6 disposable6, T7 disposable7, T8 disposable8, Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -566,24 +399,12 @@ partial class Utility
         using (disposable7)
         using (disposable8)
         {
-            return fn(
-                disposable1,
-                disposable2,
-                disposable3,
-                disposable4,
-                disposable5,
-                disposable6,
-                disposable7,
-                disposable8
-            );
+            return fn(disposable1, disposable2, disposable3, disposable4, disposable5, disposable6, disposable7, disposable8);
         }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, TResult>(
-        (T1, T2) disposable,
-        Func<T1, T2, TResult> fn
-    )
+    public static TResult Use<T1, T2, TResult>((T1, T2) disposable, Func<T1, T2, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
     {
@@ -595,10 +416,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, TResult>(
-        (T1, T2, T3) disposable,
-        Func<T1, T2, T3, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, TResult>((T1, T2, T3) disposable, Func<T1, T2, T3, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -612,10 +430,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, T4, TResult>(
-        (T1, T2, T3, T4) disposable,
-        Func<T1, T2, T3, T4, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, T4, TResult>((T1, T2, T3, T4) disposable, Func<T1, T2, T3, T4, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -631,10 +446,7 @@ partial class Utility
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, T4, T5, TResult>(
-        (T1, T2, T3, T4, T5) disposable,
-        Func<T1, T2, T3, T4, T5, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, T4, T5, TResult>((T1, T2, T3, T4, T5) disposable, Func<T1, T2, T3, T4, T5, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -647,21 +459,12 @@ partial class Utility
         using (disposable.Item4)
         using (disposable.Item5)
         {
-            return fn(
-                disposable.Item1,
-                disposable.Item2,
-                disposable.Item3,
-                disposable.Item4,
-                disposable.Item5
-            );
+            return fn(disposable.Item1, disposable.Item2, disposable.Item3, disposable.Item4, disposable.Item5);
         }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, T4, T5, T6, TResult>(
-        (T1, T2, T3, T4, T5, T6) disposable,
-        Func<T1, T2, T3, T4, T5, T6, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, T4, T5, T6, TResult>((T1, T2, T3, T4, T5, T6) disposable, Func<T1, T2, T3, T4, T5, T6, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -676,22 +479,12 @@ partial class Utility
         using (disposable.Item5)
         using (disposable.Item6)
         {
-            return fn(
-                disposable.Item1,
-                disposable.Item2,
-                disposable.Item3,
-                disposable.Item4,
-                disposable.Item5,
-                disposable.Item6
-            );
+            return fn(disposable.Item1, disposable.Item2, disposable.Item3, disposable.Item4, disposable.Item5, disposable.Item6);
         }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<T1, T2, T3, T4, T5, T6, T7, TResult>(
-        (T1, T2, T3, T4, T5, T6, T7) disposable,
-        Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, T4, T5, T6, T7, TResult>((T1, T2, T3, T4, T5, T6, T7) disposable, Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -708,33 +501,12 @@ partial class Utility
         using (disposable.Item6)
         using (disposable.Item7)
         {
-            return fn(
-                disposable.Item1,
-                disposable.Item2,
-                disposable.Item3,
-                disposable.Item4,
-                disposable.Item5,
-                disposable.Item6,
-                disposable.Item7
-            );
+            return fn(disposable.Item1, disposable.Item2, disposable.Item3, disposable.Item4, disposable.Item5, disposable.Item6, disposable.Item7);
         }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Use<
-        T1,
-        T2,
-        T3,
-        T4,
-        T5,
-        T6,
-        T7,
-        T8,
-        TResult
-    >(
-        (T1, T2, T3, T4, T5, T6, T7, T8) disposable,
-        Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn
-    )
+    public static TResult Use<T1, T2, T3, T4, T5, T6, T7, T8, TResult>((T1, T2, T3, T4, T5, T6, T7, T8) disposable, Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn)
         where T1 : IDisposable
         where T2 : IDisposable
         where T3 : IDisposable
@@ -753,16 +525,8 @@ partial class Utility
         using (disposable.Item7)
         using (disposable.Item8)
         {
-            return fn(
-                disposable.Item1,
-                disposable.Item2,
-                disposable.Item3,
-                disposable.Item4,
-                disposable.Item5,
-                disposable.Item6,
-                disposable.Item7,
-                disposable.Item8
-            );
+            return fn(disposable.Item1, disposable.Item2, disposable.Item3, disposable.Item4, disposable.Item5, disposable.Item6, disposable.Item7, disposable.Item8);
         }
     }
+
 }
