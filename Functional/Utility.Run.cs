@@ -40,6 +40,97 @@ partial class Utility
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static void Run<T1, T2>(
+        T1 value1,
+        T2 value2,
+        Action<T1, T2> action
+    )
+    {
+        action(value1, value2);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        Action<T1, T2, T3> action
+    )
+    {
+        action(value1, value2, value3);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3, T4>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        T4 value4,
+        Action<T1, T2, T3, T4> action
+    )
+    {
+        action(value1, value2, value3, value4);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3, T4, T5>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        T4 value4,
+        T5 value5,
+        Action<T1, T2, T3, T4, T5> action
+    )
+    {
+        action(value1, value2, value3, value4, value5);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3, T4, T5, T6>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        T4 value4,
+        T5 value5,
+        T6 value6,
+        Action<T1, T2, T3, T4, T5, T6> action
+    )
+    {
+        action(value1, value2, value3, value4, value5, value6);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3, T4, T5, T6, T7>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        T4 value4,
+        T5 value5,
+        T6 value6,
+        T7 value7,
+        Action<T1, T2, T3, T4, T5, T6, T7> action
+    )
+    {
+        action(value1, value2, value3, value4, value5, value6, value7);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3, T4, T5, T6, T7, T8>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        T4 value4,
+        T5 value5,
+        T6 value6,
+        T7 value7,
+        T8 value8,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> action
+    )
+    {
+        action(value1, value2, value3, value4, value5, value6, value7, value8);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2>(
         (T1, T2) value,
         Action<T1, T2> action
     )
@@ -103,6 +194,97 @@ partial class Utility
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static TResult Run<T1, T2, TResult>(
+        T1 value1,
+        T2 value2,
+        Func<T1, T2, TResult> fn
+    )
+    {
+        return fn(value1, value2);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, TResult>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        Func<T1, T2, T3, TResult> fn
+    )
+    {
+        return fn(value1, value2, value3);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, T4, TResult>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        T4 value4,
+        Func<T1, T2, T3, T4, TResult> fn
+    )
+    {
+        return fn(value1, value2, value3, value4);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, T4, T5, TResult>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        T4 value4,
+        T5 value5,
+        Func<T1, T2, T3, T4, T5, TResult> fn
+    )
+    {
+        return fn(value1, value2, value3, value4, value5);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, T4, T5, T6, TResult>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        T4 value4,
+        T5 value5,
+        T6 value6,
+        Func<T1, T2, T3, T4, T5, T6, TResult> fn
+    )
+    {
+        return fn(value1, value2, value3, value4, value5, value6);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        T4 value4,
+        T5 value5,
+        T6 value6,
+        T7 value7,
+        Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn
+    )
+    {
+        return fn(value1, value2, value3, value4, value5, value6, value7);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        T1 value1,
+        T2 value2,
+        T3 value3,
+        T4 value4,
+        T5 value5,
+        T6 value6,
+        T7 value7,
+        T8 value8,
+        Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn
+    )
+    {
+        return fn(value1, value2, value3, value4, value5, value6, value7, value8);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, TResult>(
         (T1, T2) value,
         Func<T1, T2, TResult> fn
     )
@@ -161,15 +343,6 @@ partial class Utility
         Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn
     )
     {
-        return fn(
-            value.Item1,
-            value.Item2,
-            value.Item3,
-            value.Item4,
-            value.Item5,
-            value.Item6,
-            value.Item7,
-            value.Item8
-        );
+        return fn(value.Item1, value.Item2, value.Item3, value.Item4, value.Item5, value.Item6, value.Item7, value.Item8);
     }
 }
