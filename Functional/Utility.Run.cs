@@ -5,25 +5,35 @@ namespace Macaron.Functional;
 partial class Utility
 {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Run(Action action)
+    public static void Run(
+        Action action
+    )
     {
         action();
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Run<TResult>(Func<TResult> fn)
+    public static TResult Run<TResult>(
+        Func<TResult> fn
+    )
     {
         return fn();
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static void Run<T>(T value, Action<T> action)
+    public static void Run<T>(
+        T value,
+        Action<T> action
+    )
     {
         action(value);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static TResult Run<T, TResult>(T value, Func<T, TResult> fn)
+    public static TResult Run<T, TResult>(
+        T value,
+        Func<T, TResult> fn
+    )
     {
         return fn(value);
     }
@@ -151,6 +161,15 @@ partial class Utility
         Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn
     )
     {
-        return fn(value.Item1, value.Item2, value.Item3, value.Item4, value.Item5, value.Item6, value.Item7, value.Item8);
+        return fn(
+            value.Item1,
+            value.Item2,
+            value.Item3,
+            value.Item4,
+            value.Item5,
+            value.Item6,
+            value.Item7,
+            value.Item8
+        );
     }
 }
