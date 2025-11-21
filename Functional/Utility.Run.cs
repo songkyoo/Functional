@@ -27,4 +27,130 @@ partial class Utility
     {
         return fn(value);
     }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2>(
+        (T1, T2) value,
+        Action<T1, T2> action
+    )
+    {
+        action(value.Item1, value.Item2);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3>(
+        (T1, T2, T3) value,
+        Action<T1, T2, T3> action
+    )
+    {
+        action(value.Item1, value.Item2, value.Item3);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3, T4>(
+        (T1, T2, T3, T4) value,
+        Action<T1, T2, T3, T4> action
+    )
+    {
+        action(value.Item1, value.Item2, value.Item3, value.Item4);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3, T4, T5>(
+        (T1, T2, T3, T4, T5) value,
+        Action<T1, T2, T3, T4, T5> action
+    )
+    {
+        action(value.Item1, value.Item2, value.Item3, value.Item4, value.Item5);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3, T4, T5, T6>(
+        (T1, T2, T3, T4, T5, T6) value,
+        Action<T1, T2, T3, T4, T5, T6> action
+    )
+    {
+        action(value.Item1, value.Item2, value.Item3, value.Item4, value.Item5, value.Item6);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3, T4, T5, T6, T7>(
+        (T1, T2, T3, T4, T5, T6, T7) value,
+        Action<T1, T2, T3, T4, T5, T6, T7> action
+    )
+    {
+        action(value.Item1, value.Item2, value.Item3, value.Item4, value.Item5, value.Item6, value.Item7);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void Run<T1, T2, T3, T4, T5, T6, T7, T8>(
+        (T1, T2, T3, T4, T5, T6, T7, T8) value,
+        Action<T1, T2, T3, T4, T5, T6, T7, T8> action
+    )
+    {
+        action(value.Item1, value.Item2, value.Item3, value.Item4, value.Item5, value.Item6, value.Item7, value.Item8);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, TResult>(
+        (T1, T2) value,
+        Func<T1, T2, TResult> fn
+    )
+    {
+        return fn(value.Item1, value.Item2);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, TResult>(
+        (T1, T2, T3) value,
+        Func<T1, T2, T3, TResult> fn
+    )
+    {
+        return fn(value.Item1, value.Item2, value.Item3);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, T4, TResult>(
+        (T1, T2, T3, T4) value,
+        Func<T1, T2, T3, T4, TResult> fn
+    )
+    {
+        return fn(value.Item1, value.Item2, value.Item3, value.Item4);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, T4, T5, TResult>(
+        (T1, T2, T3, T4, T5) value,
+        Func<T1, T2, T3, T4, T5, TResult> fn
+    )
+    {
+        return fn(value.Item1, value.Item2, value.Item3, value.Item4, value.Item5);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, T4, T5, T6, TResult>(
+        (T1, T2, T3, T4, T5, T6) value,
+        Func<T1, T2, T3, T4, T5, T6, TResult> fn
+    )
+    {
+        return fn(value.Item1, value.Item2, value.Item3, value.Item4, value.Item5, value.Item6);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, T4, T5, T6, T7, TResult>(
+        (T1, T2, T3, T4, T5, T6, T7) value,
+        Func<T1, T2, T3, T4, T5, T6, T7, TResult> fn
+    )
+    {
+        return fn(value.Item1, value.Item2, value.Item3, value.Item4, value.Item5, value.Item6, value.Item7);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TResult Run<T1, T2, T3, T4, T5, T6, T7, T8, TResult>(
+        (T1, T2, T3, T4, T5, T6, T7, T8) value,
+        Func<T1, T2, T3, T4, T5, T6, T7, T8, TResult> fn
+    )
+    {
+        return fn(value.Item1, value.Item2, value.Item3, value.Item4, value.Item5, value.Item6, value.Item7, value.Item8);
+    }
 }
