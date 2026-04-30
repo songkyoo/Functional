@@ -23,13 +23,13 @@ public static partial class Maybe
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Maybe<T> Of<T>(T? value) where T : class
+    public static Maybe<T> From<T>(T? value) where T : class
     {
         return value != null ? Just(value) : Nothing<T>();
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public static Maybe<T> Of<T>(T? value) where T : struct
+    public static Maybe<T> From<T>(T? value) where T : struct
     {
         return value != null ? Just(value.Value) : Nothing<T>();
     }
