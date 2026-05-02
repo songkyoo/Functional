@@ -330,4 +330,64 @@ public class EitherExtensionsTest
 
         Assert.That(result.IsLeft, Is.True);
     }
+
+    [Test]
+    public void Tap_WithAdditionalArguments_InvokesActionForRight()
+    {
+        var right = Right<string, string>("value");
+        var message = "";
+
+        var result = right.Tap("prefix", 42, (value, prefix, count) =>
+        {
+            message = $"{prefix}:{value}:{count}";
+        });
+
+        Assert.That(result, Is.EqualTo(right));
+        Assert.That(message, Is.EqualTo("prefix:value:42"));
+    }
+
+    [Test]
+    public void Tap_WithActionFirstAdditionalArguments_InvokesActionForRight()
+    {
+        var right = Right<string, string>("value");
+        var message = "";
+
+        var result = right.Tap((prefix, count, value) =>
+        {
+            message = $"{prefix}:{value}:{count}";
+        }, "prefix", 42);
+
+        Assert.That(result, Is.EqualTo(right));
+        Assert.That(message, Is.EqualTo("prefix:value:42"));
+    }
+
+    [Test]
+    public void TapLeft_WithAdditionalArguments_InvokesActionForLeft()
+    {
+        var left = Left<string, string>("error");
+        var message = "";
+
+        var result = left.TapLeft("prefix", 42, (value, prefix, count) =>
+        {
+            message = $"{prefix}:{value}:{count}";
+        });
+
+        Assert.That(result, Is.EqualTo(left));
+        Assert.That(message, Is.EqualTo("prefix:error:42"));
+    }
+
+    [Test]
+    public void TapLeft_WithActionFirstAdditionalArguments_InvokesActionForLeft()
+    {
+        var left = Left<string, string>("error");
+        var message = "";
+
+        var result = left.TapLeft((prefix, count, value) =>
+        {
+            message = $"{prefix}:{value}:{count}";
+        }, "prefix", 42);
+
+        Assert.That(result, Is.EqualTo(left));
+        Assert.That(message, Is.EqualTo("prefix:error:42"));
+    }
 }

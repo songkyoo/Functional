@@ -239,4 +239,64 @@ public class MaybeExtensionsTest
         }), Is.EqualTo(Left<string, string>("left")));
         Assert.That(calls, Is.EqualTo(1));
     }
+
+    [Test]
+    public void Tap_WithAdditionalArguments_InvokesActionForJust()
+    {
+        var just = Just("value");
+        var message = "";
+
+        var result = just.Tap("prefix", 42, (value, prefix, count) =>
+        {
+            message = $"{prefix}:{value}:{count}";
+        });
+
+        Assert.That(result, Is.EqualTo(just));
+        Assert.That(message, Is.EqualTo("prefix:value:42"));
+    }
+
+    [Test]
+    public void Tap_WithActionFirstAdditionalArguments_InvokesActionForJust()
+    {
+        var just = Just("value");
+        var message = "";
+
+        var result = just.Tap((prefix, count, value) =>
+        {
+            message = $"{prefix}:{value}:{count}";
+        }, "prefix", 42);
+
+        Assert.That(result, Is.EqualTo(just));
+        Assert.That(message, Is.EqualTo("prefix:value:42"));
+    }
+
+    [Test]
+    public void TapNothing_WithAdditionalArguments_InvokesActionForNothing()
+    {
+        var nothing = Nothing<string>();
+        var message = "";
+
+        var result = nothing.TapNothing("fallback", 42, (value, count) =>
+        {
+            message = $"{value}:{count}";
+        });
+
+        Assert.That(result, Is.EqualTo(nothing));
+        Assert.That(message, Is.EqualTo("fallback:42"));
+    }
+
+    [Test]
+    public void TapNothing_WithActionFirstAdditionalArguments_InvokesActionForNothing()
+    {
+        var nothing = Nothing<string>();
+        var message = "";
+
+        var result = nothing.TapNothing((value, count) =>
+        {
+            message = $"{value}:{count}";
+        }, "fallback", 42);
+
+        Assert.That(result, Is.EqualTo(nothing));
+        Assert.That(message, Is.EqualTo("fallback:42"));
+    }
 }

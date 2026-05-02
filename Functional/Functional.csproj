@@ -30,6 +30,7 @@
     <Exec Command="dotnet t4 Either.Lift.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Either.Map.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 EitherExtensions.Apply.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 EitherExtensions.Tap.tt -p:MaxCount=7" />
     <Exec Command="dotnet t4 Extensions.Also.tt -p:MaxCount=7" />
     <Exec Command="dotnet t4 Extensions.Append.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Extensions.Bind.tt -p:MaxCount=8" />
@@ -43,6 +44,7 @@
     <Exec Command="dotnet t4 Maybe.Lift.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Maybe.Map.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 MaybeExtensions.Apply.tt -p:MaxCount=8" />
+    <Exec Command="dotnet t4 MaybeExtensions.Tap.tt -p:MaxCount=7" />
     <Exec Command="dotnet t4 Utility.Bind.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Compose.tt -p:MaxCount=8" />
     <Exec Command="dotnet t4 Utility.Concat.tt -p:MaxCount=8" />
