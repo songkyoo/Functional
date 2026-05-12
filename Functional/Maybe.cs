@@ -33,4 +33,10 @@ public static partial class Maybe
     {
         return value != null ? Just(value.Value) : Nothing<T>();
     }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static Maybe<T> When<T>(T value, Func<T, bool> predicate) where T : struct
+    {
+        return predicate(value) ? Just(value) : Nothing<T>();
+    }
 }
