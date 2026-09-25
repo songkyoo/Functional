@@ -64,13 +64,13 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     #endregion
 
     #region Fields
-    private readonly bool? _isJust;
+    private readonly bool _isJust;
     private readonly T? _value;
     #endregion
 
     #region Properties
     [MemberNotNullWhen(true, nameof(_value))]
-    public bool IsJust => _isJust ?? throw new InvalidOperationException("Maybe is not initialized.");
+    public bool IsJust => _isJust;
 
     public bool IsNothing => !IsJust;
 
@@ -104,11 +104,6 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
 
     public override string ToString()
     {
-        if (_isJust is null)
-        {
-            return "Maybe";
-        }
-
         return IsJust ? $"Just({_value})" : "Nothing";
     }
     #endregion

@@ -6,12 +6,12 @@ namespace Macaron.Functional.Tests;
 public class MaybeTest
 {
     [Test]
-    public void DefaultCtor_WithoutJustOrNothing_CreateInvalidMaybeObject()
+    public void DefaultCtor_WithoutJustOrNothing_CreateNothingMaybeObject()
     {
         Maybe<string> maybe = default;
 
-        Assert.That(() => maybe.IsJust, Throws.Exception.InstanceOf<InvalidOperationException>());
-        Assert.That(() => maybe.IsNothing, Throws.Exception.InstanceOf<InvalidOperationException>());
+        Assert.That(() => maybe.IsJust, Is.False);
+        Assert.That(() => maybe.IsNothing, Is.True);
         Assert.That(() => maybe.Value, Throws.Exception.InstanceOf<InvalidOperationException>());
     }
 
