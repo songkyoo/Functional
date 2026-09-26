@@ -210,7 +210,7 @@ public class EitherTest
         Either<string, string> left = Left("Foo");
 
         var executed = false;
-        left.Match(left: _ => executed = true, right: _ => { });
+        left.Switch(left: _ => executed = true, right: _ => { });
 
         Assert.That(executed, Is.True);
     }
@@ -221,7 +221,7 @@ public class EitherTest
         Either<string, string> right = Right("Foo");
 
         var executed = false;
-        right.Match(left: _ => { }, right: _ => executed = true);
+        right.Switch(left: _ => { }, right: _ => executed = true);
 
         Assert.That(executed, Is.True);
     }

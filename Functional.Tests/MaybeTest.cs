@@ -124,7 +124,7 @@ public class MaybeTest
         Maybe<string> just = Just("Foo");
 
         var executed = false;
-        just.Match(just: _ => executed = true, nothing: () => { });
+        just.Switch(just: _ => executed = true, nothing: () => { });
 
         Assert.That(executed, Is.True);
     }
@@ -135,7 +135,7 @@ public class MaybeTest
         Maybe<string> nothing = Nothing();
 
         var executed = false;
-        nothing.Match(just: _ => { }, nothing: () => executed = true);
+        nothing.Switch(just: _ => { }, nothing: () => executed = true);
 
         Assert.That(executed, Is.True);
     }

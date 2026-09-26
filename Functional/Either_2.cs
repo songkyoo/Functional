@@ -232,7 +232,7 @@ public readonly struct Either<TLeft, TRight>
         return this;
     }
 
-    public void Match(Action<TLeft> left, Action<TRight> right)
+    public void Switch(Action<TLeft> left, Action<TRight> right)
     {
         if (IsRight)
         {

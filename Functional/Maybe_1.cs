@@ -72,6 +72,7 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     [MemberNotNullWhen(true, nameof(_value))]
     public bool IsJust => _isJust;
 
+    [MemberNotNullWhen(false, nameof(_value))]
     public bool IsNothing => !IsJust;
 
     public T Value => IsJust ? _value : throw new InvalidOperationException("Maybe is not Just.");
@@ -118,14 +119,14 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
     #region IEquatable<JustMaybe<T>> Interface
     public bool Equals(JustMaybe<T> other)
     {
-        return _isJust is true && EqualityComparer<T?>.Default.Equals(_value, other.Value);
+        return _isJust && EqualityComparer<T?>.Default.Equals(_value, other.Value);
     }
     #endregion
 
     #region IEquatable<NothingMaybe> Interface
     public bool Equals(NothingMaybe other)
     {
-        return _isJust is false;
+        return !_isJust;
     }
     #endregion
 
@@ -168,7 +169,7 @@ public readonly struct Maybe<T> : IEquatable<Maybe<T>>, IEquatable<JustMaybe<T>>
         return this;
     }
 
-    public void Match(Action<T> just, Action nothing)
+    public void Switch(Action<T> just, Action nothing)
     {
         if (IsJust)
         {
